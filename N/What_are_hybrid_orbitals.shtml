@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <title>What are hybrid Orbitals</title>
+  <meta name="author" content="J. Gutow">
+  <meta name="description" content="Explanation of hybrid orbitals">
+  <link rel="stylesheet" type="text/css" href="hybrid.css"/>
+</head>
+<body>
+<!--#include virtual="Hybrid Orbitals Header.html"-->
+<div id="intro-title" class="subtitle-text">
+What are Hybrid Orbitals?
+</div>
+<div id="hybrid explanation" class="explanation-text">
+Hybrid orbitals are the result of a model which combines <a
+ href="../Cl/Cl_AOs.shtml">atomic orbitals</a> on a single atom in ways
+that lead to a new set of orbitals that have geometries
+appropriate to form bonds in the directions predicted by the VSEPR
+model. The <a target="_blank"
+ href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
+model</a> predicts geometries that are very close to those seen in real
+molecules. There are many descriptions of hybrid orbitals
+available. See any general or organic chemistry text.  A web search will provide
+additional descriptions.
+<br><br>
+First, let us see the problem with the normal s and p orbitals on an
+atom. Consider methane (CH<sub>4</sub>), which consists of a
+carbon atom with four hydrogens arranged in a tetrahedral geometry
+around the cental atom. In its ground state (lowest energy)
+configuration the carbon atom has an electronic configuration of [He]2s<sup>2</sup>2p<sup>2</sup>.&nbsp;
+This means that the valence electrons (the ones involved in bonding)
+occupy s and p orbitals. In the figure below the 2s and the three
+2p orbitals are shown superimposed on a methane molecule. Notice
+that none of the orbitals point towards the hydrogens! If we were
+to rotate the orbitals we would find that at most one p orbital could
+point towards a hydrogen at any given time.
+
+<div id="fig1">
+  <div id="fig1-images">
+<a href="CH4%20with%20s.png"><img
+ alt="CH4 with 2s orbital" src="CH4%20with%20s.png"></a>
+<a href="CH4%20with%20px.png"><img alt="CH4 with px orbital"
+ src="CH4%20with%20px.png"></a>
+<a href="CH4%20with%20py.png"><img alt="CH4 with py orbital"
+ src="CH4%20with%20py.png"></a>
+<a href="CH4%20with%20pz.png"><img alt="CH4 with pz orbital"
+ src="CH4%20with%20pz.png"></a>
+      </div>
+    <div id="fig1-caption" class="fig-caption">
+      <span class="fig-label">Figure 1</span>: A methane molecule with
+the carbon s and p orbitals shown. Note that these orbitals do
+not point along the C-H bonds. Each of the p orbitals points along the
+X, Y or Z axis.<br>
+      <br>
+You may click on each of these four images to enlarge them. Use
+your back button to return here.<br>
+      <br>
+To view live images of the unhybridized atomic orbitals you can go to <a
+ target="_blank" href="../Cl/Cl_AOs.shtml">Dr. Gutow's atomic orbital
+page</a>. To compare with hybrid orbitals use these links for <a
+ href="sp%20hybrid.shtml">sp</a>, <a href="sp2%20hybrid.shtml">sp<sup>2</sup></a>
+and <a href="sp3%20hybrid.shtml">sp<sup>3</sup></a> hybrids. <br>
+      </div></div>
+This means these orbitals as we usually visualize them cannot take part
+in the bonding. The solution is to combine these orbitals (add
+and subtract them from each other) to get four orbitals pointing in the
+proper direction. To get four new orbitals we have to combine
+four atomic orbitals. Thus the orbitals that point the correct
+directions are made by combining the 2s and all three of the 2p
+orbitals. This kind of hybrid is called an <a target="_blank"
+ href="sp3%20hybrid.shtml">sp<sup>3</sup></a> hybrid orbital and is the
+kind of hybridization seen in molecules of <a target="_blank"
+ href="../../VSEPR_TUTORIAL/shtml%20version/AX4_Examples.shtml">tetrahedral
+geometry</a>.<br>
+<br>
+How the atomic orbitals are combined to give sp<sup>3</sup>
+orbitals is a bit complicated, so we will consider the simpler case of
+the sp hybrid formed from combining a single s and p orbital.&nbsp;
+This hybridization is what is seen for carbon in <a target="_blank"
+ href="../../VSEPR_TUTORIAL/shtml%20version/AX2_Examples.shtml">linear
+molecules</a> like CO<sub>2</sub> and acetylene (C<sub>2</sub>H<sub>2</sub>).&nbsp;
+To form separate bonds pointing 180 degrees away from each other two
+separate orbitals pointing in opposite directions are needed.&nbsp;
+These are formed by combining the spherically symmetric s orbital with
+one of the p orbitals. The p orbital by itself doesn't work
+because both lobes are part of the same orbital, so can only
+accommodate one pair of electrons. In two bonds there are two
+pairs of electrons to accommodate. <br>
+<br>
+In this example we will combine the 2s orbital with the 2p<sub>x</sub>
+orbital. Since we start with two atomic orbitals we will get two
+atomic orbitals. The two combinations are 2s + 2p<sub>x</sub> and
+2s - 2p<sub>x</sub>. Consider the + combination. Since the
+two lobes of the p orbital have opposite signs the positive lobe (+)
+adds to the s orbital and increases the electron density on that side
+of the atom. The negative lobe (-) subtracts from the s orbital
+and decreases the electron density on the other side of the atom.&nbsp;
+Since the orbitals represent electron waves the sign actually
+represents the phase of the waves and addition is constructive
+interference while subtraction is destructive interference. The -
+combination causes enhancement of the electron density on the opposite
+side from the + combination. This is illustrated in the graphic
+below.<br>
+<table id="hybridization-animation">
+  <tbody>
+    <tr>
+      <td><img
+ style="width: 300px; height: 267px;" alt="2s &amp; 2px orbitals"
+ src="2s&amp;2px.png"><br>
+      </td>
+      <td><big><big><span
+ style="font-weight: bold;"></span></big></big>
+      <table style="text-align: left; width: 100%;" border="0"
+ cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td"><big><big><span
+ style="font-weight: bold;">+ case: </span></big></big><img
+ style="width: 150px; height: 138px;"
+ alt="Animation of addition of s &amp; p to make an sp orbital"
+ src="making%20sp+%20anim.gif" align="middle"></td>
+          </tr>
+          <tr>
+            <td><big><big><span
+ style="font-weight: bold;">- case: <img
+ style="width: 150px; height: 138px;" alt="animation of (-) combination"
+ src="making%20sp-%20anim.gif" align="middle"></span></big></big></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td>
+      <table>
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;">sp</span><sub style="font-weight: bold;">+</sub><span
+ style="font-weight: bold;">: </span></big></big><img
+ style="width: 150px; height: 133px;" alt="sp+ image" src="sp+.png"
+ align="middle"><big><big><span style="font-weight: bold;"></span></big></big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;">sp</span><sub style="font-weight: bold;">-</sub><span
+ style="font-weight: bold;">:&nbsp; </span></big></big><img
+ style="width: 150px; height: 133px;" alt="sp- image" src="sp-.png"
+ align="middle"></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top;">
+      <div id="fig2-caption" class="fig-caption"> <span
+ class="fig-label">Figure 2</span>: The left image is of
+both the 2s and the 2p<sub>x</sub>
+orbital on a single atom. The sphere in the middle represents the
+location of the nucleus, much enlarged so that you can see it.&nbsp;
+The yellow mesh represents the 2s
+orbital with positive phase,
+the solid blue surface one lobe (positive) of the 2p and the red
+surface
+the other lobe (negative) of the 2p. The middle animations show
+how the + (top) and - (bottom) combinations yield two orbitals pointing opposite
+directions. The images at right show the two sp orbitals (sp<sub>+</sub> and sp<sub>-</sub>).&nbsp;
+To manipulate these orbitals and compare them directly with the other 2p<sub>y</sub>
+and 2p<sub>z </sub>orbitals that did not get used in making the
+hybrids see the interactive <a href="sp%20hybrid.shtml">sp hybrid page</a>.</td>
+    </tr>
+  </tbody>
+</table>
+<p>The other hybrids use more complicated sums (not just 50:50
+combinations) of the orbitals that are combined to yield the
+appropriate hybrid orbitals. You can determine the hybridization
+of an atom from the VSEPR geometry about that atom. Notice that
+the sum of the exponents is the same as the number of groups about the
+atom. This is also the same as the total number of hybrid
+orbitals you get. The
+relationship is shown in the table below.</p>
+<span class="fig-label">Table 1:</span> Relationship of the <a
+ target="_blank"
+ href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
+geometries</a> to atomic hybridization.<br>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">Number of
+Groups around the atom</span><br>
+      </td>
+      <td colspan="1" rowspan="1"
+ style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">Sub-Shapes</span><br>
+A = central atom<br>
+X = atom attached to central atom<br>
+E = nonbonding electron group on central atom<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">Hybridization</span><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">2<br>
+      </td>
+      <td style="text-align: center;">AX<sub>2</sub>, Linear </td>
+      <td style="text-align: center;"><a href="sp%20hybrid.shtml">sp</a><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">3<br>
+      </td>
+      <td style="text-align: center;">AX<sub>3</sub>, Trigonal Planar<br>
+      <br>
+AX<sub>2</sub>E, Bent </td>
+      <td style="text-align: center;"><br>
+      <a href="sp2%20hybrid.shtml">sp<sup>2</sup></a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">4<br>
+      </td>
+      <td style="text-align: center;">AX<sub>4, </sub>Tetrahedral<br>
+      <br>
+AX<sub>3</sub>E, Trigonal Pyramidal<br>
+      <br>
+AX<sub>2</sub>E<sub>2</sub>,<sub> </sub>Bent </td>
+      <td style="text-align: center;"><a href="sp3%20hybrid.shtml">sp<sup>3</sup></a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">5<br>
+      </td>
+      <td style="text-align: center;">AX<sub>5</sub>, Trigonal
+Bipyramidal<br>
+      <br>
+AX<sub>4</sub>E, See-Saw<br>
+      <br>
+AX<sub>3</sub>E<sub>2</sub>, T-Shaped<br>
+      <br>
+AX<sub>2</sub>E<sub>3</sub>, Linear </td>
+      <td style="text-align: center;"><br>
+      <br>
+      <br>
+sp<sup>3</sup>d<br>
+      <br>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">6<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </td>
+      <td style="text-align: center;">AX<sub>6</sub>, Octahedral<br>
+      <br>
+AX<sub>5</sub>E, Square Pyramidal<br>
+      <br>
+AX<sub>4</sub>E<sub>2</sub>,&nbsp;
+Square Planar </td>
+      <td style="text-align: center;"><br>
+      <br>
+sp<sup>3</sup>d<sup>2</sup><br>
+      <br>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: right;"><br>
+</div>
+</div>
+<hr style="width: 100%; height: 2px;">
+<div class="update-info">Last Update: September 7, 2013<br>by J. Gutow <br>
+Expires:---
+</div>
+</body>
+</html>

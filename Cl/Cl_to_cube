@@ -1,0 +1,23 @@
+#!/bin/csh
+
+#This script just runs MacMolPltgridtocube.pl for the listed files.
+
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3dxy.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl1s.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl2px.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl2py.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl2pz.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl2s.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3d_z^2.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3dx^2-y^2.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3dxz.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3dyz.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3px.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3py.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3pz.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl3s.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl4px.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl4py.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl4pz.grid
+perl /Users/jonathan/Documents/"Perl Scripts"/MacMolPltgridtocube.pl Cl4s.grid
+

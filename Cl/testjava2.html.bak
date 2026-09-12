@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Sufaces using jmol</title>
+  <meta content="???" name="author">
+  <meta content="chemistry, orbital, orbitals, isosurface, wavefunction, Jmol, image, animation, rotatable, live display" name="keywords">
+  <meta content="Orbital display using jmol" name="description">
+  <meta
+ content="Page design and layout by J. Gutow 5-2006, page written by Orbitals to Web.jar"
+ name="details">
+  <meta
+ content="This page is designed to have the text and normal html edited in a standard web design"
+ name="instr1">
+  <meta
+ content="program.  The javascript is to control the jmol applet (see below).  It is best to use"
+ name="instr2">
+  <meta
+ content="the java program to generate the proper java script to allow orbital display.  It is"
+ name="instr3">
+  <meta
+ content="important to have all the gzipped files in the same directory as the .html file.  The"
+ name="instr4">
+  <meta
+ content="files needed are: 1) a gzipped file with the atom coordinates, in any of the formats Jmol"
+ name="instr5">
+  <meta
+ content="can read. 2) a gzipped gaussian cube file for each of the orbitals to be displayed.  To"
+ name="instr6">
+  <meta
+ content="save loading time it seems to be better to avoid including the atom coordinates in the"
+ name="instr7">
+  <meta
+ content="cube files.  It is also recommended that the file names for the surfaces correspond to"
+ name="instr8">
+  <meta
+ content="reasonable names for the orbitals as the file names are used to generate the menu items"
+ name="instr9">
+  <meta content="that appear in the popup menus for selecting orbitals."
+ name="instr10">
+  <meta
+ content="The relative path to Jmol on your server must be correct below!!"
+ name="instr11">
+  <script src="../../Applets/Java/Jmol/Jmol.js"></script>
+</head>
+<body>
+<div style="text-align: center;"><big><big><span
+ style="font-weight: bold;">&lt;Replace this text with your title&gt;<br>
+</span></big></big>
+<div style="text-align: left;"><big><big><span
+ style="font-weight: bold;"></span></big></big>&lt;Describe your
+molecule and orbitals here. Don't forget to mention that there is a
+live display below. The user's browser window may be too small to
+display your text and the table containing the Jmol applet without
+scrolling.&gt;<br>
+<br>
+<big><big><span style="font-weight: bold;"></span></big></big>
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <script>
+jmolInitialize("../../Applets/Java/Jmol");
+jmolApplet(300, "load Cl_6-311++(2p,d).log.gz; spacefill 2%; background white"); 
+jmolBr();
+jmolHtml("This image may be rotated and zoomed.  See below for more instructions.");
+        </script>
+      <br>
+      </td>
+      <td style="vertical-align: top;">
+      <div style="text-align: right;"> </div>
+      <form>
+        <div style="text-align: right;"> </div>
+        <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="2">
+          <tbody>
+            <tr>
+              <td colspan="1" rowspan="1"
+ style="vertical-align: top; white-space: nowrap; text-align: right;"><span
+ style="font-weight: bold;">Orbital
+1:</span><br>
+              </td>
+              <td style="vertical-align: top;">
+              <script>
+		jmolMenu([
+		['isosurface neg1 delete; isosurface pos1 delete;','none'],
+		['isosurface neg1 delete; isosurface pos1 delete; isosurface neg1 -0.06 "Cl1s.cube.gz"; color isosurface red;isosurface pos1 0.06 "Cl1s.cube.gz";color isosurface blue;',"Cl1s"],
+		['isosurface neg1 delete; isosurface pos1 delete; isosurface neg1 -0.06 "Cl2px.cube.gz"; color isosurface red;isosurface pos1 0.06 "Cl2px.cube.gz";color isosurface blue;',"Cl2px"],
+		]);
+		</script>
+              <br>
+              </td>
+            </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Type:<br>
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+              <script>
+		jmolRadioGroup([['isosurface neg1 fill nomesh nodots; isosurface pos1 fill nomesh nodots;','Solid','true'],
+		['isosurface neg1 mesh nofill nodots; isosurface pos1 mesh nofill nodots;', 'Mesh'],
+		['isosurface neg1 dots nomesh nofill; isosurface pos1 dots nomesh nofill;', 'Dot']
+		 ]);
+		</script><br>
+              </td>
+            </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Color:<br>
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+              <script>
+		jmolRadioGroup([['isosurface neg1; color isosurface red; isosurface pos1; color isosurface blue;',"blue/red",'true'],
+		['isosurface neg1; color isosurface yellow; isosurface pos1; color isosurface green;',"green/yellow", ],
+		['isosurface neg1; color isosurface cyan; isosurface pos1; color isosurface purple;',"purple/cyan", ],
+		['isosurface neg1; color isosurface pink; isosurface pos1; color isosurface brown;',"brown/pink", ]
+		]);
+		</script>
+              <br>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="1" rowspan="1"
+ style="vertical-align: top; white-space: nowrap; text-align: right;"><span
+ style="font-weight: bold;">Orbital
+2:</span><br>
+              </td>
+              <td style="vertical-align: top;">
+              <script>
+		jmolMenu([
+		['isosurface neg2 delete; isosurface pos2 delete;','none'],
+		['isosurface neg2 delete; isosurface pos2 delete; isosurface neg2 -0.06 "Cl1s.cube.gz"; color isosurface yellow;isosurface pos2 0.06 "Cl1s.cube.gz";color isosurface green;',"Cl1s"],
+		['isosurface neg2 delete; isosurface pos2 delete; isosurface neg2 -0.06 "Cl2px.cube.gz"; color isosurface yellow;isosurface pos2 0.06 "Cl2px.cube.gz";color isosurface green;',"Cl2px"],
+		]);
+		</script>
+              <br>
+              </td>
+            </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Type:<br>
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+              <script>
+		jmolRadioGroup([['isosurface neg2 fill nomesh nodots; isosurface pos2 fill nomesh nodots;','Solid','true'],
+		['isosurface neg2 mesh nofill nodots; isosurface pos2 mesh nofill nodots;', 'Mesh'],
+		['isosurface neg2 dots nomesh nofill; isosurface pos2 dots nomesh nofill;', 'Dot']
+		 ]);
+		</script><br>
+              </td>
+            </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Color:<br>
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+              <script>
+		jmolRadioGroup([['isosurface neg2; color isosurface red; isosurface pos2; color isosurface blue;',"blue/red", ],
+		['isosurface neg2; color isosurface yellow; isosurface pos2; color isosurface green;',"green/yellow",'true'],
+		['isosurface neg2; color isosurface cyan; isosurface pos2; color isosurface purple;',"purple/cyan", ],
+		['isosurface neg2; color isosurface pink; isosurface pos2; color isosurface brown;',"brown/pink", ]
+		]);
+		</script>
+              <br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+&lt;This space can be used as a short caption for the applet at left.&gt;<br><br>
+      <small><a href="http://www.java.com">Javascript</a>
+generated by a java program (<a href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/HowTo/using_orbtohtml_pl.html">Orbitals to Web</a>) on Jun 5, 2006. </small><small><br>
+Original
+page composed by <a href="http://www.uwosh.edu/faculty_staff/gutow/">J.
+Gutow 4/2006</a>. </small> </td>
+    </tr>
+    <tr>
+      <td colspan="2" rowspan="1" style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">Instructions
+for using Jmol to display
+orbitals</span>: <br>
+      </div>
+      <ol>
+        <li>Choose which orbitals to display by selecting them using the
+orbital popup menus. You can control orbital color and fill mode
+by selecting the appropriate options following each orbital menu.&nbsp;
+        </li>
+        <li>ROTATE the image by
+holding
+down the mouse button while moving the cursor over the image. </li>
+        <li>ZOOM by holding down the shift key while moving the cursor
+up
+(decrease magnification) or down (increase magnification) on top of the
+image. </li>
+        <li>Other options are available in the control menu accessible by
+holding
+the mouse button down while the cursor is over "Jmol" in the lower
+right corner (right click also works on a multibutton mouse). </li>
+        <li>For more info about Jmol go to <a target="_blank"
+ href="http://www.jmol.org">www.jmol.org.</a></li>
+      </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

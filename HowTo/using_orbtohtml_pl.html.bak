@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Creating Web Pages To Display Orbitals</title>
+  <meta content="J. Gutow" name="author">
+  <meta
+ content="Instructions for semi-automatically creating Jmol web pages showing orbitals."
+ name="description">
+</head>
+<body style="background-image: url(../../Background.gif);">
+<div style="text-align: center;"><span style="font-weight: bold;"><big>Creating
+Web Pages That Use Jmol To Display Orbitals<br>
+</big></span><span style="font-style: italic;">b</span><span
+ style="font-style: italic;">y Jonathan Gutow, May 2006<br>
+<br>
+<br>
+</span>
+<div style="text-align: left;"><span style="font-weight: bold;"><span
+ style="font-style: italic;"><span style="font-weight: bold;"></span></span></span>The
+instructions here are for semi-automatically creating pages that look
+and work like <a
+ href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/Cl/Cl_AOs.html">my
+chlorine atomic orbital page</a>. The page contains one <a
+ href="http://www.jmol.org/">Jmol java applet</a> and uses <a
+ href="http://www.java.com">Javascript</a> to allow the user to choose
+up to 4 orbitals (isosurfaces) to display simultaneously on the atom or
+molecule in Jmol. A limited number of options for color and
+surface type are also provided in the form of user selectable radio
+buttons.<br>
+<br>
+You will need to be comfortable using the command line interface to use
+the tools described here. Eventually, I hope to create a GUI
+using something reasonably portable like java, but for now you need a
+computer capable of running <a href="http://www.perl.org/">perl scripts</a>
+from the command line. Essentially all *NIX systems have this
+capability (LINUX, BSD, MacOS X). I do not believe perl is
+normally installed on MS Windows, but can be added.<br>
+<br>
+<span style="font-weight: bold;">Step 1</span>: Gather all the files
+you will need into one directory.<br>
+<div style="margin-left: 40px;"><span style="font-style: italic;">Atom
+coordinate file:</span> This file can be any of the formats from
+which Jmol can read atom coordinates (.pdb, .mol, GAMESS .log,
+etc...). To save space on the server and bandwidth these files
+should be gzipped.<br>
+<span style="font-style: italic;">Surface file for each orbital:</span>
+These files must be in the <a
+ href="http://astronomy.swin.edu.au/%7Epbourke/dataformats/cube/">Gaussian
+.cube</a><a
+ href="http://astronomy.swin.edu.au/%7Epbourke/dataformats/cube/">
+format</a>. Gaussian can generate these directly. If
+you use <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a>
+you will need to do some conversion. One route for GAMESS is to
+export the surfaces you want from <a
+ href="http://www.scl.ameslab.gov/%7Ebrett/MacMolPlt/">MacMolPlt </a>and
+convert them using my perl script <a
+ href="http://www.uwosh.edu/faculty_staff/gutow/perl/MacMolPltgridtocube.pl">MacMolPltgridtocube.pl</a>.&nbsp;
+Again,
+I recommend that all these files should be gzipped. Choose the
+names for these files carefully. The basename of the file will be
+used as the text for the menu item used to display this orbital.&nbsp;
+The script assumes that the best display level is (+/-)0.06 for the
+isosurface. Optimize your cube file grid size for this, or edit
+the resulting page to appropriate levels for your data.<br>
+</div>
+<br>
+<span style="font-weight: bold;">Step 2:</span> Generate the raw page
+using my <a
+ href="http://www.uwosh.edu/faculty_staff/gutow/perl/orbtohtml.pl">orbtohtml.pl</a>
+script.<br>
+<div style="margin-left: 40px;">A) If you only have a few orbitals skip
+this step. Create a text file with one file name per line.&nbsp;
+The first line should contain the name of the file with the atom
+coordinates. The file names of the .cube files should follow in
+the order you wish them to appear in the menus.<br>
+B) Within the directory containing the files run the orbtohtml.pl perl
+script. With the following command:<br>
+<br>
+<div style="margin-left: 40px;">perl [path to script]/orbtohtml.pl
+name_of_file_created_in_step_A &gt;name_of_html_file_you_want_created<br>
+<div style="text-align: center;">or<br>
+<div style="text-align: left;">perl [path to script]/orbtohtml.pl
+name_of_coordinate_file name_of_orb1_file [name_of_orb2_file...]
+&gt;name_of_html_file_you_want_created<br>
+<br>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-left: 40px;">The "&gt;" symbol before the name of
+the file you want the data to go to is necessary.<br>
+</div>
+<br>
+<span style="font-weight: bold;">Step 3:</span> Edit the .html file
+created in step 2.<br>
+<div style="margin-left: 40px;">A) Set the relative path to the Jmol
+installation on your server. Search for the following lines in
+the page source and adjust appropriately.<br>
+&lt;script src="../../Applets/Java/Jmol/Jmol.js"&gt;&lt;/script&gt;<br>
+jmolInitialize("../../Applets/Java/Jmol");<br>
+B) Add explanatory text using your favorite .html editor.<br>
+C) If adjustments need to be made to the magnitude of function where
+the surfaces are drawn, I suggest searching the page source by orbital
+name and replacing the 0.06 in the isosurface command with an
+appropriate value.<br>
+<br>
+<br>
+</div>
+<span style="font-weight: bold;">Step 4:</span> Put your new page and
+all the .gz files on your server in a single directory. Make sure
+it has the proper relative relation to the Jmol installation on your
+server.<br>
+<div style="text-align: right;"><small><small>Last Updated: 5/24/06</small></small><br>
+</div>
+</div>
+<span style="font-weight: bold;">
+</span></div>
+</body>
+</html>

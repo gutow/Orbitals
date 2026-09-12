@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--/*	Allows to open Jmol models on request, in a div
+	Available from  http://biomodel.uah.es/Jmol/  and  http://wiki.jmol.org/ 
+	Author: Angel Herráez.  Version 2007.04.23
+	Modified by Jonathan Gutow Version 2007.07.17
+
+	This template is offered freely for anyone to use or adapt it, 
+	according to Creative Commons Attribution-ShareAlike 3.0 License,
+	http://creativecommons.org/licenses/by-sa/3.0/
+*/-->
+  <meta http-equiv="content-type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="Jmol, see http://www.jmol.org">
+  <meta name="Author" content="J. Gutow">
+  <meta name="keywords" content="generated_by_Jmol_Webexport">
+  <title>VB model of ethylene double bond</title>
+  <style type="text/css">
+/* These are important, don't change: */
+html, body { height:100%; overflow:hidden; margin:0; padding:0; }
+.JmolPanels { position:absolute; overflow:hidden;}
+.textPanels { position:absolute; overflow:auto; }
+#JmolPane {left:40%; width: 60%; top:0px; height:100%; }
+#mainPane { left:0px; width:40%; top:0px; height:100%; }
+#JmolDiv {width:100%; height:100%;}
+#Jmol0 {width:100%; height:100%;}
+/* Don't add margin or padding to textPane; if needed, use an inner div with desired style (like 'contents' below) */
+
+/* These are aesthetic, can be customized: */
+.content { padding:0.5em 1ex; }
+.textPanels { background-color:rgb(102, 255, 255); }
+  </style>
+  <script src="JmolPopIn.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	var jmoljarpath = "../../Applets/Java/Jmol"; // where Jmol.jar is to be found on a server
+    var jmoljspath = "../../Applets/Java/Jmol";  // where Jmol.js is to be found on a server
+	var jmollocaljarpath = "../../"; // where Jmol.jar is to be found locally
+    var jmollocaljspath = "../../";  // where Jmol.js is to be found locally
+    var jmoljarfile = "JmolApplet.jar";  // "JmolApplet.jar" is everything in one file; 
+ 	var dataDir = ".";                // where the model AND .spt files are to be found.
+ 	changePathIfLocal();
+  </script>
+  <script type="text/javascript">
+    addJavaScript(jmoljspath, "Jmol.js");
+  </script>
+  <script type="text/javascript">
+  jmolInitialize(jmoljarpath, jmoljarfile); 
+  jmolSetDocument(0);
+  </script>
+  <meta content="J. Gutow" name="author">
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 255, 255);"
+ onload="scriptbuttonJmol('3-D_Lewis_structure.spt')">
+<div id="JmolPane" class="JmolPanels">
+<div id="Jmol0" class="JmolDiv"> <img src="3-D_Lewis_structure.png"
+ alt="still of jmol image" style="height: 100%; width: 100%;"> </div>
+</div>
+<div id="mainPane" class="textPanels">
+<div id="mainContent" class="content"><span style="font-weight: bold;">Valence
+Bond Model of the Double Bond</span><br>
+<div style="text-align: center;">(ethylene as the example)<br>
+</div>
+At right is a 3-D version of the Lewis structure of the ethylene
+molecule.&nbsp; You may rotate the molecule yourself by holding the
+mouse button down while dragging it around within the image
+frame.&nbsp; Dark grey spheres represent C atoms and light grey
+(white) spheres represent hydrogen atoms.&nbsp; Single bonds are
+represented as single sticks and double bonds as a pair of
+sticks.&nbsp; To return to this view at any time click on the button
+below:<br>
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script 3-D_Lewis_structure.spt", "3-D Lewis structure")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Each carbon atom is surrounded by three "groups" as specified in the <a
+ target="_top"
+ href="http://www.uwosh.edu/faculty_staff/gutow/VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
+model</a> for molecular shapes.&nbsp; An atom surrounded by three
+groups will be sp<a target="_top"
+ href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/N/sp2%20hybrid.shtml"><sup>2</sup>
+hybridized</a> to get orbitals pointing in the correct directions to
+make bonds at 120 degrees from each other. Click the button below to
+show these hybrid orbitals on one
+C.
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script sp2_orbitals_on_one_C.spt", "sp2 orbitals on one C")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Single bonds (&#963;-bonds) are made by overlapping hybrid orbitals pointed
+along the
+bonds.&nbsp; The &#963;-bond that is part of the double bond in ethylene
+is made by the overlapping sp<sup>2</sup> hybrids on the neighboring C
+atoms. Click on the button below to show the hybrid orbitals on the
+other C atom and the overlap forming the &#963;-bond.
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script all_C_sp2_orbitals.spt", "all C sp2 orbitals")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+The bonds to the H atoms are made by overlapping the remaining hybrid
+orbitals with the H 1s orbitals.&nbsp; Click on the button below to add
+the H 1s orbitals.<br>
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script sigma_bonds.spt", "&sigma;-bonds")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+This represents the &#963;-bonding framework of the ethylene molecule.<br>
+<br>
+&#960;-bonds are made by the side-on overlap of p orbitals on neighboring
+atoms.&nbsp; To add the two p orbitals that are left over on the
+carbons from the formation of the sp<sup>2</sup> hybrid orbitals click
+on the
+button below.<br>
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script _sigma_bonds___p_orbitals.spt", " &sigma;-bonds & p orbitals")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+The yellow orbitals are the p orbitals.<br>
+<br>
+To show how the two p orbitals combine to make a &#960;-bond click on the
+button below.
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script _sigma_bonds__pi_bond___p_orbitals.spt", " &sigma;-bonds, &pi;-bond & p orbitals")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+The red surface indicates how the two yellow p orbitals overlap. To
+remove the p orbitals and leave the &#960;-bond click on the button below.
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script _sigma_bonds___pi_bond.spt", " &sigma;-bonds & &pi;-bond")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+This model shows the double bond as the &#963;-type overlap of the sp<sup>2</sup>
+hybrid orbitals (in blue) plus the &#960;-type overlap of the p orbitals (in
+red).&nbsp; The electron density above and below the bond in the &#960;-bond
+prevents the two ends of the molecule from rotating relative to each
+other about the C&#8211;C bond; thus maintaining the planar geometry of the
+molecule.<br>
+<br>
+To show just the &#960;-bond click on the button below.
+<table style="text-align: center; width: 100%;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>
+      <script type="text/javascript">
+     
+     document.write(jmolButton("script pi_bond.spt", "&pi;-bond")); 
+     
+  </script><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+You may look at any of these intermediate views again by clicking on
+the appropriate button.<br>
+<br>
+<div id="authordiv" style="text-align: right;">
+Based on template by A. Herr&aacute;ez as modified by J. Gutow
+</div>
+<div id="creationdiv" style="text-align: right;"> <small>Page skeleton
+and <a href="http://www.java.com">JavaScript</a> generated by export
+to web function of (<a href="http://jmol.sourceforge.net">Jmol 11.4.0
+2007-12-20 06:37</a>) on Mar 15, 2008. </small><br>
+</div>
+<div id="logdiv" style="display: none;">
+<pre>Using directory /Applications/jmol-11.4.0/tests/Ethylene double bond
+  adding JmolPopIn.js
+  ...jmolApplet0
+      ...adding 3-D_Lewis_structure.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding 3-D_Lewis_structure.spt
+  ...jmolApplet1
+      ...adding sp2_orbitals_on_one_C.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding sp2_orbitals_on_one_C.spt
+  ...jmolApplet2
+      ...adding all_C_sp2_orbitals.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding all_C_sp2_orbitals.spt
+  ...jmolApplet3
+      ...adding sigma_bonds.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding sigma_bonds.spt
+  ...jmolApplet4
+      ...adding _sigma_bonds___p_orbitals.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding _sigma_bonds___p_orbitals.spt
+  ...jmolApplet5
+      ...adding _sigma_bonds__pi_bond___p_orbitals.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding _sigma_bonds__pi_bond___p_orbitals.spt
+  ...jmolApplet6
+      ...adding _sigma_bonds___pi_bond.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding _sigma_bonds___pi_bond.spt
+  ...jmolApplet7
+      ...adding pi_bond.png
+      ...copying /Users/jonathan/Classes/All_P-Chem_stuff/Fall 05 (371)/QM_TEST/Ethylene/ethylene.log to /Applications/jmol-11.4.0/tests/Ethylene double bond/ethylene.log
+      ...adding pi_bond.spt
+
+</pre>
+</div>
+</div>
+<!--content--></div>
+<!--mainPane-->
+</body>
+</html>

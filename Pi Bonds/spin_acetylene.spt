@@ -1,0 +1,174 @@
+# Jmol state version 11.3.26_dev  2007-09-08 13:56;
+# window state;
+# height 765;
+# width 819;
+initialize;
+stateVersion = 1103026;
+refreshing = false;
+backgroundColor = "[x000000]";
+axis1Color = "[xff0000]";
+axis2Color = "[x008000]";
+axis3Color = "[x0000ff]";
+ambientPercent = 45;
+diffusePercent = 84;
+specular = true;
+specularPercent = 22;
+specularPower = 40;
+specularExponent = 6;
+
+# file state;
+
+
+allowEmbeddedScripts = false;
+autoBond = true;
+appendNew = true;
+applySymmetryToBonds = false;
+bondRadiusMilliAngstroms = 150;
+bondTolerance = 0.45;
+defaultLattice = {0.0 0.0 0.0};
+defaultLoadScript = "";
+loadFormat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+forceAutoBond = false;
+minBondDistance = 0.4;
+percentVdwAtom = 20;
+
+load "acetylene_pi_bonds.log.gz";
+
+
+# settings;
+refreshing = false;
+ defaultanglelabel = "%VALUE %UNITS";
+ defaultcolorscheme = "Jmol";
+ defaultdistancelabel = "%VALUE %UNITS";
+ defaultdrawarrowscale = 0.5;
+ defaultloadscript = "";
+ defaulttorsionlabel = "%VALUE %UNITS";
+ defaulttranslucent = 0.5;
+allowembeddedscripts = true;
+allowrotateselected = false;
+applysymmetrytobonds = false;
+autobond = true;
+autofps = false;
+axes = window;
+axesmode = 0;
+axesscale = 2.0;
+bondmodeor = false;
+bondradiusmilliangstroms = 150;
+bondtolerance = 0.45;
+cartoonrockets = false;
+chaincasesensitive = false;
+disablepopupmenu = false;
+displaycellparameters = true;
+dotsselectedonly = false;
+dotsurface = true;
+dynamicmeasurements = false;
+forceautobond = false;
+greyscalerendering = false;
+hbondsbackbone = false;
+hbondssolid = false;
+helppath = "http://www.stolaf.edu/academics/chemapps/jmol/docs/index.htm";
+hermitelevel = 0;
+hidenameinpopup = false;
+hidenavigationpoint = false;
+highresolutionflag = false;
+hoverdelay = 0.5;
+justifymeasurements = false;
+loadformat = "http://www.rcsb.org/pdb/files/%FILE.pdb";
+measureallmodels = false;
+minbonddistance = 0.4;
+navigationcentered = false;
+navigationperiodic = false;
+navigationspeed = 5.0;
+percentvdwatom = 20;
+perspectivedepth = true;
+pickingspinrate = 10;
+propertyatomnumberfield = 0;
+propertycolorscheme = "roygb";
+propertydatafield = 0;
+rangeselected = false;
+ribbonaspectratio = 16;
+ribbonborder = false;
+scriptdelay = 0;
+selecthetero = true;
+selecthydrogen = true;
+sheetsmoothing = 1.0;
+showhiddenselectionhalos = false;
+showhydrogens = true;
+showmeasurements = true;
+showmultiplebonds = true;
+shownavigationpointalways = false;
+solventprobe = false;
+solventproberadius = 1.2;
+ssbondsbackbone = false;
+testflag1 = false;
+testflag2 = false;
+testflag3 = false;
+testflag4 = false;
+tracealpha = true;
+usenumberlocalization = true;
+vectorscale = 1.0;
+vibrationperiod = 0.5;
+vibrationscale = 0.5;
+zoomlarge = true;
+zshade = false;
+
+#user-defined variables; 
+isspinning = true;
+
+
+# connections;
+
+# label defaults;
+select none;
+color label none;
+background label none;
+labelOffset = 4 4;
+labelAlignment = left;
+labelPointer = off;
+font label 13 SansSerif Plain;
+
+# model state;
+
+select ({2 3 6 7 10 11 14 15 18 19 22 23 26 27 30 31});
+Spacefill 0.18;
+select ({0 1 4 5 8 9 12 13 16 17 20 21 24 25 28 29});
+Spacefill 0.2925;
+select BONDS ({0:23});
+wireframe 0.1;
+
+measures = nanometers;
+font measures 15 SansSerif Plain;
+select measures ({null});
+boundBox off;
+;
+isosurface homo1 0.15 phase color green yellow mo 26; ;# ({0:31}) ({null})
+isosurface fill noMesh noDots notFrontOnly frontlit;
+isosurface homo2 0.15 phase color red blue mo 27; ;# ({0:31}) ({null})
+isosurface fill noMesh noDots notFrontOnly frontlit;
+frank on;
+font frank 16 SansSerif Bold;
+# frame state;
+# modelCount 8;
+# first 1;
+# last 8;
+frame RANGE 1 8;
+animation DIRECTION +1;
+animation MODE ONCE 0.0 0.0;
+frame 1;
+animation OFF;
+
+# orientation/center/spin state;
+set refreshing false;
+perspectiveModel = 11;
+cameraDepth = 3.0;
+center {8.940697E-7 -7.48234E-6 2.0108726E-7};
+moveto /* time, axisAngle */ 0.0 { -4 -71 997 171.88} /* zoom, translation */  166.45 0.06 0.07  /* center, rotationRadius */ {8.940697E-7 -7.48234E-6 2.0108726E-7} 2.895946 /* navigation center, translation, depth */ {0.0 0.0 0.0} -3.7262E-6 2.2738587E-4 50.0;;
+slab 100;depth 0;
+spinX = 0;spinY = 30;spinZ = 0;spinFps = 30;
+refreshing = true;refresh;
+spin on;
+
+# selection state;
+select ({0:31});
+
+refreshing = true;

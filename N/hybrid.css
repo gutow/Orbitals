@@ -1,0 +1,101 @@
+  #display {
+      display:block;
+      border:solid;
+      border-width:1px;
+      border-color:grey;
+      height:354px;
+  }
+  #Jmol_div {
+      position:relative;
+      display:inline-block;
+      padding:0;
+      top:5px;
+      border:solid;
+      border-color:gray;
+      border-width:1px;
+      width:302px;
+  }
+  #Jmol_button_div {
+      position:absolute;
+      display:inline-block;
+      padding:2px;
+      overflow:scroll;
+      height:350px;
+  }
+  #fig1-images {
+      max-width:410px;
+      display:inline-block;
+      border:0;
+      padding:0;
+      margin:0;
+  }
+  #fig1 img{
+      width:200px;
+      height:178px;
+      border:0;
+      padding:0;
+      margin:0;
+  }
+  .fig-caption {
+      font-size: 0.9em;
+  }
+  .fig-label {
+      font-weight: bold;
+  }
+  #fig1-caption {
+      display:inline-block;
+      max-width:50%;
+      vertical-align:top;
+      margin: 20px 5px 5px 5px;
+  }
+  #hybridization-animation {
+      text-align: left;
+      width: 100%;
+      border:0;
+  }
+  #hybridization-animation td {
+      text-align: center;
+      vertical-align: middle;
+  }
+  body {
+      color: rgb(0, 0, 0); 
+      /*background-color: rgb(250, 248, 244);*/
+  }
+  .subtitle-text {
+      font-weight:bold;
+      text-align:center;
+      font-size:1.5em;
+  }
+  .explanation-text {
+      margin:2px;
+  }
+  .example-table {      
+      text-align:center;
+      border:solid;
+      border-top-width:1px;
+      border-left-width:1px;
+      border-bottom-width:1px;
+      border-right-width:1px;
+      border-spacing:2px;
+      border-collapse:separate;
+      border-color:grey;
+      border-style:inset;
+      display:table-cell;
+  }
+  .example-table td {      
+      text-align:center;
+      border:solid;
+      border-top-width:1px;
+      border-left-width:1px;
+      border-bottom-width:1px;
+      border-right-width:1px;
+      border-spacing:2px;
+      border-collapse:separate;
+      border-color:grey;
+      border-style:inset;
+      display:table-cell;
+  }
+  .update-info {
+      text-align:right;
+      font-size:0.5em;
+  }

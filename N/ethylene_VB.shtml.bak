@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Valence Bond Model of Double Bond</title>
+  <style type="text/css"> @import url(hybrid.css);</style>  
+  <style type="text/css">
+  #visible_page_wrapper{
+      position:relative;
+      top:0px;
+      height:480px;
+      width:100%;
+      overflow:hidden;
+  }
+  #JSmol_loading_msg{
+      color:orange;
+  }
+  .JmolTextPane {
+      float: left;
+      width:39.5%;
+      height:99%;
+      overflow:scroll;
+      border:1px solid;
+      display:inline;
+  }
+  .JmolPane {
+      float: right;
+      width:60%;
+      height:99%;
+      overflow:hidden;
+      /*border:1px solid green;*/
+  }
+  .JmolViewerPane{
+      width:98%;
+      height:96%;
+      overflow:hidden;
+      /*border:1px solid grey;*/
+  }
+  .JmolWidgetPane {
+      width:98%;
+      height:3.5%;
+      overflow:scroll;
+      /*border:1px solid blue;*/
+  }
+  .JmolButtonDiv{
+      width:99%;
+      /*border:1px solid blue;*/
+      text-align:center;
+      /*min-height:8px;*/
+  }
+  .update-info{
+      text-align:right;
+      font-size: small;
+      font-style: italic;
+  }
+  </style>
+    <script src="../../Applets/JSmol/JSmol.min.js"></script>
+    <script src="../../Applets/JSmol/Jmol2.js"></script>
+  <script type="text/javascript">
+  var jmolApplet; //our viewer
+  var jmolInfo; //setup parameters
+  ;(function() {
+
+// Developers: The debugCode flag is checked in j2s/java/core.z.js, 
+// and, if TRUE, skips loading the core methods, forcing those
+// to be read from their individual directories. Set this
+// true if you want to do some code debugging by inserting
+// System.out.println, document.title, or alert commands
+// anywhere in the Java or Jmol code.
+
+var s = document.location.search;
+Jmol.debugCode = (s.indexOf("debugcode") >= 0);
+
+
+jmol_isReady = function(applet) {
+//	document.title = (applet._id + " is ready")
+//	Jmol._getElement(applet, "appletdiv").style.border="1px solid blue"
+    elem = document.getElementById("JSmol_loading_msg");
+    elem.style.visibility="hidden";
+    elem.style.height="0";
+    elem.style.border="none";
+ }		
+
+
+jmolInfo = {
+	width: "100%",
+	height: "100%",
+	debug: false,
+	color: "white",
+	addSelectionOptions: false,
+	serverURL: "../../Applets/JSmol/php/jsmol.php",
+	use: "HTML5",
+    coverImage: "ethylene/3-D_Lewis_structure.png",        // initial image instead of applet
+    coverScript: "",	// special script for click of cover image (otherwise equal to script)
+    deferApplet: false,                  // wait to load applet until click
+    deferUncover: true,                 // wait to uncover applet until script completed
+    jarPath: "../../Applets/JSmol/java",
+	j2sPath: "../../Applets/JSmol/j2s",
+	jarFile: "JmolAppletSigned0.jar",
+	isSigned: true,
+	//disableJ2SLoadMonitor: true,
+	disableInitialConsole: true,
+	readyFunction: jmol_isReady,
+	//defaultModel: "ethylene/ethylene.xyz",
+	script: "load ethylene/3-D_Lewis_structure.spt"
+}
+
+// ?_USE=JAVA   ?_USE=SIGNED   ?_USE=HTML5
+   if (s.indexOf("USE=") >= 0)
+     jmolInfo.use = s.split("USE=")[1].split("&")[0]
+   else if (s.indexOf("JAVA") >= 0)
+     jmolInfo.use = "JAVA"
+   else if (s.indexOf("IMAGE") >= 0)
+     jmolInfo.use = "IMAGE"
+   else if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = "JAVA IMAGE"
+   else if (s.indexOf("WEBGL") >= 0)
+     jmolInfo.use = "WEBGL HTML5"
+   if (s.indexOf("NOWEBGL") >= 0)
+     jmolInfo.use = use.replace(/WEBGL/,"")
+   var useSignedApplet = (s.indexOf("SIGNED") >= 0);
+   if(useSignedApplet && jmolInfo.use == "HTML5") jmolInfo.use = "JAVA";
+
+   var protocol = window.location.protocol.toLowerCase();
+   if (protocol == "file:") { 
+    jmolInfo.jarPath = "java";
+    jmolInfo.j2sPath = "j2s";
+    jmolInfo.jarFile = "JmolAppletSigned.jar";
+    jmolInfo.isSigned= "true";
+  }
+})();
+
+Jmol.setDocument(document);
+
+// notice that we are using no document.write() function here. All DOM-based.
+// Jmol.getAppletHtml is working.
+
+$(document).ready(function(){
+    $("#Jmol1").html(Jmol.getAppletHtml("jmolApplet", jmolInfo));
+});
+  </script>
+  
+</head>
+<body>
+<!--#include virtual = "../N/Hybrid Orbitals Header.html"-->
+  <div id="visible_page_wrapper">
+    <div id="Text_Buttons" class="JmolTextPane">
+      <div id="JSmol_loading_msg">
+        Once the molecule file is fully loaded the image at right
+        will become live.  At that time the "activate 3-D" icon 
+        <img src="j2s/img/play_make_live.jpg" height="15px"> will disappear.<hr/>
+      </div>
+      <div id="HeaderInfo"><center><span style="font-weight:bold">
+        Valence Bond Model of the Double Bond<br/>
+        (ethylene as the example)
+      </span></center></div>
+    At right is a 3-D version of the Lewis structure of the ethylene
+    molecule. You may rotate the molecule yourself by holding the
+    mouse button down while dragging it around within the image
+    frame. Dark grey spheres represent C atoms and light grey
+    (white) spheres represent hydrogen atoms. Single bonds are
+    represented as single sticks and double bonds as a pair of
+    sticks. To return to this view at any time click on the button
+    below:
+      <div id="3-D_Lewis_structure" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/3-D_Lewis_structure.spt')">3-D Lewis structure</button>
+      </div>
+      Each carbon atom is surrounded by three "groups" as specified in the <a
+      target="_top"
+      href="http://www.uwosh.edu/faculty_staff/gutow/VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
+      model</a> for molecular shapes. An atom surrounded by three
+      groups will be <a target="_top"
+      href="http://www.uwosh.edu/faculty_staff/gutow/Orbitals/N/sp2%20hybrid.shtml">sp<sup>2</sup>
+      hybridized</a> to get orbitals pointing in the correct directions to
+      make bonds at 120 degrees from each other. Click the button below to
+      show these hybrid orbitals on one C.
+      <div id="sp2_orbitals_on_one_C" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/sp2_orbitals_on_one_C.spt')">sp<sup>2</sup> orbitals on one C</button>
+      </div>
+      Single bonds (&#963;-bonds) are made by overlapping hybrid orbitals pointed
+      along the bonds. The &#963;-bond that is part of the double bond in ethylene
+      is made by the overlapping sp<sup>2</sup> hybrids on the neighboring C
+      atoms. Click on the button below to show the hybrid orbitals on the
+      other C atom and the overlap forming the &#963;-bond.
+      <div id="all_C_sp2_orbitals" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/all_C_sp2_orbitals.spt')">all C sp<sup>2</sup> orbitals</button>
+      </div>
+      The bonds to the H atoms are made by overlapping the remaining hybrid
+      orbitals with the H 1s orbitals. Click on the button below to add
+      the H 1s orbitals and thus show the whole &#963;-bond network.
+      <div id="sigma_bonds" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/sigma_bonds.spt')">&#963;-bonds</button>
+      </div>
+      &#960;-bonds are made by the side-on overlap of p orbitals on neighboring
+      atoms. To add the two p orbitals that are left over on the
+      carbons from the formation of the sp<sup>2</sup> hybrid orbitals click
+      on the button below.
+      <div id="_sigma_bonds___p_orbitals" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/_sigma_bonds___p_orbitals.spt')">&#963;-bonds & p-orbitals</button>
+      </div>
+      The yellow orbitals are the p orbitals.<br><br>
+      To show how the two p orbitals combine to make a &#960;-bond click on the
+      button below.
+      <div id="_sigma_bonds__pi_bond___p_orbitals" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/_sigma_bonds__pi_bond___p_orbitals.spt')">&#963;-bonds, &#960;-bond & p-orbitals</button>
+      </div>
+      The red surface indicates how the two yellow p orbitals overlap. To
+      remove the p orbitals and leave the &#960;-bond click on the button below.
+      <div id="_sigma_bonds___pi_bond" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/_sigma_bonds___pi_bond.spt')">&#963;-bonds, &#960;-bond</button>
+      </div>
+      This model shows the double bond as the &#963;-type overlap of the sp<sup>2</sup>
+      hybrid orbitals (in blue) plus the &#960;-type overlap of the p orbitals (in
+      red). The electron density above and below the bond in the &#960;-bond
+      prevents the two ends of the molecule from rotating relative to each
+      other about the C&#8211;C double bond; thus maintaining the planar geometry of the
+      molecule.<br><br>
+      To show just the &#960;-bond click on the button below.
+      <div id="pi_bond" class="JmolButtonDiv">
+        <button onclick="Jmol.script(jmolApplet,'load ethylene/pi_bond.spt')">&#960;-bond</button>
+      </div>
+      You may look at any of these intermediate views again by clicking on
+      the appropriate button.
+      <div id="updatediv" class="update-info">
+       Last Update: Nov. 1, 2019<br/>J. Gutow
+      </div>
+    </div>
+    <div id="Viewer_and_Widgets" class="JmolPane">
+      <div id="Jmol1" class="JmolViewerPane">This will be the viewer</div>
+      <div id="JmolWidgets1" class="JmolWidgetPane">If your browser/OS combination is Java 
+      capable you will get snappier performance if you <a href="?use=JAVA">use Java.</a></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Hybrid Orbitals from s + p</title>
+  <meta content="J. Gutow" name="author">
+  <meta content="Hybrid orbitals made from s and p orbitals"
+ name="description">
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 204);"
+ alink="#000099" link="#000099" vlink="#990099">
+<div style="text-align: center;"><big><big><span
+ style="font-weight: bold;">Hybrid Orbitals</span></big></big><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;">(made from combining s and p orbitals)<br>
+</span>
+<div style="text-align: left;"><span style="text-decoration: underline;">You
+may rotate the images below</span> by holding down the mouse button
+while dragging the mouse over an image. The dots represent a
+surface of constant probability for finding an electron in these hybrid
+orbitals. The data files from which these images are built were
+made by W. R. Salzman, Department of Chemistry, University of Arizona
+(salzman@ccit.arizona.edu).<br>
+<span style="font-weight: bold;"></span></div>
+</div>
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr align="center">
+      <td colspan="2" rowspan="1" style="vertical-align: top;">Results
+of 1 2s + 1 2p<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 50%; vertical-align: top; text-align: center;"><!--#include virtual="sp hybrid orbital.html"-->A
+single sp hybrid<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><!--#include virtual="both sp hybrid orbitals.html"-->Both
+sp
+hybrids centered on single atom<br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2" rowspan="1" style="vertical-align: top;">Results
+of 1 2s + 2 2p's<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: right;"><small><small>Last Update: 4/13/06</small></small><br>
+</div>
+</body>
+</html>
