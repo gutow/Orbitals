@@ -88,16 +88,16 @@ Color:<br>
                   <div id="iso1_color_radio_group" class="color_mode_radio_group">
                       <input type="radio" name="iso1_colors" id="iso1_red_blue" checked
                              class="color_mode_radio_group" value="isosurface iso1; color isosurface phase red blue;"/>
-                      <label for="iso1_solid">Red/Blue</label>
+                      <label for="iso1_red_blue">Red/Blue</label>
                       <input type="radio" name="iso1_colors" id="iso1_green_yellow"
                              class="color_mode_radio_group" value="isosurface iso1; color isosurface phase yellow green;"/>
-                      <label for="iso1_translucent">Green/Yellow<label>
+                      <label for="iso1_green_yellow">Green/Yellow<label>
                       <input type="radio" name="iso1_colors" id="iso1_purple_cyan"
                              class="color_mode_radio_group" value="isosurface iso1; color isosurface phase cyan purple;"/>
-                      <label for="iso1_mesh">Purple/Cyan</label>
+                      <label for="iso1_purple_cyan">Purple/Cyan</label>
                       <input type="radio" name="iso1_colors" id="iso1_brown_pink"
                              class="color_mode_radio_group" value="isosurface iso1; color isosurface phase pink brown;"/>
-                      <label for="iso1_dot">Brown/Pink</label>
+                      <label for="iso1_brown_pink">Brown/Pink</label>
                   </div>
               </td>
             </tr>
@@ -131,33 +131,22 @@ Display Mode:
  style="font-weight: bold;">Orbital
 2:</span><br>
               </td>
-                            <td style="vertical-align: top;">
-              <script>
-		jmolMenu([
-		['isosurface iso2 delete;','none'],
-		['isosurface iso2 delete; isosurface iso2 mo 6; color isosurface phase yellow green;',"sp+"],
-		['isosurface iso2 delete; isosurface iso2 mo 7; color isosurface phase yellow green;',"sp-"],
-		['isosurface iso2 delete; isosurface iso2 mo 3; color isosurface phase yellow green;',"N_2py"],
-		['isosurface iso2 delete; isosurface iso2 mo 5; color isosurface phase yellow green;',"N_2pz"],
-		]);
-		</script>
-              <br>
-              </td>
-            </tr>
-            <tr>
-              <td
- style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-Type:<br>
-              </td>
-              <td
- style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso2 fill nomesh nodots translucent 0; ','Solid','true'],
-		['isosurface iso2 fill nomesh nodots translucent;', 'Translucent'],
-		['isosurface iso2 mesh nofill nodots translucent 0;', 'Mesh'],
-		['isosurface iso2 dots nomesh nofill translucent 0;', 'Dot']
-		 ]);
-		</script><br>
+              <td style="vertical-align: top;">
+                <select id="iso2_select" class="orbital_selector">
+                    <option selected value="isosurface iso2 delete;">None</option>
+                    <option value="isosurface iso2 delete; isosurface iso2 mo 6;">
+                        sp+
+                    </option>
+                    <option value="isosurface iso2 delete; isosurface iso2 mo 7;">
+                        sp-
+                    </option>
+                    <option value="isosurface iso2 delete; isosurface iso2 mo 3;">
+                        2p<sub>y</sub>
+                    </option>
+                    <option value="isosurface iso2 delete; isosurface iso2 mo 5;">
+                        2p<sub>z</sub>
+                    </option>
+                </select>
               </td>
             </tr>
             <tr>
@@ -167,14 +156,43 @@ Color:<br>
               </td>
               <td
  style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso2; color isosurface phase red blue',"blue/red",],
-		['isosurface iso2; color isosurface phase yellow green;',"green/yellow", 'true'],
-		['isosurface iso2; color isosurface phase cyan purple;',"purple/cyan", ],
-		['isosurface iso2; color isosurface phase pink brown;',"brown/pink", ]
-		]);
-		</script>
-              <br>
+                  <div id="iso2_color_radio_group" class="color_mode_radio_group">
+                      <input type="radio" name="iso2_colors" id="iso2_red_blue" checked
+                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase red blue;"/>
+                      <label for="iso2_red_blue">Red/Blue</label>
+                      <input type="radio" name="iso2_colors" id="iso2_green_yellow"
+                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase yellow green;"/>
+                      <label for="iso2_green_yellow">Green/Yellow<label>
+                      <input type="radio" name="iso2_colors" id="iso2_purple_cyan"
+                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase cyan purple;"/>
+                      <label for="iso2_purple_cyan">Purple/Cyan</label>
+                      <input type="radio" name="iso2_colors" id="iso2_brown_pink"
+                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase pink brown;"/>
+                      <label for="iso2_brown_pink">Brown/Pink</label>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Display Mode:
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+                  <div id="iso2_display_mode_radio_group" class="display_mode_radio_group">
+                      <input type="radio" name="iso2_display_mode" id="iso2_solid" checked
+                             class="display_mode_radio_group" value="isosurface iso2 fill nomesh nodots translucent 0;"/>
+                      <label for="iso2_solid">Solid</label>
+                      <input type="radio" name="iso2_display_mode" id="iso2_translucent"
+                             class="display_mode_radio_group" value="isosurface iso2 fill nomesh nodots translucent 0.5;"/>
+                      <label for="iso2_translucent">Translucent<label>
+                      <input type="radio" name="iso2_display_mode" id="iso2_mesh"
+                             class="display_mode_radio_group" value="isosurface iso2 nofill mesh nodots translucent 0;"/>
+                      <label for="iso2_mesh">Mesh</label>
+                      <input type="radio" name="iso2_display_mode" id="iso2_dot"
+                             class="display_mode_radio_group" value="isosurface iso2 nofill nomesh dots translucent 0;"/>
+                      <label for="iso2_dot">Dots</label>
+                  </div>
               </td>
             </tr>
             <tr>
@@ -183,33 +201,22 @@ Color:<br>
  style="font-weight: bold;">Orbital
 3:</span><br>
               </td>
-                            <td style="vertical-align: top;">
-              <script>
-		jmolMenu([
-		['isosurface iso3 delete;','none'],
-		['isosurface iso3 delete; isosurface iso3 mo 6; color isosurface phase cyan purple;',"sp+"],
-		['isosurface iso3 delete; isosurface iso3 mo 7; color isosurface phase cyan purple;',"sp-"],
-		['isosurface iso3 delete; isosurface iso3 mo 3; color isosurface phase cyan purple',"N_2py"],
-		['isosurface iso3 delete; isosurface iso3 mo 5; color isosurface phase cyan purple',"N_2pz"],
-		]);
-		</script>
-              <br>
-              </td>
-            </tr>
-            <tr>
-              <td
- style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-Type:<br>
-              </td>
-              <td
- style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso3 fill nomesh nodots translucent 0; ','Solid','true'],
-		['isosurface iso3 fill nomesh nodots translucent;', 'Translucent'],
-		['isosurface iso3 mesh nofill nodots translucent 0;', 'Mesh'],
-		['isosurface iso3 dots nomesh nofill translucent 0;', 'Dot']
-		 ]);
-		</script><br>
+                                          <td style="vertical-align: top;">
+                <select id="iso3_select" class="orbital_selector">
+                    <option selected value="isosurface iso3 delete;">None</option>
+                    <option value="isosurface iso3 delete; isosurface iso3 mo 6;">
+                        sp+
+                    </option>
+                    <option value="isosurface iso3 delete; isosurface iso3 mo 7;">
+                        sp-
+                    </option>
+                    <option value="isosurface iso3 delete; isosurface iso3 mo 3;">
+                        2p<sub>y</sub>
+                    </option>
+                    <option value="isosurface iso3 delete; isosurface iso3 mo 5;">
+                        2p<sub>z</sub>
+                    </option>
+                </select>
               </td>
             </tr>
             <tr>
@@ -219,16 +226,46 @@ Color:<br>
               </td>
               <td
  style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso3; color isosurface phase red blue',"blue/red",],
-		['isosurface iso3; color isosurface phase yellow green;',"green/yellow", ],
-		['isosurface iso3; color isosurface phase cyan purple;',"purple/cyan", 'true'],
-		['isosurface iso3; color isosurface phase pink brown;',"brown/pink", ]
-		]);
-		</script>
-              <br>
+                  <div id="iso3_color_radio_group" class="color_mode_radio_group">
+                      <input type="radio" name="iso3_colors" id="iso3_red_blue" checked
+                             class="color_mode_radio_group" value="isosurface iso3; color isosurface phase red blue;"/>
+                      <label for="iso3_red_blue">Red/Blue</label>
+                      <input type="radio" name="iso3_colors" id="iso3_green_yellow"
+                             class="color_mode_radio_group" value="isosurface iso3; color isosurface phase yellow green;"/>
+                      <label for="iso3_green_yellow">Green/Yellow<label>
+                      <input type="radio" name="iso3_colors" id="iso3_purple_cyan"
+                             class="color_mode_radio_group" value="isosurface iso3; color isosurface phase cyan purple;"/>
+                      <label for="iso3_purple_cyan">Purple/Cyan</label>
+                      <input type="radio" name="iso3_colors" id="iso3_brown_pink"
+                             class="color_mode_radio_group" value="isosurface iso3; color isosurface phase pink brown;"/>
+                      <label for="iso3_brown_pink">Brown/Pink</label>
+                  </div>
               </td>
             </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Display Mode:
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+                  <div id="iso3_display_mode_radio_group" class="display_mode_radio_group">
+                      <input type="radio" name="iso3_display_mode" id="iso3_solid" checked
+                             class="display_mode_radio_group" value="isosurface iso3 fill nomesh nodots translucent 0;"/>
+                      <label for="iso3_solid">Solid</label>
+                      <input type="radio" name="iso3_display_mode" id="iso3_translucent"
+                             class="display_mode_radio_group" value="isosurface iso3 fill nomesh nodots translucent 0.5;"/>
+                      <label for="iso3_translucent">Translucent<label>
+                      <input type="radio" name="iso3_display_mode" id="iso3_mesh"
+                             class="display_mode_radio_group" value="isosurface iso3 nofill mesh nodots translucent 0;"/>
+                      <label for="iso3_mesh">Mesh</label>
+                      <input type="radio" name="iso3_display_mode" id="iso3_dot"
+                             class="display_mode_radio_group" value="isosurface iso3 nofill nomesh dots translucent 0;"/>
+                      <label for="iso3_dot">Dots</label>
+                  </div>
+              </td>
+            </tr>
+            <tr>
             <tr>
               <td colspan="1" rowspan="1"
  style="vertical-align: top; white-space: nowrap; text-align: right;"><span
@@ -236,32 +273,21 @@ Color:<br>
 4:</span><br>
               </td>
               <td style="vertical-align: top;">
-              <script>
-		jmolMenu([
-		['isosurface iso4 delete;','none'],
-		['isosurface iso4 delete; isosurface iso4 mo 6; color isosurface phase pink brown;',"sp+"],
-		['isosurface iso4 delete; isosurface iso4 mo 7; color isosurface phase pink brown;',"sp-"],
-		['isosurface iso4 delete; isosurface iso4 mo 3; color isosurface phase pink brown',"N_2py"],
-		['isosurface iso4 delete; isosurface iso4 mo 5; color isosurface phase pink brown',"N_2pz"],
-		]);
-		</script>
-              <br>
-              </td>
-            </tr>
-            <tr>
-              <td
- style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-Type:<br>
-              </td>
-              <td
- style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso4 fill nomesh nodots translucent 0; ','Solid','true'],
-		['isosurface iso4 fill nomesh nodots translucent;', 'Translucent'],
-		['isosurface iso4 mesh nofill nodots translucent 0;', 'Mesh'],
-		['isosurface iso4 dots nomesh nofill translucent 0;', 'Dot']
-		 ]);
-		</script><br>
+                <select id="iso4_select" class="orbital_selector">
+                    <option selected value="isosurface iso4 delete;">None</option>
+                    <option value="isosurface iso4 delete; isosurface iso4 mo 6;">
+                        sp+
+                    </option>
+                    <option value="isosurface iso4 delete; isosurface iso4 mo 7;">
+                        sp-
+                    </option>
+                    <option value="isosurface iso4 delete; isosurface iso4 mo 3;">
+                        2p<sub>y</sub>
+                    </option>
+                    <option value="isosurface iso4 delete; isosurface iso4 mo 5;">
+                        2p<sub>z</sub>
+                    </option>
+                </select>
               </td>
             </tr>
             <tr>
@@ -271,26 +297,49 @@ Color:<br>
               </td>
               <td
  style="vertical-align: top; text-align: left; white-space: nowrap;">
-              <script>
-		jmolRadioGroup([['isosurface iso4; color isosurface phase red blue',"blue/red",],
-		['isosurface iso4; color isosurface phase yellow green;',"green/yellow", ],
-		['isosurface iso4; color isosurface phase cyan purple;',"purple/cyan", 'true'],
-		['isosurface iso4; color isosurface phase pink brown;',"brown/pink", ]
-		]);
-		</script>
-              <br>
+                  <div id="iso2_color_radio_group" class="color_mode_radio_group">
+                      <input type="radio" name="iso4_colors" id="iso4_red_blue" checked
+                             class="color_mode_radio_group" value="isosurface iso4; color isosurface phase red blue;"/>
+                      <label for="iso4_red_blue">Red/Blue</label>
+                      <input type="radio" name="iso4_colors" id="iso4_green_yellow"
+                             class="color_mode_radio_group" value="isosurface iso4; color isosurface phase yellow green;"/>
+                      <label for="iso4_green_yellow">Green/Yellow<label>
+                      <input type="radio" name="iso4_colors" id="iso4_purple_cyan"
+                             class="color_mode_radio_group" value="isosurface iso4; color isosurface phase cyan purple;"/>
+                      <label for="iso4_purple_cyan">Purple/Cyan</label>
+                      <input type="radio" name="iso4_colors" id="iso4_brown_pink"
+                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase pink brown;"/>
+                      <label for="iso4_brown_pink">Brown/Pink</label>
+                  </div>
               </td>
             </tr>
+            <tr>
+              <td
+ style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
+Display Mode:
+              </td>
+              <td
+ style="vertical-align: top; text-align: left; white-space: nowrap;">
+                  <div id="iso4_display_mode_radio_group" class="display_mode_radio_group">
+                      <input type="radio" name="iso4_display_mode" id="iso4_solid" checked
+                             class="display_mode_radio_group" value="isosurface iso4 fill nomesh nodots translucent 0;"/>
+                      <label for="iso4_solid">Solid</label>
+                      <input type="radio" name="iso4_display_mode" id="iso4_translucent"
+                             class="display_mode_radio_group" value="isosurface iso4 fill nomesh nodots translucent 0.5;"/>
+                      <label for="iso4_translucent">Translucent<label>
+                      <input type="radio" name="iso4_display_mode" id="iso4_mesh"
+                             class="display_mode_radio_group" value="isosurface iso4 nofill mesh nodots translucent 0;"/>
+                      <label for="iso4_mesh">Mesh</label>
+                      <input type="radio" name="iso4_display_mode" id="iso4_dot"
+                             class="display_mode_radio_group" value="isosurface iso4 nofill nomesh dots translucent 0;"/>
+                      <label for="iso4_dot">Dots</label>
+                  </div>
+              </td>
+            </tr>
+            <tr>
           </tbody>
         </table>
       </form>
-      <small><a href="http://www.java.com">Javascript</a>
-generated by a java program (<a
- href="https://cms.gutow.uwosh.edu/gutow/Jmol_Web_Page_Maker/Jmol_Web_Page_Maker.shtml">Orbitals
-to Web</a>) on Jun 28, 2006. </small><small><br>
-Original
-page composed by <a href="https://cms.gutow.uwosh.edu/gutow/">J.
-Gutow 4/2006</a>. </small> </td>
     </tr>
     <tr>
       <td colspan="2" rowspan="1" style="vertical-align: top;">
@@ -324,9 +373,9 @@ right corner (right click also works on a multibutton mouse). </li>
   </tbody>
 </table>
 </div>
-<div style="text-align: right;"><small><small>Last Update: September 17, 2013
+<div style="text-align: right;"><small><small>Last Update: 9/2026
 <br>
-Copyright J. Gutow 2006
+Copyright J. Gutow 2026
 </small></small></div>
 </div>
 </body>
