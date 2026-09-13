@@ -297,7 +297,7 @@ Color:<br>
               </td>
               <td
  style="vertical-align: top; text-align: left; white-space: nowrap;">
-                  <div id="iso2_color_radio_group" class="color_mode_radio_group">
+                  <div id="iso4_color_radio_group" class="color_mode_radio_group">
                       <input type="radio" name="iso4_colors" id="iso4_red_blue" checked
                              class="color_mode_radio_group" value="isosurface iso4; color isosurface phase red blue;"/>
                       <label for="iso4_red_blue">Red/Blue</label>
@@ -308,7 +308,7 @@ Color:<br>
                              class="color_mode_radio_group" value="isosurface iso4; color isosurface phase cyan purple;"/>
                       <label for="iso4_purple_cyan">Purple/Cyan</label>
                       <input type="radio" name="iso4_colors" id="iso4_brown_pink"
-                             class="color_mode_radio_group" value="isosurface iso2; color isosurface phase pink brown;"/>
+                             class="color_mode_radio_group" value="isosurface iso4; color isosurface phase pink brown;"/>
                       <label for="iso4_brown_pink">Brown/Pink</label>
                   </div>
               </td>
