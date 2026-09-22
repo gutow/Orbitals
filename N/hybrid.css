@@ -5,22 +5,191 @@
       border-color:grey;
       height:354px;
   }
-  #Jmol_div {
-      position:relative;
-      display:inline-block;
-      padding:0;
-      top:5px;
-      border:solid;
-      border-color:gray;
-      border-width:1px;
-      width:302px;
+  .content_container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 85vh;
   }
-  #Jmol_button_div {
-      position:absolute;
-      display:inline-block;
-      padding:2px;
-      overflow:scroll;
-      height:350px;
+  #Jmol_div {
+    display:inline-block;
+    width:49%;
+    min-width: 290px;
+    aspect-ratio: 1/1;
+    max-height: 100%;
+  }
+  .controls_div {
+    position:relative;
+    display:inline-flex;
+    flex-wrap: nowrap;
+    min-width: 320px;
+    width: 49%;
+    max-height: 100%;
+    overflow: visible;
+  }
+  @media (max-width: 600px){
+        #Jmol_div {
+            width:100%;
+            min-width: 300px;
+        }
+        .controls_div {
+            position:relative;
+            display:inline-flex;
+            flex-wrap: nowrap;
+            min-width: 320px;
+            width: 100%;
+            min-height: 16em;
+            max-height: 100%;
+            overflow: scroll;
+        }
+  }
+  /* Selection dropdown css*/
+  .orbit_controls {
+      position: absolute;
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      border-bottom:1px dotted grey;
+  }
+  #orb1_controls{
+      top:0;
+      left:0;
+      z-index: 10;
+  }
+  #orb2_controls{
+      top:4em;
+      z-index: 8;
+  }
+  #orb3_controls {
+      top:8em;
+      z-index: 6;
+  }
+  #orb4_controls{
+      top:12em;
+      z-index: 4;
+  }
+/* hide the checkbox*/
+.selectOneList input{
+  display: none;
+}
+.complexMenuItem{
+  display:inline-flex;
+}
+.selectOneList input ~ li{
+ display: none;
+}
+.selectOneList input:checked  ~ li {
+  display: block;
+  position:relative;
+  background-color: aliceblue;
+  z-index: 9999;
+}
+.selectOneList input:checked  ~ li:hover {
+  background-color: lightgrey;
+}
+.selectOneList input:checked ~ hr {
+  border: 1px dotted black;
+  margin:0;
+  display:block;
+}
+.selectOneList input ~ hr {
+  display:none;
+}
+.mainmenu label{
+  /* Force the label to show up.*/
+  cursor: pointer;
+  display: block;
+  /* prettifying*/
+  background-color: inherit;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  font-weight: bold;
+  text-wrap: nowrap;
+  text-align: center;
+    /*
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+  */
+}
+/* down pointing triangle to append to labels that are
+  sub items of a mainmenu class.
+ */
+.mainmenu label:after{
+  content:" \25BE";
+}
+ul.selectOneList {
+  list-style-type: none;
+  list-style-position: inside;
+  padding:0;
+  margin:0;
+}
+.selectOneList li{
+  cursor:pointer;
+  padding-left: 0;
+    margin-right:5px;
+    margin-left:5px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.selectOneList li:last-child {
+  border-bottom:1px solid grey;
+}
+.selectOneList li:first-child{
+  border-top:1px solid grey;
+}
+.selectOneList li:hover{
+  background-color:lightgrey;
+}
+.selectOneList label:hover{
+  background-color:lightgrey;
+}
+.selectOneList li.selected {
+ display:block;
+ background-color: whitesmoke;
+ border:1px solid grey;
+}
+/* add checkmark before the selected item */
+.selectOneList li.selected:before {
+ content: '\2713';
+}
+/* Color boxes to go in the menus*/
+.colorbox {
+  border:none;
+  margin:0;
+  padding:0;
+  height:1em;
+  width:1em;
+}
+.colorbox.cyan {
+  background-color: cyan;
+}
+.colorbox.magenta{
+  background-color: magenta;
+}
+.colorbox.blue{
+  background-color: blue;
+}
+.colorbox.red{
+  background-color: red;
+}
+.colorbox.green{
+  background-color: green;
+}
+.colorbox.yellow{
+  background-color: yellow;
+}
+.colorbox.brown{
+  background-color: brown;
+}
+.colorbox.pink{
+  background-color: pink;
+}
+
+  /* End selection dropdown css*/
+  #orb4_select{
+      z-index: 4;
   }
   #fig1-images {
       max-width:410px;
@@ -60,8 +229,10 @@
   body {
       color: rgb(0, 0, 0); 
       /*background-color: rgb(250, 248, 244);*/
+      overflow: scroll;
   }
   .subtitle-text {
+      width:100%;
       font-weight:bold;
       text-align:center;
       font-size:1.5em;
@@ -69,33 +240,13 @@
   .explanation-text {
       margin:2px;
   }
-  .example-table {      
+  .orbital_title{
       text-align:center;
-      border:solid;
-      border-top-width:1px;
-      border-left-width:1px;
-      border-bottom-width:1px;
-      border-right-width:1px;
-      border-spacing:2px;
-      border-collapse:separate;
-      border-color:grey;
-      border-style:inset;
-      display:table-cell;
-  }
-  .example-table td {      
-      text-align:center;
-      border:solid;
-      border-top-width:1px;
-      border-left-width:1px;
-      border-bottom-width:1px;
-      border-right-width:1px;
-      border-spacing:2px;
-      border-collapse:separate;
-      border-color:grey;
-      border-style:inset;
-      display:table-cell;
+      font-size:1.5em;
+      font-weight:bold;
+      padding-right: 0.5em;
   }
   .update-info {
       text-align:right;
-      font-size:0.5em;
+      font-size:0.75em;
   }

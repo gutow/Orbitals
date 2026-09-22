@@ -23,6 +23,7 @@ function jmolFromOrbitalNum(whichOrb){
     const orbNum = parseInt(whichOrb[3]);
     let whichJmol = null;
     // If different JSmol instances display different orbitals that is sorted here
+    //window.alert('orbNum: ' + orbNum);
     switch (orbNum){
         case 1:
             whichJmol = Orbital_Jmol;
@@ -46,47 +47,131 @@ function displayOrbital(whichJmol, selectID, orbitalScript){
     // whichJmol: applet name
     // selectID: "iso1_select", "iso2_select", etc...
     // orbitalScript: string containing proper JSmol script to display the desired orbital
+    window.alert('whichJmol:'+whichJmol+'selectID:'+selectID+'orbitalScript:'+orbitalScript);
     Jmol.script(whichJmol,orbitalScript);
     let prefixStr = selectID.replace('_select','');
     // Set colors to match user selections
-    let colorStr = prefixStr + '_colors'
-    let colorScript = document.querySelector('input[name='+colorStr+']:checked')?.value;
+    let colorStr = '#'+prefixStr + '_color'
+    let colorScript = document.querySelector(colorStr+' li.selected').dataset.jmolscript;
     Jmol.script(whichJmol, colorScript);
     // Set the display mode to match user selections. This must happen second because
     // setting the color overrides transparency.
-    displayModeStr = prefixStr+'_display_mode';
-    let displayModeScript = document.querySelector('input[name='+displayModeStr+']:checked')?.value;
+    displayModeStr = '#'+prefixStr+'_display_mode';
+    let displayModeScript = document.querySelector(displayModeStr+' li.selected').dataset.jmolscript;
     Jmol.script(whichJmol,displayModeScript);
 }
 
-function handleChangeEvents(event){
-    const eventtype = event.target.className;
-    const whichOrb = event.target.id.split("_")[0];
+function handleSelectEvents(triggerElem){
+    const idparts = triggerElem.parentElement.id.split("_");
+    const whichOrb = idparts[0];
+    const eventtype =idparts[1];
     const whichJmol = jmolFromOrbitalNum(whichOrb);
+    const jmolscript = triggerElem.parentElement.querySelector('li.selected').dataset.jmolscript;
+    window.alert('whichOrb:'+whichOrb+', eventtype:'+eventtype+', whichJmol:'+whichJmol+', script:'+jmolscript);
     switch (eventtype) {
-        case "orbital_selector" :
-            displayOrbital(whichJmol, event.target.id, event.target.value);
+        case "select" :
+            displayOrbital(whichJmol, triggerElem.parentElement.id, jmolscript);
             break;
-        case "color_mode_radio_group" :
-            Jmol.script(whichJmol, event.target.value);
+        case "color" :
+            Jmol.script(whichJmol, jmolscript);
     // Set the display mode to match user selections. This must happen second because
     // setting the color overrides transparency.
-            displayModeStr = whichOrb+'_display_mode';
-            let displayModeScript = document.querySelector('input[name='+displayModeStr+']:checked')?.value;
+            let displayModeStr = whichOrb+'_display_mode';
+            let modelist = document.querySelector('#'+displayModeStr);
+            let displayModeScript = modelist.querySelector('li.selected').dataset.jmolscript;
             Jmol.script(whichJmol,displayModeScript);
             break;
-        case "display_mode_radio_group" :
-            Jmol.script(whichJmol, event.target.value);
+        case "display" :
+            Jmol.script(whichJmol, jmolscript);
             break;
         default:
             //do nothing
     }
 }
+
+/* SelectOne dropdowns*/
+/* This supports css based menus and select dropdowns that can support
+html within each menu item, allowing for formatted text, images, etc...
+
+The idea was to have minimal javascript with most of the menu behavior
+provided by the css.
+J. Gutow (gutow@uwosh.edu) 9-2026.
+ */
+function closeMenu(triggerElem){
+  const parent=triggerElem.parentNode;
+  const whichmenu = parent.id;
+  const menu_check = document.querySelector('#'+whichmenu+'_check');
+  menu_check.checked=false;
+  if (parent.classList.contains('submenu')){
+    const wraplist = parent.parentNode;
+    closeMenu(wraplist);
+  } else {
+    return
+  }
+}
+
+function doMenuItem(triggerElem){
+  const itemID = triggerElem.id;
+  /*window.alert('The clicked item:'+itemID);*/
+  switch (itemID) {
+    case '':
+      /* This is where to put your action or call appropriate functions
+       one case for each menu item
+       */
+      break;
+    default:
+      break;
+  }
+  closeMenu(triggerElem);
+}
+
+function doSelectOne(triggerElem){
+  /* toggle selection state of item. No selection from list is allowed*/
+  if (triggerElem.classList.contains('selected')){
+    triggerElem.classList.remove('selected');
+    /* Call a function that does what is necessary when the selection is removed */
+    /* Set to default if available */
+    let parent = triggerElem.parentElement;
+    let defaultelem = parent.querySelector('.defaultselection');
+    if (defaultelem){
+      defaultelem.classList.add('selected');
+    }
+  } else {
+    triggerElem.classList.add('selected');
+    /* Unselect all other items in the menu and submenus*/
+    let sibling = triggerElem.previousElementSibling;
+    while (sibling){
+      sibling.classList.remove('selected');
+      sibling = sibling.previousElementSibling;
+    }
+    sibling = triggerElem.nextElementSibling;
+    while (sibling){
+      sibling.classList.remove('selected');
+      sibling = sibling.nextElementSibling;
+    }
+  }
+  closeMenu(triggerElem);
+  /* Call a function that does what is necessary when the selection is changed */
+  handleSelectEvents(triggerElem)
+}
+
+function handleClickEvent(event){
+  /*window.alert(event.target.nodeName)*/
+  if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('menuList')){
+    doMenuItem(event.target);
+    } else {
+    if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('selectOneList')){
+    doSelectOne(event.target);
+    }
+  }
+  return;
+}
+/* Ened SelectOne dropdowns*/
 function addListeners(){
     // This adds the listeners. Goal is to have a limited number and take advantage of events bubbling up through the DOM.
     // Try just one. If this does not work will do three different ones.
-        document.addEventListener("change", handleChangeEvents);
-        console.log("added change listener to document.");
+        document.addEventListener("click", handleClickEvent);
+        console.log("added click listener for accordian menus to document.");
     // Orbital choice
     // Orbital color
     // Orbital display mode
