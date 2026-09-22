@@ -36,10 +36,10 @@
                   <label for="orb1_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso1 delete;" class="selected defaultselection">None</li>
                   <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 6;">
-                      sp<sup>+</sup>
+                      sp<sub>+</sub>
                   </li>
                   <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 7;">
-                      sp<sup>-</sup>
+                      sp<sub>-</sub>
                   </li>
                   <hr>
                   <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 3;" >
@@ -93,8 +93,8 @@
                   <input type="checkbox" id="orb2_select_check"/>
                   <label for="orb2_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso2 delete;" class="selected defaultselection">None</li>
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 6;">sp<sup>+</sup></li>
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 7;">sp<sup>-</sup></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 6;">sp<sub>+</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 7;">sp<sub>-</sub></li>
                   <hr>
                   <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 3;">2p<sub>y</sub></li>
                   <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 5;">2p<sub>z</sub></li>
@@ -144,10 +144,10 @@
                   <label for="orb3_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso3 delete;" class="selected defaultselection">None</li>
                   <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 6;">
-                      sp<sup>+</sup>
+                      sp<sub>+</sub>
                   </li>
                   <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 7;">
-                      sp<sup>-</sup>
+                      sp<sub>-</sub>
                   </li>
                   <hr>
                   <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 3;" >
@@ -202,10 +202,10 @@
                   <label for="orb4_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso4 delete;" class="selected defaultselection">None</li>
                   <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 6;">
-                      sp<sup>+</sup>
+                      sp<sub>+</sub>
                   </li>
                   <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 7;">
-                      sp<sup>-</sup>
+                      sp<sub>-</sub>
                   </li>
                   <hr>
                   <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 3;" >
