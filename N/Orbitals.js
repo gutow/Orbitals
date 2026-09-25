@@ -47,7 +47,7 @@ function displayOrbital(whichJmol, selectID, orbitalScript){
     // whichJmol: applet name
     // selectID: "iso1_select", "iso2_select", etc...
     // orbitalScript: string containing proper JSmol script to display the desired orbital
-    window.alert('whichJmol:'+whichJmol+'selectID:'+selectID+'orbitalScript:'+orbitalScript);
+    // window.alert('whichJmol:'+whichJmol+'selectID:'+selectID+'orbitalScript:'+orbitalScript);
     Jmol.script(whichJmol,orbitalScript);
     let prefixStr = selectID.replace('_select','');
     // Set colors to match user selections
@@ -67,7 +67,7 @@ function handleSelectEvents(triggerElem){
     const eventtype =idparts[1];
     const whichJmol = jmolFromOrbitalNum(whichOrb);
     const jmolscript = triggerElem.parentElement.querySelector('li.selected').dataset.jmolscript;
-    window.alert('whichOrb:'+whichOrb+', eventtype:'+eventtype+', whichJmol:'+whichJmol+', script:'+jmolscript);
+    //window.alert('whichOrb:'+whichOrb+', eventtype:'+eventtype+', whichJmol:'+whichJmol+', script:'+jmolscript);
     switch (eventtype) {
         case "select" :
             displayOrbital(whichJmol, triggerElem.parentElement.id, jmolscript);

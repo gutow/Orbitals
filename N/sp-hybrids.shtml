@@ -252,8 +252,24 @@
                   <li data-jmolscript="isosurface iso4 nofill nomesh dots translucent 0;">Dots</li>
                 </ul>
             </div>
+            <div class="accordians">
+                <ul class="accordion">
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              Viewer Instructions
+                          </h3>
+                        <div class = "accordion-contents">
+                            <!--#include virtual = "MV_Instructions.html"-->
+                        </div>
+                    </li>
+                </ul>
+                <!--#include virtual = "Last_mod_date.html"-->
+            </div>
         </div>
+
     </div>
-   <!--#include virtual = "Last_mod_date.html"-->
+
 </body>
 </html>
