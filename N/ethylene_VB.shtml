@@ -90,17 +90,20 @@ $(document).ready(function(){
 <body>
 <!--#include virtual = "../N/Hybrid Orbitals Header.html"-->
   <div id="visible_page_wrapper">
+    <div id="HeaderInfo" class="subtitle-text">
+      Valence Bond Model of the Double Bond
+      (ethylene as the example)
+    </div>
+    <div id="Viewer_and_Widgets" class="JmolPane">
+      <div id="Jmol1" class="JmolViewerPane">This will be the viewer</div>
+    </div>
     <div id="Text_Buttons" class="JmolTextPane">
       <div id="JSmol_loading_msg">
         Once the molecule file is fully loaded the image at right
-        will become live.  At that time the "activate 3-D" icon 
+        will become live.  At that time the "activate 3-D" icon
         <img src="../../Applets/JSmol/j2s/img/play_make_live.jpg" height="15px"> will disappear.<hr/>
       </div>
-      <div id="HeaderInfo"><center><span style="font-weight:bold">
-        Valence Bond Model of the Double Bond<br/>
-        (ethylene as the example)
-      </span></center></div>
-    At right is a 3-D version of the Lewis structure of the ethylene
+    At left (or above on narrow screen) is a 3-D version of the Lewis structure of the ethylene
     molecule. You may rotate the molecule yourself by holding the
     mouse button down while dragging it around within the image
     frame. Dark grey spheres represent C atoms and light grey
@@ -169,10 +172,6 @@ $(document).ready(function(){
       the appropriate button.
 <!--#include virtual = "Last_mod_date.html"-->
     </div>
-    <div id="Viewer_and_Widgets" class="JmolPane">
-      <div id="Jmol1" class="JmolViewerPane">This will be the viewer</div>
-    </div>
-
   </div>
 </body>
 </html>
