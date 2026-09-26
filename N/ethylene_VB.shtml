@@ -118,7 +118,7 @@ $(document).ready(function(){
       groups will be <a target="_top"
       href="https://cms.gutow.uwosh.edu/gutow/Orbitals/N/sp2%20hybrid.shtml">sp<sup>2</sup>
       hybridized</a> to get orbitals pointing in the correct directions to
-      make bonds at 120 degrees from each other. Click the button below to
+      make bonds at 120&deg; from each other. Click the button below to
       show these hybrid orbitals on one C.
       <div id="sp2_orbitals_on_one_C" class="JmolButtonDiv">
         <button onclick="Jmol.script(jmolApplet,'load ethylene/sp2_orbitals_on_one_C.spt')">sp<sup>2</sup> orbitals on one C</button>
