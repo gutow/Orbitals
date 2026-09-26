@@ -58,6 +58,53 @@
       border-top:1px solid lightgray;
       border-bottom:1px solid lightgray
   }
+  /* double bond/VB stuff */
+  #visible_page_wrapper{
+      position:relative;
+      top:0px;
+      height:85vh;
+      width:100%;
+      overflow:hidden;
+  }
+  #JSmol_loading_msg{
+      color:orange;
+  }
+  .JmolTextPane {
+      float: left;
+      width:39.5%;
+      height:99%;
+      overflow:scroll;
+      border:1px solid;
+      display:inline;
+  }
+  .JmolPane {
+      float: right;
+      width:60%;
+      height:99%;
+      overflow:hidden;
+      /*border:1px solid green;*/
+  }
+  .JmolViewerPane{
+      width:98%;
+      min-width: 290px;
+      aspect-ratio: 1/1;
+      max-height: 100%;
+      overflow:hidden;
+      /*border:1px solid grey;*/
+  }
+  .JmolWidgetPane {
+      width:98%;
+      height:3.5%;
+      overflow:scroll;
+      /*border:1px solid blue;*/
+  }
+  .JmolButtonDiv{
+      width:99%;
+      /*border:1px solid blue;*/
+      text-align:center;
+      /*min-height:8px;*/
+  }
+/* end VB stuff */
   @media (max-width: 600px){
         #Jmol_div {
             width:100%;

@@ -1,384 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="hybrid.css"/>
-    <title>3d view of sp hybrids</title>
-    <meta content="J. Gutow" name="author">
-    <meta
-            content="chemistry, orbital, orbitals, isosurface, wavefunction, Jmol, image, animation, rotatable, live display"
-            name="keywords">
-    <meta
-            content="sp and p orbital viewer using orbitals calculated for nitrogen (N)"
-            name="description">
+    <title>sp-hybrids</title>
     <script src="../../Applets/JSmol/JSmol.min.js"></script>
     <script type="text/javascript" src="JSmol_settings.js"></script>
     <script type="text/javascript" src="Orbitals.js"></script>
 </head>
 <body>
-<!--#include virtual = "Hybrid Orbitals Header.html"-->
-<div style="text-align: center;"><span
-        style="font-weight: bold;">Visualizing sp hybrids and the p orbitals
-that are left<br>
-</span>
-    <div style="text-align: left;"><span
-            style="font-weight: bold;"></span>In the table below you
-        may choose to display the sp<sub>+</sub>, sp<sub>-</sub>, p<sub>y</sub>
-        or p<sub>z</sub> orbitals that are left
-        after combining the 2s and the 2p<sub>x</sub> orbitals to make the two
-        sp
-        hybrids. Use the pop-up menus to choose up to four different
-        orbitals to display at once.<br>
-        <table>
-            <tbody>
-            <tr>
-                <td>
-                    <script type="text/javascript">
-                        Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
-                        Jmol.script(Orbital_Jmol, 'load N-hybrid.log; spacefill 2%; background white')
-                    </script>
-                </td>
-                <td>
-                    <form>
-                        <table style="width: 100%; text-align: left;">
-                            <tbody>
-                            <tr>
-                                <td colspan="1" rowspan="1"
-                                    style="vertical-align: top; white-space: nowrap; text-align: right;"><span
-                                        style="font-weight: bold;">Orbital 1:</span><br>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <select id="iso1_select" class="orbital_selector">
-                                        <option selected value="isosurface iso1 delete;">None</option>
-                                        <option value="isosurface iso1 delete; isosurface iso1 mo 6;">
-                                            sp+
-                                        </option>
-                                        <option value="isosurface iso1 delete; isosurface iso1 mo 7;">
-                                            sp-
-                                        </option>
-                                        <option value="isosurface iso1 delete; isosurface iso1 mo 3;">
-                                            2p<sub>y</sub>
-                                        </option>
-                                        <option value="isosurface iso1 delete; isosurface iso1 mo 5;">
-                                            2p<sub>z</sub>
-                                        </option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Color:<br>
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso1_color_radio_group" class="color_mode_radio_group">
-                                        <input type="radio" name="iso1_colors" id="iso1_red_blue" checked
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso1; color isosurface phase red blue;"/>
-                                        <label for="iso1_red_blue">Red/Blue</label>
-                                        <input type="radio" name="iso1_colors" id="iso1_green_yellow"
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso1; color isosurface phase yellow green;"/>
-                                        <label for="iso1_green_yellow">Green/Yellow</label>
-                                            <input type="radio" name="iso1_colors" id="iso1_purple_cyan"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso1; color isosurface phase cyan purple;"/>
-                                            <label for="iso1_purple_cyan">Purple/Cyan</label>
-                                            <input type="radio" name="iso1_colors" id="iso1_brown_pink"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso1; color isosurface phase pink brown;"/>
-                                            <label for="iso1_brown_pink">Brown/Pink</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Display Mode:
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso1_display_mode_radio_group" class="display_mode_radio_group">
-                                        <input type="radio" name="iso1_display_mode" id="iso1_solid" checked
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso1 fill nomesh nodots translucent 0;"/>
-                                        <label for="iso1_solid">Solid</label>
-                                        <input type="radio" name="iso1_display_mode" id="iso1_translucent"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso1 fill nomesh nodots translucent 0.5;"/>
-                                        <label for="iso1_translucent">Translucent</label>
-                                        <input type="radio" name="iso1_display_mode" id="iso1_mesh"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso1 nofill mesh nodots translucent 0;"/>
-                                        <label for="iso1_mesh">Mesh</label>
-                                        <input type="radio" name="iso1_display_mode" id="iso1_dot"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso1 nofill nomesh dots translucent 0;"/>
-                                        <label for="iso1_dot">Dots</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1"
-                                    style="vertical-align: top; white-space: nowrap; text-align: right;"><span style="font-weight: bold;">Orbital
-                                    2:</span><br>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <select id="iso2_select" class="orbital_selector">
-                                        <option selected value="isosurface iso2 delete;">None</option>
-                                        <option value="isosurface iso2 delete; isosurface iso2 mo 6;">
-                                            sp+
-                                        </option>
-                                        <option value="isosurface iso2 delete; isosurface iso2 mo 7;">
-                                            sp-
-                                        </option>
-                                        <option value="isosurface iso2 delete; isosurface iso2 mo 3;">
-                                            2p<sub>y</sub>
-                                        </option>
-                                        <option value="isosurface iso2 delete; isosurface iso2 mo 5;">
-                                            2p<sub>z</sub>
-                                        </option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Color:<br>
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso2_color_radio_group" class="color_mode_radio_group">
-                                        <input type="radio" name="iso2_colors" id="iso2_red_blue" checked
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso2; color isosurface phase red blue;"/>
-                                        <label for="iso2_red_blue">Red/Blue</label>
-                                        <input type="radio" name="iso2_colors" id="iso2_green_yellow"
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso2; color isosurface phase yellow green;"/>
-                                        <label for="iso2_green_yellow">Green/Yellow</label>
-                                            <input type="radio" name="iso2_colors" id="iso2_purple_cyan"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso2; color isosurface phase cyan purple;"/>
-                                            <label for="iso2_purple_cyan">Purple/Cyan</label>
-                                            <input type="radio" name="iso2_colors" id="iso2_brown_pink"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso2; color isosurface phase pink brown;"/>
-                                            <label for="iso2_brown_pink">Brown/Pink</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Display Mode:
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso2_display_mode_radio_group" class="display_mode_radio_group">
-                                        <input type="radio" name="iso2_display_mode" id="iso2_solid" checked
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso2 fill nomesh nodots translucent 0;"/>
-                                        <label for="iso2_solid">Solid</label>
-                                        <input type="radio" name="iso2_display_mode" id="iso2_translucent"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso2 fill nomesh nodots translucent 0.5;"/>
-                                        <label for="iso2_translucent">Translucent</label>
-                                            <input type="radio" name="iso2_display_mode" id="iso2_mesh"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso2 nofill mesh nodots translucent 0;"/>
-                                            <label for="iso2_mesh">Mesh</label>
-                                            <input type="radio" name="iso2_display_mode" id="iso2_dot"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso2 nofill nomesh dots translucent 0;"/>
-                                            <label for="iso2_dot">Dots</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1"
-                                    style="vertical-align: top; white-space: nowrap; text-align: right;"><span style="font-weight: bold;">Orbital
-3:</span><br>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <select id="iso3_select" class="orbital_selector">
-                                        <option selected value="isosurface iso3 delete;">None</option>
-                                        <option value="isosurface iso3 delete; isosurface iso3 mo 6;">
-                                            sp+
-                                        </option>
-                                        <option value="isosurface iso3 delete; isosurface iso3 mo 7;">
-                                            sp-
-                                        </option>
-                                        <option value="isosurface iso3 delete; isosurface iso3 mo 3;">
-                                            2p<sub>y</sub>
-                                        </option>
-                                        <option value="isosurface iso3 delete; isosurface iso3 mo 5;">
-                                            2p<sub>z</sub>
-                                        </option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Color:<br>
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso3_color_radio_group" class="color_mode_radio_group">
-                                        <input type="radio" name="iso3_colors" id="iso3_red_blue" checked
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso3; color isosurface phase red blue;"/>
-                                        <label for="iso3_red_blue">Red/Blue</label>
-                                        <input type="radio" name="iso3_colors" id="iso3_green_yellow"
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso3; color isosurface phase yellow green;"/>
-                                        <label for="iso3_green_yellow">Green/Yellow</label>
-                                            <input type="radio" name="iso3_colors" id="iso3_purple_cyan"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso3; color isosurface phase cyan purple;"/>
-                                            <label for="iso3_purple_cyan">Purple/Cyan</label>
-                                            <input type="radio" name="iso3_colors" id="iso3_brown_pink"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso3; color isosurface phase pink brown;"/>
-                                            <label for="iso3_brown_pink">Brown/Pink</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Display Mode:
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso3_display_mode_radio_group" class="display_mode_radio_group">
-                                        <input type="radio" name="iso3_display_mode" id="iso3_solid" checked
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso3 fill nomesh nodots translucent 0;"/>
-                                        <label for="iso3_solid">Solid</label>
-                                        <input type="radio" name="iso3_display_mode" id="iso3_translucent"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso3 fill nomesh nodots translucent 0.5;"/>
-                                        <label for="iso3_translucent">Translucent</label>
-                                            <input type="radio" name="iso3_display_mode" id="iso3_mesh"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso3 nofill mesh nodots translucent 0;"/>
-                                            <label for="iso3_mesh">Mesh</label>
-                                            <input type="radio" name="iso3_display_mode" id="iso3_dot"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso3 nofill nomesh dots translucent 0;"/>
-                                            <label for="iso3_dot">Dots</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                            <tr>
-                                <td colspan="1" rowspan="1"
-                                    style="vertical-align: top; white-space: nowrap; text-align: right;"><span style="font-weight: bold;">Orbital
-4:</span><br>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <select id="iso4_select" class="orbital_selector">
-                                        <option selected value="isosurface iso4 delete;">None</option>
-                                        <option value="isosurface iso4 delete; isosurface iso4 mo 6;">
-                                            sp+
-                                        </option>
-                                        <option value="isosurface iso4 delete; isosurface iso4 mo 7;">
-                                            sp-
-                                        </option>
-                                        <option value="isosurface iso4 delete; isosurface iso4 mo 3;">
-                                            2p<sub>y</sub>
-                                        </option>
-                                        <option value="isosurface iso4 delete; isosurface iso4 mo 5;">
-                                            2p<sub>z</sub>
-                                        </option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Color:<br>
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso4_color_radio_group" class="color_mode_radio_group">
-                                        <input type="radio" name="iso4_colors" id="iso4_red_blue" checked
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso4; color isosurface phase red blue;"/>
-                                        <label for="iso4_red_blue">Red/Blue</label>
-                                        <input type="radio" name="iso4_colors" id="iso4_green_yellow"
-                                               class="color_mode_radio_group"
-                                               value="isosurface iso4; color isosurface phase yellow green;"/>
-                                        <label for="iso4_green_yellow">Green/Yellow</label>
-                                            <input type="radio" name="iso4_colors" id="iso4_purple_cyan"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso4; color isosurface phase cyan purple;"/>
-                                            <label for="iso4_purple_cyan">Purple/Cyan</label>
-                                            <input type="radio" name="iso4_colors" id="iso4_brown_pink"
-                                                   class="color_mode_radio_group"
-                                                   value="isosurface iso4; color isosurface phase pink brown;"/>
-                                            <label for="iso4_brown_pink">Brown/Pink</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: top; text-align: right; white-space: nowrap;">Surface
-                                    Display Mode:
-                                </td>
-                                <td style="vertical-align: top; text-align: left; white-space: nowrap;">
-                                    <div id="iso4_display_mode_radio_group" class="display_mode_radio_group">
-                                        <input type="radio" name="iso4_display_mode" id="iso4_solid" checked
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso4 fill nomesh nodots translucent 0;"/>
-                                        <label for="iso4_solid">Solid</label>
-                                        <input type="radio" name="iso4_display_mode" id="iso4_translucent"
-                                               class="display_mode_radio_group"
-                                               value="isosurface iso4 fill nomesh nodots translucent 0.5;"/>
-                                        <label for="iso4_translucent">Translucent</label>
-                                            <input type="radio" name="iso4_display_mode" id="iso4_mesh"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso4 nofill mesh nodots translucent 0;"/>
-                                            <label for="iso4_mesh">Mesh</label>
-                                            <input type="radio" name="iso4_display_mode" id="iso4_dot"
-                                                   class="display_mode_radio_group"
-                                                   value="isosurface iso4 nofill nomesh dots translucent 0;"/>
-                                            <label for="iso4_dot">Dots</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                            </tbody>
-                        </table>
-                    </form>
-            </tr>
-            <tr>
-                <td colspan="2" rowspan="1" style="vertical-align: top;">
-                    <div style="text-align: center;"><span style="font-weight: bold;">Instructions
-for using Jmol to display
-orbitals</span>: <br>
-                    </div>
-                    <ol>
-                        <li>Choose which orbitals to display by selecting them using
-                            the
-                            orbital popup menus. You can control orbital color and fill mode
-                            by selecting the appropriate options following each orbital menu.&nbsp;
-                        </li>
-                        <li>ROTATE the image by
-                            holding
-                            down the mouse button while moving the cursor over the image.
-                        </li>
-                        <li>ZOOM by holding down the shift key while moving the cursor
-                            up
-                            (decrease magnification) or down (increase magnification) on top of the
-                            image.
-                        </li>
-                        <li>Other options are available in the control menu accessible
-                            by
-                            holding
-                            the mouse button down while the cursor is over "Jmol" in the lower
-                            right corner (right click also works on a multibutton mouse).
-                        </li>
-                        <li>For more info about Jmol go to <a target="_blank"
-                                                              href="http://www.jmol.org">www.jmol.org.</a></li>
-                    </ol>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+    <!--#include virtual = "Hybrid Orbitals Header.html"-->
+    <div class="content_container">
+        <div class="subtitle-text">
+            Visualizing sp hybrids and the p orbitals that are left
+        </div>
+        <div class="explanation-text">
+            Below you may choose to display the hybrid orbitals sp<sub>+</sub> and sp<sub>-</sub> plus the 
+            unhybridized orbitals 2p<sub>y</sub> and 2p<sub>z</sub> that are left
+                after combining the 2s and 2p<sub>x</sub> orbitals to make the two
+                sp hybrids. Use the menus to select up to four different
+                orbitals to display at once, plus control their colors and display mode.
+        </div>
+        <div id="Jmol_div">
+              <script type="text/javascript">
+                    Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
+                    Jmol.script(Orbital_Jmol, 'load N-hybrid.log; spacefill 2%; background white')
+              </script>
+        </div>
+        <div class="controls_div">
+            <div id="orb1_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 1:
+                </div>
+                <ul id="orb1_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb1_select_check"/>
+                  <label for="orb1_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso1 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 6;">
+                      sp+</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 7;">
+                      sp<sub>-</sub>
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 3;" >
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 5;">
+                      2p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb1_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb1_color_check"/>
+                  <label for="orb1_color_check">Surface Color</label>
+                  <li  class="selected defaultselection"
+                  data-jmolscript="isosurface iso1; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb1_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb1_display_mode_check"/>
+                  <label for="orb1_display_mode_check">Display Mode</label>
+                  <li class="defaultselection"
+                  data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0.5;"
+                      class="selected">Translucent</li>
+                  <li data-jmolscript="isosurface iso1 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso1 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb2_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 2:
+                </div>
+                <ul id="orb2_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb2_select_check"/>
+                  <label for="orb2_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso2 delete;" class="selected defaultselection">None</li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 6;">sp<sub>+</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 7;">sp<sub>-</sub></li>
+                  <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 3;">2p<sub>y</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 5;">2p<sub>z</sub></li>
+                </ul>
+                <ul id="orb2_color" class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb2_color_check"/>
+                  <label for="orb2_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li class="selected defaultselection"
+                        data-jmolscript="isosurface iso2; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb2_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb2_display_mode_check"/>
+                  <label for="orb2_display_mode_check">Display Mode</label>
+                   <li class="defaultselection"
+                  data-jmolscript="isosurface iso2 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso2 fill nomesh nodots translucent 0.5;"
+                      class="selected">Translucent</li>
+                  <li data-jmolscript="isosurface iso2 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso2 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb3_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 3:
+                </div>
+                <ul id="orb3_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb3_select_check"/>
+                  <label for="orb3_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso3 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 6;">
+                      sp<sub>+</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 7;">
+                      sp<sub>-</sub>
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 3;" >
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 5;">
+                      2p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb3_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb3_color_check"/>
+                  <label for="orb3_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li class="selected defaultselection"
+                  data-jmolscript="isosurface iso3; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb3_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb3_display_mode_check"/>
+                  <label for="orb3_display_mode_check">Display Mode</label>
+                  <li class="defaultselection"
+                  data-jmolscript="isosurface iso3 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso3 fill nomesh nodots translucent 0.5;"
+                      class="selected">Translucent</li>
+                  <li data-jmolscript="isosurface iso3 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso3 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb4_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 4:
+                </div>
+                <ul id="orb4_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb4_select_check"/>
+                  <label for="orb4_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso4 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 6;">
+                      sp<sub>+</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 7;">
+                      sp<sub>-</sub>
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 3;" >
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 5;">
+                      2p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb4_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb4_color_check"/>
+                  <label for="orb4_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li class="selected defaultselection"
+                    data-jmolscript="isosurface iso4; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb4_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb4_display_mode_check"/>
+                  <label for="orb4_display_mode_check">Display Mode</label>
+                  <li class="defaultselection"
+                  data-jmolscript="isosurface iso4 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso4 fill nomesh nodots translucent 0.5;"
+                      class="selected">Translucent</li>
+                  <li data-jmolscript="isosurface iso4 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso4 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div class="accordians">
+                <ul class="accordion">
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              Viewer Instructions
+                          </h3>
+                        <div class = "accordion-contents">
+                            <!--#include virtual = "MV_Instructions.html"-->
+                        </div>
+                    </li>
+                </ul>
+                <!--#include virtual = "Last_mod_date.html"-->
+            </div>
+        </div>
+
     </div>
-    <div style="text-align: right;">Last Update: 9/2026
-        <br>
-        Copyright J. Gutow 2026
-    </div>
-</div>
+
 </body>
 </html>
