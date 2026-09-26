@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+ <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>What are hybrid Orbitals</title>
   <meta name="author" content="J. Gutow">
   <meta name="description" content="Explanation of hybrid orbitals">
@@ -66,9 +67,9 @@ This means these orbitals as we usually visualize them cannot take part
 in the bonding. The solution is to combine these orbitals (add
 and subtract them from each other) to get four orbitals pointing in the
 proper direction. To get four new orbitals we have to combine
-four atomic orbitals. Thus the orbitals that point the correct
+four atomic orbitals. Thus, the orbitals that point the correct
 directions are made by combining the 2s and all three of the 2p
-orbitals. This kind of hybrid is called an <a target="_blank"
+orbitals. This kind of hybrid is called a <a target="_blank"
  href="sp3%20hybrid.shtml">sp<sup>3</sup></a> hybrid orbital and is the
 kind of hybridization seen in molecules of <a target="_blank"
  href="../../VSEPR_TUTORIAL/shtml%20version/AX4_Examples.shtml">tetrahedral
@@ -109,23 +110,21 @@ below.<br>
  style="width: 300px; height: 267px;" alt="2s &amp; 2px orbitals"
  src="2s&amp;2px.png"><br>
       </td>
-      <td><big><big><span
- style="font-weight: bold;"></span></big></big>
-      <table style="text-align: left; width: 100%;" border="0"
- cellpadding="2" cellspacing="2">
+      <td>
+      <table style="text-align: left; width: 100%;">
         <tbody>
           <tr>
-            <td"><big><big><span
- style="font-weight: bold;">+ case: </span></big></big><img
+            <td><span
+ style="font-weight: bold;font-size:1.5em;vertical-align: center;">+ case: </span><img
  style="width: 150px; height: 138px;"
  alt="Animation of addition of s &amp; p to make an sp orbital"
- src="making%20sp+%20anim.gif" align="middle"></td>
+ src="making%20sp+%20anim.gif"></td>
           </tr>
           <tr>
-            <td><big><big><span
- style="font-weight: bold;">- case: <img
+            <td><span
+ style="font-weight: bold;font-size: 1.5em;vertical-align: center;">- case: </span><img
  style="width: 150px; height: 138px;" alt="animation of (-) combination"
- src="making%20sp-%20anim.gif" align="middle"></span></big></big></td>
+ src="making%20sp-%20anim.gif"></td>
           </tr>
         </tbody>
       </table>
@@ -134,18 +133,16 @@ below.<br>
       <table>
         <tbody>
           <tr>
-            <td style="vertical-align: top;"><big><big><span
- style="font-weight: bold;">sp</span><sub style="font-weight: bold;">+</sub><span
- style="font-weight: bold;">: </span></big></big><img
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold; font-size: 1.5em;vertical-align: center;">sp<sub>+</sub>:</span><img
  style="width: 150px; height: 133px;" alt="sp+ image" src="sp+.png"
- align="middle"><big><big><span style="font-weight: bold;"></span></big></big></td>
+ ></td>
           </tr>
           <tr>
-            <td style="vertical-align: top;"><big><big><span
- style="font-weight: bold;">sp</span><sub style="font-weight: bold;">-</sub><span
- style="font-weight: bold;">:&nbsp; </span></big></big><img
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;font-size: 1.5em;vertical-align: center;">sp<sub>-</sub>:&nbsp; </span><img
  style="width: 150px; height: 133px;" alt="sp- image" src="sp-.png"
- align="middle"></td>
+></td>
           </tr>
         </tbody>
       </table>
@@ -167,7 +164,7 @@ how the + (top) and - (bottom) combinations yield two orbitals pointing opposite
 directions. The images at right show the two sp orbitals (sp<sub>+</sub> and sp<sub>-</sub>).&nbsp;
 To manipulate these orbitals and compare them directly with the other 2p<sub>y</sub>
 and 2p<sub>z </sub>orbitals that did not get used in making the
-hybrids see the interactive <a href="sp%20hybrid.shtml">sp hybrid page</a>.</td>
+hybrids see the interactive <a href="sp%20hybrid.shtml">sp hybrid page</a>.</div></td>
     </tr>
   </tbody>
 </table>
@@ -183,59 +180,56 @@ relationship is shown in the table below.</p>
  target="_blank"
  href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
 geometries</a> to atomic hybridization.<br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
- cellspacing="2">
+<table class="example-table" style="text-align: left; width: 100%;">
   <tbody>
     <tr>
-      <td style="vertical-align: top; text-align: center;"><span
+      <td><span
  style="font-weight: bold;">Number of
 Groups around the atom</span><br>
       </td>
-      <td colspan="1" rowspan="1"
- style="vertical-align: top; text-align: center;"><span
+      <td><span
  style="font-weight: bold;">Sub-Shapes</span><br>
 A = central atom<br>
 X = atom attached to central atom<br>
 E = nonbonding electron group on central atom<br>
       </td>
-      <td style="vertical-align: top; text-align: center;"><span
+      <td><span
  style="font-weight: bold;">Hybridization</span><br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center;">2<br>
+      <td>2<br>
       </td>
-      <td style="text-align: center;">AX<sub>2</sub>, Linear </td>
-      <td style="text-align: center;"><a href="sp%20hybrid.shtml">sp</a><br>
+      <td>AX<sub>2</sub>, Linear </td>
+      <td><a href="sp%20hybrid.shtml">sp</a><br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center;">3<br>
+      <td>3<br>
       </td>
-      <td style="text-align: center;">AX<sub>3</sub>, Trigonal Planar<br>
+      <td>AX<sub>3</sub>, Trigonal Planar<br>
       <br>
 AX<sub>2</sub>E, Bent </td>
-      <td style="text-align: center;"><br>
-      <a href="sp2%20hybrid.shtml">sp<sup>2</sup></a><br>
-      <br>
+      <td>
+      <a href="sp2%20hybrid.shtml">sp<sup>2</sup></a>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center;">4<br>
+      <td>4
       </td>
-      <td style="text-align: center;">AX<sub>4, </sub>Tetrahedral<br>
+      <td>AX<sub>4, </sub>Tetrahedral<br>
       <br>
 AX<sub>3</sub>E, Trigonal Pyramidal<br>
       <br>
 AX<sub>2</sub>E<sub>2</sub>,<sub> </sub>Bent </td>
-      <td style="text-align: center;"><a href="sp3%20hybrid.shtml">sp<sup>3</sup></a><br>
-      <br>
+      <td><a href="sp3%20hybrid.shtml">sp<sup>3</sup></a>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center;">5<br>
+      <td>5
+
       </td>
-      <td style="text-align: center;">AX<sub>5</sub>, Trigonal
+      <td>AX<sub>5</sub>, Trigonal
 Bipyramidal<br>
       <br>
 AX<sub>4</sub>E, See-Saw<br>
@@ -243,23 +237,14 @@ AX<sub>4</sub>E, See-Saw<br>
 AX<sub>3</sub>E<sub>2</sub>, T-Shaped<br>
       <br>
 AX<sub>2</sub>E<sub>3</sub>, Linear </td>
-      <td style="text-align: center;"><br>
-      <br>
-      <br>
-sp<sup>3</sup>d<br>
-      <br>
-      <br>
-      <br>
+      <td>
+sp<sup>3</sup>d
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top; text-align: center;">6<br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <td>6
       </td>
-      <td style="text-align: center;">AX<sub>6</sub>, Octahedral<br>
+      <td>AX<sub>6</sub>, Octahedral<br>
       <br>
 AX<sub>5</sub>E, Square Pyramidal<br>
       <br>
@@ -274,12 +259,8 @@ sp<sup>3</sup>d<sup>2</sup><br>
     </tr>
   </tbody>
 </table>
-<div style="text-align: right;"><br>
-</div>
 </div>
 <hr style="width: 100%; height: 2px;">
-<div class="update-info">Last Update: September 7, 2013<br>by J. Gutow <br>
-Expires:---
-</div>
+<!--#include virtual = "Last_mod_date.html"-->
 </body>
 </html>

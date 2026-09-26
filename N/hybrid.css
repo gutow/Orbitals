@@ -56,8 +56,21 @@
   }
   .example-table{
       border-top:1px solid lightgray;
-      border-bottom:1px solid lightgray
+      border-bottom:1px solid lightgray;
+      border-collapse: collapse;
   }
+  .example-table td{
+      border:1px solid lightgray;
+      text-align:center;
+      vertical-align: middle;
+  }
+  table.MV_Instructions {
+    border-collapse: collapse;
+  }
+  table.MV_Instructions td{
+    border:1px solid lightgray;
+    vertical-align: middle;
+}
   /* double bond/VB stuff */
   #visible_page_wrapper{
       position:relative;
@@ -383,6 +396,9 @@ ul.selectOneList {
       color: rgb(0, 0, 0); 
       /*background-color: rgb(250, 248, 244);*/
       overflow: scroll;
+  }
+  #portal-header{
+      border-bottom:1px solid lightgray;
   }
   .subtitle-text {
       width:100%;
