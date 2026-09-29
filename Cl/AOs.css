@@ -1,0 +1,450 @@
+#page-title {
+    display:inline-block;
+    margin:5px 1px 1px 5px;
+    width:100%;
+    text-align:center;
+  }
+#page-title .title-text {
+    font-weight: bold;
+    font-size: 2em;
+}
+#hybrid-site-parts{
+    text-align: center;
+}
+#hybrid-site-parts a{
+    border-right:1px solid black;
+    padding-left:5px;
+    padding-right:5px;
+}
+#hybrid-site-parts a:last-child{
+    border-right:none;
+}
+#hybrid-site-parts span{
+    font-weight: bold;
+}
+#hosted-by{
+    text-align: right;
+}
+#display {
+      display:block;
+      border:solid;
+      border-width:1px;
+      border-color:grey;
+      height:354px;
+  }
+  .content_container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 85vh;
+  }
+  #Jmol_div {
+    display:inline-block;
+    width:49%;
+    min-width: 300px;
+    aspect-ratio: 1/1;
+    max-height: 100%;
+  }
+  .controls_div {
+    position:relative;
+    display:inline-flex;
+    flex-wrap: nowrap;
+    min-width: 320px;
+    width: 49%;
+    max-height: 100%;
+    overflow: visible;
+  }
+  .example-table{
+      border-top:1px solid lightgray;
+      border-bottom:1px solid lightgray;
+      border-collapse: collapse;
+  }
+  .example-table td{
+      border:1px solid lightgray;
+      text-align:center;
+      vertical-align: middle;
+  }
+  table.MV_Instructions {
+    border-collapse: collapse;
+  }
+  table.MV_Instructions td{
+    border:1px solid lightgray;
+    vertical-align: middle;
+}
+  /* double bond/VB stuff */
+  #visible_page_wrapper{
+      position:relative;
+      top:0px;
+      width:100%;
+      height:85vh;
+      overflow:hidden;
+      display:inline-flex;
+      flex-wrap: wrap;
+  }
+  #JSmol_loading_msg{
+      color:orange;
+  }
+  .JmolTextPane {
+      width:49%;
+      min-width:300px;
+      height:95%;
+      overflow:scroll;
+      border:1px solid;
+      display:inline;
+  }
+  .JmolPane {
+      width:49%;
+      min-width:300px;
+      height:95%;
+      overflow:hidden;
+      /*border:1px solid green;*/
+  }
+  .JmolViewerPane{
+      width:98%;
+      min-width: 290px;
+      aspect-ratio: 1/1;
+      max-height: 100%;
+      overflow:hidden;
+      /*border:1px solid grey;*/
+  }
+  .JmolWidgetPane {
+      width:98%;
+      height:3.5%;
+      overflow:scroll;
+      /*border:1px solid blue;*/
+  }
+  .JmolButtonDiv{
+      width:99%;
+      /*border:1px solid blue;*/
+      text-align:center;
+      /*min-height:8px;*/
+  }
+/* end VB stuff */
+  @media (max-width: 600px){
+        #Jmol_div {
+            width:100%;
+            min-width: 300px;
+        }
+        .controls_div {
+            position:relative;
+            display:inline-flex;
+            flex-wrap: nowrap;
+            min-width: 320px;
+            width: 100%;
+            min-height: 16em;
+            max-height: 100%;
+            overflow: scroll;
+        }
+          /* VB stuff */
+            .JmolTextPane {
+              width:100%;
+              min-width:300px;
+              max-height: 400px;
+              overflow:scroll;
+              border:1px solid;
+              display:inline;
+          }
+           .JmolPane {
+              width:100%;
+              min-width:300px;
+               min-height:300px;
+              height:95%;
+              overflow:hidden;
+              /*border:1px solid green;*/
+          }
+           #visible_page_wrapper{
+               position:relative;
+               display:inline-flex;
+               flex-wrap: wrap;
+               width: 100%;
+               height: unset;
+               overflow: scroll;
+           }
+  }
+  /* Selection dropdown css*/
+  .orbit_controls {
+      position: absolute;
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      border-top:1px dotted grey;
+  }
+  #orb1_controls{
+      top:0;
+      left:0;
+      z-index: 10;
+  }
+  #orb2_controls{
+      top:4em;
+      z-index: 8;
+  }
+  #orb3_controls {
+      top:8em;
+      z-index: 6;
+  }
+  #orb4_controls{
+      top:12em;
+      z-index: 4;
+  }
+/* hide the checkbox*/
+.selectOneList input{
+  display: none;
+}
+.complexMenuItem{
+  display:inline-flex;
+}
+.selectOneList input ~ li{
+ display: none;
+}
+.selectOneList input:checked  ~ li {
+  display: block;
+  position:relative;
+  background-color: aliceblue;
+  z-index: 9999;
+}
+.selectOneList input:checked  ~ li:hover {
+  background-color: lightgrey;
+}
+.selectOneList input:checked ~ hr {
+  border: 1px dotted black;
+  margin:0;
+  display:block;
+}
+.selectOneList input ~ hr {
+  display:none;
+}
+.mainmenu label{
+  /* Force the label to show up.*/
+  cursor: pointer;
+  display: block;
+  /* prettifying*/
+  background-color: inherit;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  position: relative;
+  font-weight: bold;
+  text-wrap: nowrap;
+  text-align: center;
+    /*
+  border-left:1px solid grey;
+  border-right:1px solid grey;
+  */
+}
+/* down pointing triangle to append to labels that are
+  sub items of a mainmenu class.
+ */
+.mainmenu label:after{
+  content:" \25BE";
+}
+ul.selectOneList {
+  list-style-type: none;
+  list-style-position: inside;
+  padding:0;
+  margin:0;
+}
+.selectOneList li{
+  cursor:pointer;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right:5px;
+  margin-left:5px;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+.selectOneList li:last-child {
+  border-bottom:1px solid grey;
+}
+.selectOneList li:first-child{
+  border-top:1px solid grey;
+}
+.selectOneList li:hover{
+  background-color:lightgrey;
+}
+.selectOneList label:hover{
+  background-color:lightgrey;
+}
+.selectOneList li.selected {
+ display:block;
+ background-color: whitesmoke;
+ border:1px solid grey;
+}
+/* add checkmark before the selected item */
+.selectOneList li.selected:before {
+ content: '\2713';
+}
+/* Color boxes to go in the menus*/
+.colorbox {
+  border:none;
+  margin:0;
+  padding:0;
+  height:1em;
+  width:1em;
+}
+.colorbox.cyan {
+  background-color: cyan;
+}
+.colorbox.magenta{
+  background-color: magenta;
+}
+.colorbox.blue{
+  background-color: blue;
+}
+.colorbox.red{
+  background-color: red;
+}
+.colorbox.green{
+  background-color: green;
+}
+.colorbox.yellow{
+  background-color: yellow;
+}
+.colorbox.brown{
+  background-color: brown;
+}
+.colorbox.pink{
+  background-color: pink;
+}
+
+  /* End selection dropdown css*/
+
+/* Accordian css */
+.accordians{
+    display: inline-block;
+    position: absolute;
+    top: 16em;
+    width: 100%;
+}
+.accordians ul li i:before, ul li i:after {
+  transition: all 0.25s ease-in-out;
+}
+.accordians ul {
+  position: relative;
+    top:0px;
+    list-style: none;
+  width: 98%;
+  padding: 0;
+  margin: 0;
+}
+.accordians li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+}
+.accordians ul li:last-of-type {
+  padding-bottom: 0;
+}
+.accordians ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 2px;
+  right: 0;
+}
+.accordians ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 3px;
+  height: 9px;
+}
+.accordians ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordians ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordians ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+    touch-action: manipulation;
+}
+.accordians ul li input[type=checkbox]:checked ~ .accordion-contents{
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+    display:none;
+}
+.accordians ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordians ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+.accordion-contents{
+    position: relative;
+    z-index: 2;
+}
+/* end Accordian css */
+  #fig1-images {
+      max-width:410px;
+      display:inline-block;
+      border:0;
+      padding:0;
+      margin:0;
+  }
+  #fig1 img{
+      width:200px;
+      height:178px;
+      border:0;
+      padding:0;
+      margin:0;
+  }
+  .fig-caption {
+      font-size: 0.9em;
+  }
+  .fig-label {
+      font-weight: bold;
+  }
+  #fig1-caption {
+      display:inline-block;
+      max-width:50%;
+      vertical-align:top;
+      margin: 20px 5px 5px 5px;
+  }
+  #hybridization-animation {
+      text-align: left;
+      width: 100%;
+      border:0;
+  }
+  #hybridization-animation td {
+      text-align: center;
+      vertical-align: middle;
+  }
+  body {
+      color: rgb(0, 0, 0); 
+      /*background-color: rgb(250, 248, 244);*/
+      overflow: scroll;
+  }
+  #portal-header{
+      border-bottom:1px solid lightgray;
+  }
+  .subtitle-text {
+      width:100%;
+      font-weight:bold;
+      text-align:center;
+      font-size:1.5em;
+  }
+  .explanation-text {
+      margin:2px;
+  }
+  .orbital_title{
+      text-align:center;
+      font-size:1.5em;
+      font-weight:bold;
+      padding-right: 0.5em;
+  }
+  .update-info {
+      position:relative;
+      text-align:right;
+      font-size:0.75em;
+      width:98%;
+  }

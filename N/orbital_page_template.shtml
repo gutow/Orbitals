@@ -11,7 +11,7 @@
 </head>
 <body>
     <!--#include virtual = "Hybrid Orbitals Header.html"-->
-    <div class="content_container">
+        <div class="content_container">
         <div class="subtitle-text">
             Visualizing XX hybrids and the p orbitals that are left
         </div>

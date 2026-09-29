@@ -40,10 +40,10 @@
   }
   #Jmol_div {
     display:inline-block;
+    position:relative;
     width:49%;
     min-width: 300px;
     aspect-ratio: 1/1;
-    max-height: 100%;
   }
   .controls_div {
     position:relative;
@@ -426,6 +426,8 @@ ul.selectOneList {
   }
   #portal-header{
       border-bottom:1px solid lightgray;
+      text-align:center;
+      width:100%;
   }
   .subtitle-text {
       width:100%;
