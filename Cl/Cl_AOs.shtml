@@ -16,35 +16,23 @@
             Visualization of atomic orbitals on Cl atom
         </div>
         <div class="explanation-text">
-            This
-        page is designed to allow you to manipulate images of atomic
-        orbitals
-        and compare multiple orbitals by displaying them simultaneously
-        on one
-        atom. The goal is to help you visualize atomic orbitals
-        and their relative sizes. For more information about
-        detailed
-        interpretation of orbitals and the quantum mechanical model
-        behind them
-        see
-        some of the links to other websites below and your class text.<br>
-            On the left below (you may need to scroll down) is a
-        window with a green dot in it.&nbsp;The green
-        dot represents the location of a chlorine nucleus (significantly
-        enlarged so that you can see it). On the right hand side
-        are four
-        pull-down menus from which you can choose an orbital to display.&nbsp;
-        The electronic configuration of a ground state
-        chlorine is [Ne]3s<sup>2</sup>3p<sup>5</sup>
-            (1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>5</sup>).&nbsp;
-        This means that the 4s, 3d and 4p orbitals shown are unoccupied;&nbsp;
-        thus their extent and energy are somewhat different than would
-        be found for orbitals with electrons in them.&nbsp; The orbitals
-        appear in the pull-down menus from lowest (at top) to highest (at bottom)
-        energy.
-        <br>
-            Use the menus to select up to four different
-            orbitals to display at once, plus control their colors and display mode.
+            <p>This page is designed to allow you to manipulate images of atomic
+            orbitals and compare multiple orbitals by displaying them simultaneously
+            on one atom. The goal is to help you visualize atomic orbitals and their
+                relative sizes.</p>
+            <p>Below (you may need to scroll down) is a
+            box with a green dot in it.&nbsp;The green
+            dot represents the location of a chlorine nucleus (significantly
+            enlarged so that you can see it). To the right (or below on a narrow screen)
+            are dropdown selectors from which you can choose an orbital to display and control
+            the appearance of each orbital.
+            The orbitals appear in the dropdowns from lowest (at top) to highest (at bottom)
+            energy.</p>
+            <p>The electronic configuration of a ground state chlorine is [Ne]3s<sup>2</sup>3p<sup>5</sup>
+                (1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>5</sup>).&nbsp;
+            This means that the 4s, 3d and 4p orbitals shown are unoccupied;&nbsp;
+            thus their extent and energy are somewhat different than would
+            be found for orbitals with electrons in them.</p>&nbsp;
         </div>
         <div id="Jmol_div">
               <script type="text/javascript">
@@ -487,6 +475,69 @@
                           </h3>
                         <div class = "accordion-contents">
                             <!--#include virtual = "MV_Instructions.html"-->
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              Other visualizations and explanations of atomic orbitals
+                          </h3>
+                        <div class = "accordion-contents">
+                            <ul>
+                                <li>
+                                    Dr. Spinney's <a href="https://cbc-uged.asc.ohio-state.edu/H-AOs/" target="_blank">
+                                    hydrogenic atomic orbitals</a> (part of his general chemistry resource within
+                                    <span style="font-style:italic;">Chemistry the Central Science</span> hosted by Ohio State
+                                    University).
+                                </li>
+                                <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.07%3A_The_Schrodinger_Wave_Equation_for_the_Hydrogen_Atom"
+                                       target="_blank"> Sophomore/Junior level discussion of hydrogenic atomic orbitals </a>
+                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                                <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.08%3A_Many-Electron_Atoms_and_the_Periodic_Table"
+                                       target="blank">Sophomore/Junior level discussion of many electron atomic orbitals</a>
+                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              How these orbital images are generated
+                          </h3>
+                        <div class = "accordion-contents">
+                            These orbital images are based
+                            on calculations done using
+                            the <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
+                            <span style="font-style: italic;">ab initio</span> quantum
+                            mechanics
+                            package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">
+                            JSmol/Jmol</a> from the GAMESS.log file of a single point energy calculation on a ground
+                            state Cl at the 6-311G++(2d,p) level of theory.
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              References
+                          </h3>
+                        <div class = "accordion-contents">
+                          <ol>
+                              <li>M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert,
+                                M.S.Gordon,
+                                J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su,
+                                T.L.Windus,
+                                M.Dupuis, J.A.Montgomery <span style="font-style:
+                                    italic;">J. Comput. Chem.</span>, 14,
+                                1347-1363(1993).</li>
+                            </ol>
                         </div>
                     </li>
                 </ul>
