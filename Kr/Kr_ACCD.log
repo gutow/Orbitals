@@ -1,0 +1,978 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host chemcompute-node-0.novalocal
+under operating system Linux at Wed Sep 30 23:58:41 UTC 2026
+SLURM has assigned the following compute nodes to this run:
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda4       60672104 14827052  45845052  25% /
+GAMESS temporary binary files will be written to /scratch/2006690
+GAMESS supplementary output files will be written to /data/slurm/162/1625780
+Copying input file 1625780.inp to your run's scratch directory...
+The generated host list is
+chemcompute-node-0.novalocal
+
+ Distributed Data Interface kickoff program.
+ Initiating 1 compute processes on 1 nodes to run the following command:
+ /data/gamess-2019R1-avx2-ddi/gamess.00.x 1625780 
+
+          ******************************************************
+          *         GAMESS VERSION = 30 JUN 2019 (R1)          *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT INTEL VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     COLLEEN BERTONI, BRETT BODE, KURT BRORSEN, CALEB CARLIN, GALINA CHABAN,
+     WEI CHEN, CHEOL HO CHOI, PAUL DAY, ALBERT DEFUSCO, NUWAN DESILVA,
+     TIM DUDLEY, DMITRI FEDOROV, ALEX FINDLATER, GRAHAM FLETCHER, 
+     MARK FREITAG, KURT GLAESEMANN, ANASTASIA GUNINA,
+     DAN KEMP, GRANT MERRILL, NORIYUKI MINEZAWA, JONATHAN MULLIN,
+     TAKESHI NAGATA, SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON,
+     MIKE PAK, BUU PHAM,
+     SPENCER PRUITT, LUKE ROSKOP, JIM SHOEMAKER, LYUDMILA SLIPCHENKO,
+     TONY SMITH, SAROM SOK LEANG, JIE SONG, TETSUYA TAKETSUGU, SIMON WEBB,
+     PENG XU, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, AARON WEST, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     NAT. INST. OF ADVANCED INDUSTRIAL SCIENCE AND TECHNOLOGY: KAZUO KITAURA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, JUN SHEN, J. EMILIANO DEUSTUA, PIOTR PIECUCH
+     UNIVERSITY OF MINNESOTA:
+          YINAN SHU
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: ANNA POMOGAEVA, DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, JUNJI SEINO,
+          YUYA NAKAJIMA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH: ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+     UNIVERSITY OF COPENHAGEN: Jimmy Kromann, CASPER STEINMANN
+     TOKYO INSTITUTE OF TECHNOLOGY: HIROYA NAKATA
+     NAGOYA UNIVERSITY: YOSHIO NISHIMOTO, STEPHAN IRLE
+     MOSCOW STATE UNIVERSITY: VLADIMIR MIRONOV
+     A.N.NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS OF RUSSIAN ACADEMY OF SCIENCES:
+          IGOR S. GERASIMOV
+
+ EXECUTION OF GAMESS BEGUN Wed Sep 30 23:58:41 2026
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD>!                                                                               
+ INPUT CARD>!   GAMESS Calculation input file                                               
+ INPUT CARD>!                                                                               
+ INPUT CARD>!                                                                               
+ INPUT CARD> $CONTRL SCFTYP=RHF MAXIT=200 RUNTYP=ENERGY                                     
+ INPUT CARD>         COORD=UNIQUE MULT=1 ISPHER=1                                           
+ INPUT CARD>         ICHARG=0                                                               
+ INPUT CARD>         MOLPLT=.FALSE. PLTORB=.FALSE.  $END                                    
+ INPUT CARD> $SYSTEM TIMLIM=2879 MWORDS=436  MEMDDI=1 $END                                  
+ INPUT CARD>                                                                                
+ INPUT CARD> $STATPT OPTTOL=0.0005 NSTEP=999 $END                                           
+ INPUT CARD> $STATPT IHREP=0  $END                                                          
+ INPUT CARD>                                                                                
+ INPUT CARD> $BASIS  GBASIS=ACCD $END                                                       
+ INPUT CARD>                                                                                
+ INPUT CARD> $SCF    DIRSCF=.T. $END                                                        
+ INPUT CARD> $GUESS  GUESS=HUCKEL  $END                                                     
+ INPUT CARD>                                                                                
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>                                                                                
+ INPUT CARD>  Dnh 2                                                                         
+ INPUT CARD>                                                                                
+ INPUT CARD>Kr   36.0     0.00     0.00     0.00                                            
+ INPUT CARD> $END                                                                           
+ INPUT CARD>                                                                                
+ INPUT CARD>                                                                                
+ INPUT CARD>! Customizations after this line are persisted when using Do More Calculations  
+  436000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=ACCD         IGAUSS=       0      POLAR=NONE    
+     NDFUNC=       0     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       0      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+                                                                                 
+
+ THE POINT GROUP OF THE MOLECULE IS DNH     
+ THE ORDER OF THE PRINCIPAL AXIS IS     2
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ KR         36.0     0.0000000000        0.0000000000        0.0000000000
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 KR    
+
+   1 KR      0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ KR        
+
+      1   S       1        681358.8000000    0.000196899539
+      1   S       2        102126.5000000    0.001528596418
+      1   S       3         23243.7100000    0.007949981369
+      1   S       4          6582.0070000    0.032493723848
+      1   S       5          2146.4290000    0.106723749885
+      1   S       6           774.3378000    0.267569472930
+      1   S       7           301.6702000    0.420184115265
+      1   S       8           123.4118000    0.285800830203
+      1   S       9            38.5675500    0.032246024429
+      1   S      10            16.6373800   -0.007682781995
+      1   S      11             5.1987950    0.002939293112
+      1   S      12             2.2948140   -0.001466196564
+      1   S      13             0.4852110    0.000414399029
+
+      2   S      14        681358.8000000   -0.000062191150
+      2   S      15        102126.5000000   -0.000479331791
+      2   S      16         23243.7100000   -0.002533739448
+      2   S      17          6582.0070000   -0.010362125467
+      2   S      18          2146.4290000   -0.036346427894
+      2   S      19           774.3378000   -0.099359561108
+      2   S      20           301.6702000   -0.214030543397
+      2   S      21           123.4118000   -0.188292405941
+      2   S      22            38.5675500    0.458316381458
+      2   S      23            16.6373800    0.646474406521
+      2   S      24             5.1987950    0.085645712592
+      2   S      25             2.2948140   -0.015610078682
+      2   S      26             0.4852110    0.003648480820
+
+      3   S      27        681358.8000000    0.000024802094
+      3   S      28        102126.5000000    0.000192041914
+      3   S      29         23243.7100000    0.001010909433
+      3   S      30          6582.0070000    0.004169241909
+      3   S      31          2146.4290000    0.014588312607
+      3   S      32           774.3378000    0.040945368079
+      3   S      33           301.6702000    0.090040066660
+      3   S      34           123.4118000    0.088712108776
+      3   S      35            38.5675500   -0.292417481417
+      3   S      36            16.6373800   -0.573705097998
+      3   S      37             5.1987950    0.494904164836
+      3   S      38             2.2948140    0.758694551765
+      3   S      39             0.4852110    0.045148476301
+
+      4   S      40        681358.8000000   -0.000013798238
+      4   S      41        102126.5000000   -0.000107242000
+      4   S      42         23243.7100000   -0.000564155799
+      4   S      43          6582.0070000   -0.002328234302
+      4   S      44          2146.4290000   -0.008151789297
+      4   S      45           774.3378000   -0.022942102925
+      4   S      46           301.6702000   -0.050711493145
+      4   S      47           123.4118000   -0.050681975396
+      4   S      48            38.5675500    0.175126535474
+      4   S      49            16.6373800    0.367455456272
+      4   S      50             5.1987950   -0.407392272310
+      4   S      51             2.2948140   -0.968758032229
+      4   S      52             0.4852110    1.217305340343
+
+      5   S      53             0.1862700    1.000000000000
+
+      6   P      54          4474.2700000    0.001519503322
+      6   P      55          1060.5790000    0.012742427858
+      6   P      56           342.2081000    0.063646639145
+      6   P      57           128.9984000    0.208563955964
+      6   P      58            53.0872200    0.412243201249
+      6   P      59            22.9594200    0.387811147836
+      6   P      60             9.5073000    0.100382219456
+      6   P      61             4.0830550   -0.002507805483
+      6   P      62             1.7504460    0.002713905933
+      6   P      63             0.5291900   -0.000697701525
+
+      7   P      64          4474.2700000   -0.000620715547
+      7   P      65          1060.5790000   -0.005220489714
+      7   P      66           342.2081000   -0.026842647858
+      7   P      67           128.9984000   -0.091569841242
+      7   P      68            53.0872200   -0.196789625308
+      7   P      69            22.9594200   -0.163452761036
+      7   P      70             9.5073000    0.273783149766
+      7   P      71             4.0830550    0.598077827063
+      7   P      72             1.7504460    0.275007883132
+      7   P      73             0.5291900    0.012768862701
+
+      8   P      74          4474.2700000    0.000293571829
+      8   P      75          1060.5790000    0.002427274662
+      8   P      76           342.2081000    0.012765110623
+      8   P      77           128.9984000    0.042845608920
+      8   P      78            53.0872200    0.096158149467
+      8   P      79            22.9594200    0.071128950572
+      8   P      80             9.5073000   -0.151196740489
+      8   P      81             4.0830550   -0.421215341107
+      8   P      82             1.7504460   -0.050914605809
+      8   P      83             0.5291900    1.037648699640
+
+      9   P      84             0.1643690    1.000000000000
+
+     10   D      85           115.5253000    0.021955698972
+     10   D      86            33.4652500    0.132161993814
+     10   D      87            11.8304600    0.363348382992
+     10   D      88             4.3397710    0.492958176926
+     10   D      89             1.5075240    0.266755987514
+
+     11   D      90             0.5030000    1.000000000000
+
+     12   S      91             0.0651450    1.000000000000
+
+     13   P      92             0.0466060    1.000000000000
+
+     14   D      93             0.2155000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   14
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   39
+ NOTE: THIS RUN WILL RESTRICT THE MO VARIATION SPACE TO SPHERICAL HARMONICS.
+ THE NUMBER OF ORBITALS KEPT IN THE VARIATIONAL SPACE WILL BE PRINTED LATER.
+ NUMBER OF ELECTRONS                          =   36
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =   18
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =   18
+ TOTAL NUMBER OF ATOMS                        =    1
+ THE NUCLEAR REPULSION ENERGY IS        0.0000000000
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=       1     NOSYM =       0     MAXIT =     200     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=   436000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           1 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS     1000000 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=   437000000 WORDS.
+ TIMLIM=        2879.00 MINUTES, OR       2.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    39     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       T     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       T
+
+     ------------------------------------------
+     THE POINT GROUP IS DNH, NAXIS= 2, ORDER= 8
+     ------------------------------------------
+
+ -- VARIATIONAL SPACE WILL BE RESTRICTED TO PURE SPHERICAL HARMONICS ONLY --
+ AFTER EXCLUDING CONTAMINANT COMBINATIONS FROM THE CARTESIAN GAUSSIAN BASIS
+ SET, THE NUMBER OF SPHERICAL HARMONICS KEPT IN THE VARIATION SPACE IS   36
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ AG  =   12     AU  =    0     B3U =    5     B3G =    3     B1G =    3
+ B1U =    5     B2U =    5     B2G =    3
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    50.00%
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    33.33%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES     13878 WORDS.
+
+ STATISTICS FOR GENERATION OF SYMMETRY ORBITAL -Q- MATRIX
+ NUMBER OF CARTESIAN ATOMIC ORBITALS=         39
+ NUMBER OF SPHERICAL CONTAMINANTS DROPPED=     3
+ NUMBER OF LINEARLY DEPENDENT MOS DROPPED=     0
+ TOTAL NUMBER OF MOS IN VARIATION SPACE=      36
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    18 ORBITALS ARE OCCUPIED (   14 CORE ORBITALS).
+    15=AG      16=B3U     17=B2U     18=B1U     19=AG      20=AG      21=AG  
+    22=AG      23=AG      24=AG      25=B3U     26=B3U     27=B3G     28=B3G 
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    25.00%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ DIRECT SCF METHOD SKIPS INTEGRAL STORAGE ON DISK.
+ DIRECT TRANSFORMATION SKIPS AO INTEGRAL STORAGE ON DISK.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    40.00%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+
+     NUCLEAR ENERGY =         0.0000000000
+     MAXIT =  200     NPUNCH=    2
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  DEM=F  SOSCF=T
+     DENSITY MATRIX CONV=  2.00E-05
+     SOSCF WILL OPTIMIZE     324 ORBITAL ROTATIONS, SOGTOL=   0.250
+     MEMORY REQUIRED FOR RHF ITERS=     58095 WORDS.
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+ SCHWARZ INEQUALITY OVERHEAD:       780 INTEGRALS, T=        0.02
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD      INTEGRALS    SKIPPED
+   1  0  0    -2751.7131739368 -2751.7131739368   0.165696507   0.000000000          44046          0
+          ---------------START SECOND ORDER SCF---------------
+   2  1  0    -2751.9747020615    -0.2615281248   0.062917218   0.030749055          44034          4
+   3  2  0    -2751.9775836398    -0.0028815783   0.007321347   0.005734851          43959         30
+   4  3  0    -2751.9777523001    -0.0001686603   0.000547595   0.000204302          43818         55
+   5  4  0    -2751.9777525973    -0.0000002971   0.000211467   0.000060509          43098        173
+   6  5  0    -2751.9777526135    -0.0000000162   0.000001857   0.000000782          41577        302
+   7  6  0    -2751.9777526134     0.0000000001   0.000000210   0.000000136          36638        898
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       1.7 SECONDS (       0.2 SEC/ITER)
+     FOCK TIME ON FIRST ITERATION=       0.3, LAST ITERATION=       0.2
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS    -2751.9777526134 AFTER   7 ITERATIONS
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     4 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    3) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     7 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     8 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    5) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    10 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    11 (    6) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    12 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (    6) HAS LZ(WEIGHT)=-2.00( 45.0%)  0.00( 10.0%)  2.00( 45.0%) 
+ MO    14 (    6) HAS LZ(WEIGHT)=-2.00(  5.0%)  0.00( 90.0%)  2.00(  5.0%) 
+ MO    15 (    7) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (    8) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (    8) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    18 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    19 (    9) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (    9) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    22 (   10) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    23 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    24 (   11) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    25 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    26 (   11) HAS LZ(WEIGHT)=-2.00( 47.9%)  0.00(  4.1%)  2.00( 47.9%) 
+ MO    27 (   11) HAS LZ(WEIGHT)=-2.00(  2.1%)  0.00( 95.9%)  2.00(  2.1%) 
+ MO    28 (   12) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    29 (   12) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    30 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    31 (   13) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    32 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    33 (   14) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    34 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    35 (   14) HAS LZ(WEIGHT)=-2.00( 49.3%)  0.00(  1.5%)  2.00( 49.3%) 
+ MO    36 (   14) HAS LZ(WEIGHT)= 0.00( 98.5%) 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                 -520.2084   -69.9423   -63.0504   -63.0504   -63.0504
+                     AG         AG         B2U        B1U        B3U 
+    1  KR 1  S    1.000005   0.000019   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000015   1.000273   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000057   0.000444   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000066   0.000594   0.000000   0.000000   0.000000
+    5  KR 1  S   -0.000314  -0.002749   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.999997
+    7  KR 1  Y    0.000000   0.000000   0.999997   0.000000   0.000000
+    8  KR 1  Z    0.000000   0.000000   0.000000   0.999997   0.000000
+    9  KR 1  X    0.000000   0.000000   0.000000   0.000000  -0.000067
+   10  KR 1  Y    0.000000   0.000000  -0.000067   0.000000   0.000000
+   11  KR 1  Z    0.000000   0.000000   0.000000  -0.000067   0.000000
+   12  KR 1  X    0.000000   0.000000   0.000000   0.000000  -0.000005
+   13  KR 1  Y    0.000000   0.000000  -0.000005   0.000000   0.000000
+   14  KR 1  Z    0.000000   0.000000   0.000000  -0.000005   0.000000
+   15  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000274
+   16  KR 1  Y    0.000000   0.000000   0.000274   0.000000   0.000000
+   17  KR 1  Z    0.000000   0.000000   0.000000   0.000274   0.000000
+   18  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1  S    0.000096   0.000826   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.000000   0.000000   0.000000  -0.000082
+   32  KR 1  Y    0.000000   0.000000  -0.000082   0.000000   0.000000
+   33  KR 1  Z    0.000000   0.000000   0.000000  -0.000082   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+
+                      6          7          8          9         10
+                  -10.8682    -8.3506    -8.3506    -8.3506    -3.8384
+                     AG         B2U        B3U        B1U        B2G 
+    1  KR 1  S    0.000088   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000644   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    1.006186   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.002261   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S   -0.017159   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000000   0.000052   0.000000   0.000000
+    7  KR 1  Y    0.000000   0.000052   0.000000   0.000000   0.000000
+    8  KR 1  Z    0.000000   0.000000   0.000000   0.000052   0.000000
+    9  KR 1  X    0.000000   0.000000   1.000027   0.000000   0.000000
+   10  KR 1  Y    0.000000   1.000027   0.000000   0.000000   0.000000
+   11  KR 1  Z    0.000000   0.000000   0.000000   1.000027   0.000000
+   12  KR 1  X    0.000000   0.000000  -0.000650   0.000000   0.000000
+   13  KR 1  Y    0.000000  -0.000650   0.000000   0.000000   0.000000
+   14  KR 1  Z    0.000000   0.000000   0.000000  -0.000650   0.000000
+   15  KR 1  X    0.000000   0.000000  -0.000836   0.000000   0.000000
+   16  KR 1  Y    0.000000  -0.000836   0.000000   0.000000   0.000000
+   17  KR 1  Z    0.000000   0.000000   0.000000  -0.000836   0.000000
+   18  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.997768
+   23  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.005318
+   29  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1  S    0.004717   0.000000   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.000000   0.000214   0.000000   0.000000
+   32  KR 1  Y    0.000000   0.000214   0.000000   0.000000   0.000000
+   33  KR 1  Z    0.000000   0.000000   0.000000   0.000214   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.008237
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     11         12         13         14         15
+                   -3.8384    -3.8384    -3.8384    -3.8384    -1.1560
+                     B1G        B3G        AG         AG         AG  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000335
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.002238
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.009027
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.582956
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.520704
+    6  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1 XX    0.000000   0.000000  -0.662433  -0.746139   0.000000
+   19  KR 1 YY    0.000000   0.000000   0.977392  -0.200614   0.000000
+   20  KR 1 ZZ    0.000000   0.000000  -0.314959   0.946753   0.000000
+   21  KR 1 XY    0.997768   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YZ    0.000000   0.997768   0.000000   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000  -0.003531  -0.003977   0.000000
+   25  KR 1 YY    0.000000   0.000000   0.005209  -0.001069   0.000000
+   26  KR 1 ZZ    0.000000   0.000000  -0.001679   0.005046   0.000000
+   27  KR 1 XY    0.005318   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YZ    0.000000   0.005318   0.000000   0.000000   0.000000
+   30  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.012219
+   31  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000  -0.005469  -0.006160   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.008069  -0.001656   0.000000
+   36  KR 1 ZZ    0.000000   0.000000  -0.002600   0.007816   0.000000
+   37  KR 1 XY    0.008237   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.008237   0.000000   0.000000   0.000000
+
+                     16         17         18         19         20
+                   -0.5258    -0.5258    -0.5258     0.1358     0.1358
+                     B2U        B3U        B1U        B3U        B2U 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000192   0.000000   0.001566   0.000000
+    7  KR 1  Y    0.000192   0.000000   0.000000   0.000000   0.001566
+    8  KR 1  Z    0.000000   0.000000   0.000192   0.000000   0.000000
+    9  KR 1  X    0.000000   0.002998   0.000000   0.016481   0.000000
+   10  KR 1  Y    0.002998   0.000000   0.000000   0.000000   0.016481
+   11  KR 1  Z    0.000000   0.000000   0.002998   0.000000   0.000000
+   12  KR 1  X    0.000000   0.585792   0.000000  -0.118797   0.000000
+   13  KR 1  Y    0.585792   0.000000   0.000000   0.000000  -0.118797
+   14  KR 1  Z    0.000000   0.000000   0.585792   0.000000   0.000000
+   15  KR 1  X    0.000000   0.504999   0.000000  -0.521465   0.000000
+   16  KR 1  Y    0.504999   0.000000   0.000000   0.000000  -0.521465
+   17  KR 1  Z    0.000000   0.000000   0.504999   0.000000   0.000000
+   18  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.027052   0.000000   1.224179   0.000000
+   32  KR 1  Y    0.027052   0.000000   0.000000   0.000000   1.224179
+   33  KR 1  Z    0.000000   0.000000   0.027052   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     21         22         23         24         25
+                    0.1358     0.1431     0.4545     0.4545     0.4545
+                     B1U        AG         B3G        B1G        B2G 
+    1  KR 1  S    0.000000   0.007810   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.051772   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.179398   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000376   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000  -1.375537   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Z    0.001566   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Z    0.016481   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Z   -0.118797   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Z   -0.521465   0.000000   0.000000   0.000000   0.000000
+   18  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1 XY    0.000000   0.000000   0.000000  -0.114819   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000  -0.114819
+   23  KR 1 YZ    0.000000   0.000000  -0.114819   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 XY    0.000000   0.000000   0.000000   0.056714   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.056714
+   29  KR 1 YZ    0.000000   0.000000   0.056714   0.000000   0.000000
+   30  KR 1  S    0.000000   1.773517   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1  Z    1.224179   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.962664   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.962664
+   39  KR 1 YZ    0.000000   0.000000   0.962664   0.000000   0.000000
+
+                     26         27         28         29         30
+                    0.4545     0.4545     0.9261     0.9261     0.9261
+                     AG         AG         B3U        B2U        B1U 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000000  -0.027125   0.000000   0.000000
+    7  KR 1  Y    0.000000   0.000000   0.000000  -0.027125   0.000000
+    8  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.027125
+    9  KR 1  X    0.000000   0.000000  -0.359909   0.000000   0.000000
+   10  KR 1  Y    0.000000   0.000000   0.000000  -0.359909   0.000000
+   11  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.359909
+   12  KR 1  X    0.000000   0.000000  -1.302552   0.000000   0.000000
+   13  KR 1  Y    0.000000   0.000000   0.000000  -1.302552   0.000000
+   14  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -1.302552
+   15  KR 1  X    0.000000   0.000000   1.647978   0.000000   0.000000
+   16  KR 1  Y    0.000000   0.000000   0.000000   1.647978   0.000000
+   17  KR 1  Z    0.000000   0.000000   0.000000   0.000000   1.647978
+   18  KR 1 XX    0.085690   0.076424   0.000000   0.000000   0.000000
+   19  KR 1 YY   -0.109030   0.035998   0.000000   0.000000   0.000000
+   20  KR 1 ZZ    0.023340  -0.112422   0.000000   0.000000   0.000000
+   21  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 XX   -0.042326  -0.037749   0.000000   0.000000   0.000000
+   25  KR 1 YY    0.053855  -0.017781   0.000000   0.000000   0.000000
+   26  KR 1 ZZ   -0.011529   0.055530   0.000000   0.000000   0.000000
+   27  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.000000  -0.608977   0.000000   0.000000
+   32  KR 1  Y    0.000000   0.000000   0.000000  -0.608977   0.000000
+   33  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.608977
+   34  KR 1 XX   -0.718442  -0.640751   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.914128  -0.301813   0.000000   0.000000   0.000000
+   36  KR 1 ZZ   -0.195686   0.942565   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     31         32         33         34         35
+                    1.0590     1.4125     1.4125     1.4125     1.4125
+                     AG         B3G        B1G        B2G        AG  
+    1  KR 1  S   -0.074294   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S   -0.500021   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S   -1.937124   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S   -2.528452   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    3.641180   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.244718
+   19  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -0.281975
+   20  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.037257
+   21  KR 1 XY    0.000000   0.000000  -0.306360   0.000000   0.000000
+   22  KR 1 XZ    0.000000   0.000000   0.000000  -0.306360   0.000000
+   23  KR 1 YZ    0.000000  -0.306360   0.000000   0.000000   0.000000
+   24  KR 1 XX    0.000000   0.000000   0.000000   0.000000  -1.234698
+   25  KR 1 YY    0.000000   0.000000   0.000000   0.000000   1.422675
+   26  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000  -0.187978
+   27  KR 1 XY    0.000000   0.000000   1.545708   0.000000   0.000000
+   28  KR 1 XZ    0.000000   0.000000   0.000000   1.545708   0.000000
+   29  KR 1 YZ    0.000000   1.545708   0.000000   0.000000   0.000000
+   30  KR 1  S   -1.362575   0.000000   0.000000   0.000000   0.000000
+   31  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.916922
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -1.056519
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.139597
+   37  KR 1 XY    0.000000   0.000000  -1.147887   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000  -1.147887   0.000000
+   39  KR 1 YZ    0.000000  -1.147887   0.000000   0.000000   0.000000
+
+                     36
+                    1.4125
+                     AG  
+    1  KR 1  S    0.000000
+    2  KR 1  S    0.000000
+    3  KR 1  S    0.000000
+    4  KR 1  S    0.000000
+    5  KR 1  S    0.000000
+    6  KR 1  X    0.000000
+    7  KR 1  Y    0.000000
+    8  KR 1  Z    0.000000
+    9  KR 1  X    0.000000
+   10  KR 1  Y    0.000000
+   11  KR 1  Z    0.000000
+   12  KR 1  X    0.000000
+   13  KR 1  Y    0.000000
+   14  KR 1  Z    0.000000
+   15  KR 1  X    0.000000
+   16  KR 1  Y    0.000000
+   17  KR 1  Z    0.000000
+   18  KR 1 XX    0.184309
+   19  KR 1 YY    0.119777
+   20  KR 1 ZZ   -0.304086
+   21  KR 1 XY    0.000000
+   22  KR 1 XZ    0.000000
+   23  KR 1 YZ    0.000000
+   24  KR 1 XX   -0.929911
+   25  KR 1 YY   -0.604324
+   26  KR 1 ZZ    1.534235
+   27  KR 1 XY    0.000000
+   28  KR 1 XZ    0.000000
+   29  KR 1 YZ    0.000000
+   30  KR 1  S    0.000000
+   31  KR 1  X    0.000000
+   32  KR 1  Y    0.000000
+   33  KR 1  Z    0.000000
+   34  KR 1 XX    0.690578
+   35  KR 1 YY    0.448788
+   36  KR 1 ZZ   -1.139367
+   37  KR 1 XY    0.000000
+   38  KR 1 XZ    0.000000
+   39  KR 1 YZ    0.000000
+ ...... END OF RHF CALCULATION ......
+ STEP CPU TIME =     1.76 TOTAL CPU TIME =          1.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.9 SECONDS, CPU UTILIZATION IS    95.70%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =   -3829.6607730354
+                TWO ELECTRON ENERGY =    1077.6830204220
+           NUCLEAR REPULSION ENERGY =       0.0000000000
+                                      ------------------
+                       TOTAL ENERGY =   -2751.9777526134
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =    1077.6830204220
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =   -6580.8131761229
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       0.0000000000
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =   -5503.1301557009
+               TOTAL KINETIC ENERGY =    2751.1524030875
+                 VIRIAL RATIO (V/T) =       2.0003000014
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+
+                      1          2          3          4          5
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                      6          7          8          9         10
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                     11         12         13         14         15
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                     16         17         18
+
+                  2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  KR 1  S      2.00001     1.99802
+              2  KR 1  S      2.00055     1.72127
+              3  KR 1  S      2.01244     0.98728
+              4  KR 1  S      1.05262     0.84908
+              5  KR 1  S      0.91574     0.41562
+              6  KR 1  X      1.99999     1.99984
+              7  KR 1  Y      1.99999     1.99984
+              8  KR 1  Z      1.99999     1.99984
+              9  KR 1  X      2.00006     1.97285
+             10  KR 1  Y      2.00006     1.97285
+             11  KR 1  Z      2.00006     1.97285
+             12  KR 1  X      1.07000     1.05825
+             13  KR 1  Y      1.07000     1.05825
+             14  KR 1  Z      1.07000     1.05825
+             15  KR 1  X      0.90450     0.86680
+             16  KR 1  Y      0.90450     0.86680
+             17  KR 1  Z      0.90450     0.86680
+             18  KR 1 XX      1.99538     1.66651
+             19  KR 1 YY      1.99538     1.66651
+             20  KR 1 ZZ      1.99538     1.66651
+             21  KR 1 XY      1.99538     1.95745
+             22  KR 1 XZ      1.99538     1.95745
+             23  KR 1 YZ      0.00000     1.95745
+             24  KR 1 XX      0.00292     0.23888
+             25  KR 1 YY      0.00292     0.23888
+             26  KR 1 ZZ      0.00292     0.23888
+             27  KR 1 XY      0.00292     0.04089
+             28  KR 1 XZ      0.00292     0.04089
+             29  KR 1 YZ      0.00000     0.04089
+             30  KR 1  S      0.01864     0.12356
+             31  KR 1  X      0.02545     0.10227
+             32  KR 1  Y      0.02545     0.10227
+             33  KR 1  Z      0.02545     0.10227
+             34  KR 1 XX      0.00170     0.06299
+             35  KR 1 YY      0.00170     0.06299
+             36  KR 1 ZZ      0.00170     0.06299
+             37  KR 1 XY      0.00170     0.00166
+             38  KR 1 XZ      0.00170     0.00166
+             39  KR 1 YZ      0.00000     0.00166
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1
+
+    1   36.0000000
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 KR           36.000000    0.000000        36.000000   -0.000000
+
+          MULLIKEN SPHERICAL HARMONIC POPULATIONS
+       ATOM           S       P       D      F      G      H      I    TOTAL
+    1 KR            8.00   18.00   10.00   0.00   0.00   0.00   0.00   36.00
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 KR                0.000       0.000       0.000
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    0.000000       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000    0.000000    0.000000
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =          1.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.9 SECONDS, CPU UTILIZATION IS    95.74%
+                580000  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY Wed Sep 30 23:58:43 2026
+ DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 1.760 + 0.45 = 1.806
+ ----------------------------------------
+ ddikick.x: exited gracefully.
+----- accounting info -----
+Files used on the master node chemcompute-node-0.novalocal were:
+-rw-r--r--. 1 chemcomp nginx      525 Sep 30 23:58 /scratch/2006690/1625780.F05
+-rw-r--r--. 1 chemcomp nginx 50790400 Sep 30 23:58 /scratch/2006690/1625780.F10
+Wed Sep 30 23:58:46 UTC 2026
+0.106u 0.091s 0:05.24 3.6%	0+0k 0+80io 0pf+0w

@@ -1,0 +1,1604 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host chemcompute-node-0.novalocal
+under operating system Linux at Thu Oct 1 16:57:07 UTC 2026
+SLURM has assigned the following compute nodes to this run:
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda4       60672104 14859008  45813096  25% /
+GAMESS temporary binary files will be written to /scratch/2006756
+GAMESS supplementary output files will be written to /data/slurm/162/1625965
+Copying input file 1625965.inp to your run's scratch directory...
+The generated host list is
+chemcompute-node-0.novalocal
+
+ Distributed Data Interface kickoff program.
+ Initiating 1 compute processes on 1 nodes to run the following command:
+ /data/gamess-2019R1-avx2-ddi/gamess.00.x 1625965 
+
+          ******************************************************
+          *         GAMESS VERSION = 30 JUN 2019 (R1)          *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT INTEL VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     COLLEEN BERTONI, BRETT BODE, KURT BRORSEN, CALEB CARLIN, GALINA CHABAN,
+     WEI CHEN, CHEOL HO CHOI, PAUL DAY, ALBERT DEFUSCO, NUWAN DESILVA,
+     TIM DUDLEY, DMITRI FEDOROV, ALEX FINDLATER, GRAHAM FLETCHER, 
+     MARK FREITAG, KURT GLAESEMANN, ANASTASIA GUNINA,
+     DAN KEMP, GRANT MERRILL, NORIYUKI MINEZAWA, JONATHAN MULLIN,
+     TAKESHI NAGATA, SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON,
+     MIKE PAK, BUU PHAM,
+     SPENCER PRUITT, LUKE ROSKOP, JIM SHOEMAKER, LYUDMILA SLIPCHENKO,
+     TONY SMITH, SAROM SOK LEANG, JIE SONG, TETSUYA TAKETSUGU, SIMON WEBB,
+     PENG XU, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, AARON WEST, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     NAT. INST. OF ADVANCED INDUSTRIAL SCIENCE AND TECHNOLOGY: KAZUO KITAURA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, JUN SHEN, J. EMILIANO DEUSTUA, PIOTR PIECUCH
+     UNIVERSITY OF MINNESOTA:
+          YINAN SHU
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: ANNA POMOGAEVA, DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, JUNJI SEINO,
+          YUYA NAKAJIMA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH: ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+     UNIVERSITY OF COPENHAGEN: Jimmy Kromann, CASPER STEINMANN
+     TOKYO INSTITUTE OF TECHNOLOGY: HIROYA NAKATA
+     NAGOYA UNIVERSITY: YOSHIO NISHIMOTO, STEPHAN IRLE
+     MOSCOW STATE UNIVERSITY: VLADIMIR MIRONOV
+     A.N.NESMEYANOV INSTITUTE OF ORGANOELEMENT COMPOUNDS OF RUSSIAN ACADEMY OF SCIENCES:
+          IGOR S. GERASIMOV
+
+ EXECUTION OF GAMESS BEGUN Thu Oct  1 16:57:07 2026
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD>!                                                                               
+ INPUT CARD>!   GAMESS Calculation input file                                               
+ INPUT CARD>!                                                                               
+ INPUT CARD>!                                                                               
+ INPUT CARD> $CONTRL SCFTYP=RHF MAXIT=200 RUNTYP=ENERGY                                     
+ INPUT CARD>         COORD=UNIQUE MULT=1 ISPHER=1                                           
+ INPUT CARD>         ICHARG=0                                                               
+ INPUT CARD>         MOLPLT=.FALSE. PLTORB=.FALSE.  $END                                    
+ INPUT CARD> $SYSTEM TIMLIM=2879 MWORDS=436  MEMDDI=1 $END                                  
+ INPUT CARD>                                                                                
+ INPUT CARD> $STATPT OPTTOL=0.0005 NSTEP=999 $END                                           
+ INPUT CARD> $STATPT IHREP=0  $END                                                          
+ INPUT CARD>                                                                                
+ INPUT CARD> $BASIS  GBASIS=ACCD $END                                                       
+ INPUT CARD>                                                                                
+ INPUT CARD> $SCF    DIRSCF=.T. $END                                                        
+ INPUT CARD> $GUESS  GUESS=HUCKEL  $END                                                     
+ INPUT CARD>                                                                                
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>                                                                                
+ INPUT CARD>  Dnh 2                                                                         
+ INPUT CARD>                                                                                
+ INPUT CARD>Kr   36.0     0.0000     0.0000     0.0000                                      
+ INPUT CARD> $END                                                                           
+ INPUT CARD>                                                                                
+ INPUT CARD>                                                                                
+ INPUT CARD>! Customizations after this line are persisted when using Do More Calculations  
+ INPUT CARD> $BASIS  GBASIS=ACCT $END                                                       
+ INPUT CARD>                                                                                
+ INPUT CARD>                                                                                
+ INPUT CARD>                                                                                
+ INPUT CARD>                                                                                
+  436000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=ACCT         IGAUSS=       0      POLAR=NONE    
+     NDFUNC=       0     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       0      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+                                                                                 
+
+ THE POINT GROUP OF THE MOLECULE IS DNH     
+ THE ORDER OF THE PRINCIPAL AXIS IS     2
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ KR         36.0     0.0000000000        0.0000000000        0.0000000000
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 KR    
+
+   1 KR      0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ KR        
+
+      1   S       1      11718110.0000000    0.000005599987
+      1   S       2       1754604.0000000    0.000043799898
+      1   S       3        399281.3000000    0.000230499462
+      1   S       4        113084.6000000    0.000973297728
+      1   S       5         36885.9300000    0.003533691752
+      1   S       6         13312.2100000    0.011416673351
+      1   S       7          5189.9880000    0.033132422662
+      1   S       8          2151.6600000    0.085446200551
+      1   S       9           938.0325000    0.186911963709
+      1   S      10           426.5573000    0.314975364783
+      1   S      11           201.0666000    0.334332619599
+      1   S      12            97.0976100    0.160880624472
+      1   S      13            42.9987200    0.017843458350
+      1   S      14            21.1770700   -0.001379296780
+      1   S      15            10.4267500    0.000657198466
+      1   S      16             4.5850080   -0.000338799209
+      1   S      17             2.1176030    0.000121099717
+      1   S      18             0.3492250    0.000036599915
+
+      2   S      19      11718110.0000000   -0.000001800049
+      2   S      20       1754604.0000000   -0.000013800376
+      2   S      21        399281.3000000   -0.000072601978
+      2   S      22        113084.6000000   -0.000306308346
+      2   S      23         36885.9300000   -0.001117730454
+      2   S      24         13312.2100000   -0.003627098824
+      2   S      25          5189.9880000   -0.010743492716
+      2   S      26          2151.6600000   -0.028699981957
+      2   S      27           938.0325000   -0.068669770970
+      2   S      28           426.5573000   -0.136519219589
+      2   S      29           201.0666000   -0.202251310519
+      2   S      30            97.0976100   -0.109059871434
+      2   S      31            42.9987200    0.331885842529
+      2   S      32            21.1770700    0.594841206985
+      2   S      33            10.4267500    0.242489106834
+      2   S      34             4.5850080    0.017224569299
+      2   S      35             2.1176030    0.000368510040
+      2   S      36             0.3492250   -0.000115303142
+
+      3   S      37      11718110.0000000    0.000000727201
+      3   S      38       1754604.0000000    0.000005713725
+      3   S      39        399281.3000000    0.000030334688
+      3   S      40        113084.6000000    0.000127571905
+      3   S      41         36885.9300000    0.000466551650
+      3   S      42         13312.2100000    0.001512267282
+      3   S      43          5189.9880000    0.004500234004
+      3   S      44          2151.6600000    0.012047130272
+      3   S      45           938.0325000    0.029252715713
+      3   S      46           426.5573000    0.059250189559
+      3   S      47           201.0666000    0.092599334719
+      3   S      48            97.0976100    0.052817781400
+      3   S      49            42.9987200   -0.199567961595
+      3   S      50            21.1770700   -0.532003932290
+      3   S      51            10.4267500   -0.192916873582
+      3   S      52             4.5850080    0.691269248810
+      3   S      53             2.1176030    0.625800967737
+      3   S      54             0.3492250   -0.011058967437
+
+      4   S      55      11718110.0000000   -0.000000302009
+      4   S      56       1754604.0000000   -0.000002718079
+      4   S      57        399281.3000000   -0.000014043410
+      4   S      58        113084.6000000   -0.000059042725
+      4   S      59         36885.9300000   -0.000215936310
+      4   S      60         13312.2100000   -0.000700509471
+      4   S      61          5189.9880000   -0.002084011900
+      4   S      62          2151.6600000   -0.005587314276
+      4   S      63           938.0325000   -0.013578467800
+      4   S      64           426.5573000   -0.027636978627
+      4   S      65           201.0666000   -0.043422677928
+      4   S      66            97.0976100   -0.025266662360
+      4   S      67            42.9987200    0.098516788928
+      4   S      68            21.1770700    0.277005816861
+      4   S      69            10.4267500    0.104522687436
+      4   S      70             4.5850080   -0.476575060815
+      4   S      71             2.1176030   -0.759778853798
+      4   S      72             0.3492250    1.082938867410
+
+      5   S      73             0.7070570    1.000000000000
+
+      6   S      74             0.1448210    1.000000000000
+
+      7   P      75          9366.3090000    0.000423086902
+      7   P      76          2219.5540000    0.003674186256
+      7   P      77           719.4529000    0.019930582998
+      7   P      78           273.4645000    0.077419803271
+      7   P      79           114.7523000    0.214031974091
+      7   P      80            51.1555700    0.384843686176
+      7   P      81            23.6826800    0.362622774081
+      7   P      82            10.8754800    0.117078175545
+      7   P      83             4.9551310    0.005120841471
+      7   P      84             2.2172670    0.001753845705
+      7   P      85             0.3221540    0.000219893193
+
+      8   P      86          9366.3090000   -0.000176480515
+      8   P      87          2219.5540000   -0.001541639381
+      8   P      88           719.4529000   -0.008441206674
+      8   P      89           273.4645000   -0.033712498171
+      8   P      90           114.7523000   -0.097488554658
+      8   P      91            51.1555700   -0.188085750420
+      8   P      92            23.6826800   -0.165415699628
+      8   P      93            10.8754800    0.183421124160
+      8   P      94             4.9551310    0.557953921335
+      8   P      95             2.2172670    0.401532879484
+      8   P      96             0.3221540   -0.004904516635
+
+      9   P      97          9366.3090000    0.000077676762
+      9   P      98          2219.5540000    0.000683422155
+      9   P      99           719.4529000    0.003721817042
+      9   P     100           273.4645000    0.015025952861
+      9   P     101           114.7523000    0.043358135077
+      9   P     102            51.1555700    0.085567787557
+      9   P     103            23.6826800    0.071830835556
+      9   P     104            10.8754800   -0.102519990765
+      9   P     105             4.9551310   -0.333947401759
+      9   P     106             2.2172670   -0.242925572030
+      9   P     107             0.3221540    0.960888382680
+
+     10   P     108             0.8064100    1.000000000000
+
+     11   P     109             0.1176190    1.000000000000
+
+     12   D     110           446.1613000    0.001445103857
+     12   D     111           133.9648000    0.012524267731
+     12   D     112            51.3459100    0.058026311748
+     12   D     113            21.9169100    0.172501812854
+     12   D     114             9.8937250    0.326945795593
+     12   D     115             4.4925270    0.398488829265
+     12   D     116             2.0022930    0.280707205477
+
+     13   D     117             0.8084090    1.000000000000
+
+     14   D     118             0.3006000    1.000000000000
+
+     15   F     119             0.6622000    1.000000000000
+
+     16   S     120             0.0519850    1.000000000000
+
+     17   P     121             0.0400330    1.000000000000
+
+     18   D     122             0.1257000    1.000000000000
+
+     19   F     123             0.3280000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   19
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   69
+ NOTE: THIS RUN WILL RESTRICT THE MO VARIATION SPACE TO SPHERICAL HARMONICS.
+ THE NUMBER OF ORBITALS KEPT IN THE VARIATIONAL SPACE WILL BE PRINTED LATER.
+ NUMBER OF ELECTRONS                          =   36
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =   18
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =   18
+ TOTAL NUMBER OF ATOMS                        =    1
+ THE NUCLEAR REPULSION ENERGY IS        0.0000000000
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=       1     NOSYM =       0     MAXIT =     200     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=   436000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           1 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS     1000000 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=   437000000 WORDS.
+ TIMLIM=        2879.00 MINUTES, OR       2.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    69     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       T     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       T
+
+     ------------------------------------------
+     THE POINT GROUP IS DNH, NAXIS= 2, ORDER= 8
+     ------------------------------------------
+
+ -- VARIATIONAL SPACE WILL BE RESTRICTED TO PURE SPHERICAL HARMONICS ONLY --
+ AFTER EXCLUDING CONTAMINANT COMBINATIONS FROM THE CARTESIAN GAUSSIAN BASIS
+ SET, THE NUMBER OF SPHERICAL HARMONICS KEPT IN THE VARIATION SPACE IS   59
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ AG  =   15     AU  =    2     B3U =   10     B3G =    4     B1G =    4
+ B1U =   10     B2U =   10     B2G =    4
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    50.00%
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    50.00%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES     37548 WORDS.
+
+ STATISTICS FOR GENERATION OF SYMMETRY ORBITAL -Q- MATRIX
+ NUMBER OF CARTESIAN ATOMIC ORBITALS=         69
+ NUMBER OF SPHERICAL CONTAMINANTS DROPPED=    10
+ NUMBER OF LINEARLY DEPENDENT MOS DROPPED=     0
+ TOTAL NUMBER OF MOS IN VARIATION SPACE=      59
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    18 ORBITALS ARE OCCUPIED (   14 CORE ORBITALS).
+    15=AG      16=B3U     17=B2U     18=B1U     19=AG      20=AG      21=AG  
+    22=AG      23=AG      24=AG      25=AG      26=AG      27=AG      28=AU  
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.0 SECONDS, CPU UTILIZATION IS    40.00%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ DIRECT SCF METHOD SKIPS INTEGRAL STORAGE ON DISK.
+ DIRECT TRANSFORMATION SKIPS AO INTEGRAL STORAGE ON DISK.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =          0.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    33.33%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+
+     NUCLEAR ENERGY =         0.0000000000
+     MAXIT =  200     NPUNCH=    2
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  DEM=F  SOSCF=T
+     DENSITY MATRIX CONV=  2.00E-05
+     SOSCF WILL OPTIMIZE     738 ORBITAL ROTATIONS, SOGTOL=   0.250
+     MEMORY REQUIRED FOR RHF ITERS=     91725 WORDS.
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+ SCHWARZ INEQUALITY OVERHEAD:      2415 INTEGRALS, T=        0.06
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD      INTEGRALS    SKIPPED
+   1  0  0    -2751.6603464974 -2751.6603464974   0.120759894   0.000000000         288531       1777
+          ---------------START SECOND ORDER SCF---------------
+   2  1  0    -2752.0412453443    -0.3808988469   0.119352661   0.080582568         288421       1790
+   3  2  0    -2752.0505816836    -0.0093363393   0.016115248   0.022270819         288135       1838
+   4  3  0    -2752.0522209276    -0.0016392440   0.001350123   0.000648381         287585       1960
+   5  4  0    -2752.0522231905    -0.0000022629   0.000253102   0.000122451         284424       2198
+   6  5  0    -2752.0522232417    -0.0000000512   0.000034236   0.000012436         277806       2653
+   7  6  0    -2752.0522232422    -0.0000000006   0.000007071   0.000001142         254809       3527
+   8  7  0    -2752.0522232421     0.0000000001   0.000000403   0.000000132         242297       4013
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       8.4 SECONDS (       1.1 SEC/ITER)
+     FOCK TIME ON FIRST ITERATION=       1.1, LAST ITERATION=       1.0
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS    -2752.0522232421 AFTER   8 ITERATIONS
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    3) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     5 (    3) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     7 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     8 (    5) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    5) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    10 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    11 (    6) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    12 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    14 (    6) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    15 (    7) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (    8) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    17 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    18 (    8) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    19 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    20 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    21 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    22 (   10) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    23 (   11) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    24 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    25 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    26 (   11) HAS LZ(WEIGHT)=-2.00(  1.2%)  0.00( 97.6%)  2.00(  1.2%) 
+ MO    27 (   11) HAS LZ(WEIGHT)=-2.00( 48.8%)  0.00(  2.4%)  2.00( 48.8%) 
+ MO    28 (   12) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    29 (   12) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    30 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    31 (   13) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    32 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    33 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    34 (   14) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    35 (   14) HAS LZ(WEIGHT)= 0.00( 99.2%) 
+ MO    36 (   14) HAS LZ(WEIGHT)=-2.00( 49.6%)  2.00( 49.6%) 
+ MO    37 (   15) HAS LZ(WEIGHT)=-3.00( 18.7%) -1.00( 31.3%)  1.00( 31.3%)  3.00( 18.7%) 
+ MO    38 (   15) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    39 (   15) HAS LZ(WEIGHT)=-3.00( 18.7%) -1.00( 31.3%)  1.00( 31.3%)  3.00( 18.7%) 
+ MO    40 (   15) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    41 (   15) HAS LZ(WEIGHT)=-3.00( 31.3%) -1.00( 18.7%)  1.00( 18.7%)  3.00( 31.3%) 
+ MO    42 (   15) HAS LZ(WEIGHT)=-0.00(100.0%) 
+ MO    43 (   15) HAS LZ(WEIGHT)=-3.00( 31.3%) -1.00( 18.7%)  1.00( 18.7%)  3.00( 31.3%) 
+ MO    44 (   16) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    45 (   16) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    46 (   16) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    47 (   17) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    48 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    49 (   17) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    50 (   17) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    51 (   17) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    52 (   18) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    53 (   18) HAS LZ(WEIGHT)=-3.00( 18.7%) -1.00( 31.3%)  1.00( 31.3%)  3.00( 18.7%) 
+ MO    54 (   18) HAS LZ(WEIGHT)=-3.00( 18.7%) -1.00( 31.3%)  1.00( 31.3%)  3.00( 18.7%) 
+ MO    55 (   18) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    56 (   18) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    57 (   18) HAS LZ(WEIGHT)=-3.00( 31.3%) -1.00( 18.7%)  1.00( 18.7%)  3.00( 31.3%) 
+ MO    58 (   18) HAS LZ(WEIGHT)=-3.00( 31.3%) -1.00( 18.7%)  1.00( 18.7%)  3.00( 31.3%) 
+ MO    59 (   19) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                 -520.1655   -69.9029   -63.0095   -63.0095   -63.0095
+                     AG         AG         B1U        B2U        B3U 
+    1  KR 1  S    1.000003  -0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000002   0.999970   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000005  -0.000009   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000005  -0.000010   0.000000   0.000000   0.000000
+    5  KR 1  S   -0.000061   0.000114   0.000000   0.000000   0.000000
+    6  KR 1  S   -0.000015   0.000021   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   1.000033
+    8  KR 1  Y    0.000000   0.000000   0.000000   1.000033   0.000000
+    9  KR 1  Z    0.000000   0.000000   1.000033   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000020
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000020   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000020   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000028
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000028   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000028   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000  -0.000470
+   17  KR 1  Y    0.000000   0.000000   0.000000  -0.000470   0.000000
+   18  KR 1  Z    0.000000   0.000000  -0.000470   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000  -0.000104
+   20  KR 1  Y    0.000000   0.000000   0.000000  -0.000104   0.000000
+   21  KR 1  Z    0.000000   0.000000  -0.000104   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000003  -0.000007   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000031
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000031   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000031   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                      6          7          8          9         10
+                  -10.8495    -8.3315    -8.3315    -8.3315    -3.8253
+                     AG         B3U        B2U        B1U        B2G 
+    1  KR 1  S   -0.000041   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S   -0.000267   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.961744   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S   -0.000878   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.052516   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.003527   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000  -0.000036   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000  -0.000036   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000  -0.000036   0.000000
+   10  KR 1  X    0.000000   0.974296   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.974296   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.974296   0.000000
+   13  KR 1  X    0.000000  -0.000473   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000  -0.000473   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000  -0.000473   0.000000
+   16  KR 1  X    0.000000   0.046450   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.046450   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.046450   0.000000
+   19  KR 1  X    0.000000   0.002071   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.002071   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.002071   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.971905
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.070788
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000293
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S   -0.000635   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000  -0.000577   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000  -0.000577   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000  -0.000577   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.001279
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     11         12         13         14         15
+                   -3.8253    -3.8253    -3.8253    -3.8253    -1.1532
+                     B1G        B3G        AG         AG         AG  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000080
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000523
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.001720
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.664177
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.248667
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.295420
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000  -0.474050   0.848455   0.000000
+   23  KR 1 YY    0.000000   0.000000  -0.497758  -0.834767   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.971808  -0.013688   0.000000
+   25  KR 1 XY    0.971905   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.971905   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000  -0.034527   0.061796   0.000000
+   29  KR 1 YY    0.000000   0.000000  -0.036254  -0.060799   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.070781  -0.000997   0.000000
+   31  KR 1 XY    0.070788   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.070788   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000  -0.000143   0.000256   0.000000
+   35  KR 1 YY    0.000000   0.000000  -0.000150  -0.000252   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000293  -0.000004   0.000000
+   37  KR 1 XY    0.000293   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000293   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.002235
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000  -0.000624   0.001117   0.000000
+   55  KR 1 YY    0.000000   0.000000  -0.000655  -0.001099   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.001279  -0.000018   0.000000
+   57  KR 1 XY    0.001279   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.001279   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     16         17         18         19         20
+                   -0.5243    -0.5243    -0.5243     0.1048     0.1058
+                     B2U        B1U        B3U        AG         B2U 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.011601   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.075895   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.240329   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.087877   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000  -0.112899   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000  -1.271146   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000203   0.000000   0.000000
+    8  KR 1  Y    0.000203   0.000000   0.000000   0.000000   0.010393
+    9  KR 1  Z    0.000000   0.000203   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.001859   0.000000   0.000000
+   11  KR 1  Y    0.001859   0.000000   0.000000   0.000000   0.092961
+   12  KR 1  Z    0.000000   0.001859   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.602848   0.000000   0.000000
+   14  KR 1  Y    0.602848   0.000000   0.000000   0.000000   0.020241
+   15  KR 1  Z    0.000000   0.602848   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.310357   0.000000   0.000000
+   17  KR 1  Y    0.310357   0.000000   0.000000   0.000000  -0.113566
+   18  KR 1  Z    0.000000   0.310357   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.287673   0.000000   0.000000
+   20  KR 1  Y    0.287673   0.000000   0.000000   0.000000  -0.616546
+   21  KR 1  Z    0.000000   0.287673   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   1.755749   0.000000
+   51  KR 1  X    0.000000   0.000000   0.007097   0.000000   0.000000
+   52  KR 1  Y    0.007097   0.000000   0.000000   0.000000   1.325821
+   53  KR 1  Z    0.000000   0.007097   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     21         22         23         24         25
+                    0.1058     0.1058     0.3049     0.3049     0.3049
+                     B3U        B1U        B1G        B3G        B2G 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.010393   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.010393   0.000000   0.000000   0.000000
+   10  KR 1  X    0.092961   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.092961   0.000000   0.000000   0.000000
+   13  KR 1  X    0.020241   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.020241   0.000000   0.000000   0.000000
+   16  KR 1  X   -0.113566   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000  -0.113566   0.000000   0.000000   0.000000
+   19  KR 1  X   -0.616546   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000  -0.616546   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000  -0.096188   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000  -0.096188
+   27  KR 1 YZ    0.000000   0.000000   0.000000  -0.096188   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.143648   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.143648
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.143648   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000  -0.103506   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000  -0.103506
+   39  KR 1 YZ    0.000000   0.000000   0.000000  -0.103506   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    1.325821   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   1.325821   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   1.034398   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   1.034398
+   59  KR 1 YZ    0.000000   0.000000   0.000000   1.034398   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     26         27         28         29         30
+                    0.3049     0.3049     0.5583     0.5583     0.5583
+                     AG         AG         B2U        B3U        B1U 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000  -0.067963   0.000000
+    8  KR 1  Y    0.000000   0.000000  -0.067963   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.067963
+   10  KR 1  X    0.000000   0.000000   0.000000  -0.652527   0.000000
+   11  KR 1  Y    0.000000   0.000000  -0.652527   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.652527
+   13  KR 1  X    0.000000   0.000000   0.000000  -1.468243   0.000000
+   14  KR 1  Y    0.000000   0.000000  -1.468243   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -1.468243
+   16  KR 1  X    0.000000   0.000000   0.000000  -0.035468   0.000000
+   17  KR 1  Y    0.000000   0.000000  -0.035468   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.035468
+   19  KR 1  X    0.000000   0.000000   0.000000   2.153971   0.000000
+   20  KR 1  Y    0.000000   0.000000   2.153971   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   2.153971
+   22  KR 1 XX    0.060313   0.074929   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.034734  -0.089697   0.000000   0.000000   0.000000
+   24  KR 1 ZZ   -0.095047   0.014768   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX   -0.090072  -0.111900   0.000000   0.000000   0.000000
+   29  KR 1 YY   -0.051872   0.133955   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.141945  -0.022055   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.064902   0.080630   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.037377  -0.096522   0.000000   0.000000   0.000000
+   36  KR 1 ZZ   -0.102278   0.015892   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000  -0.881968   0.000000
+   52  KR 1  Y    0.000000   0.000000  -0.881968   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -0.881968
+   54  KR 1 XX   -0.648606  -0.805785   0.000000   0.000000   0.000000
+   55  KR 1 YY   -0.373528   0.964602   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    1.022133  -0.158816   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     31         32         33         34         35
+                    0.7447     0.8447     0.8447     0.8447     0.8447
+                     AG         B3G        B2G        B1G        AG  
+    1  KR 1  S   -0.074256   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S   -0.493074   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S   -1.723319   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S   -2.494801   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S   -0.344477   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    3.821559   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.111873
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.081951
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000  -0.193824
+   25  KR 1 XY    0.000000   0.000000   0.000000  -0.194592   0.000000
+   26  KR 1 XZ    0.000000   0.000000  -0.194592   0.000000   0.000000
+   27  KR 1 YZ    0.000000  -0.194592   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000  -0.038857
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -0.028464
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.067322
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.067588   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.067588   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.067588   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000  -0.802249
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -0.587673
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   1.389922
+   37  KR 1 XY    0.000000   0.000000   0.000000   1.395432   0.000000
+   38  KR 1 XZ    0.000000   0.000000   1.395432   0.000000   0.000000
+   39  KR 1 YZ    0.000000   1.395432   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S   -1.496469   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.604112
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.442530
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000  -1.046642
+   57  KR 1 XY    0.000000   0.000000   0.000000  -1.050791   0.000000
+   58  KR 1 XZ    0.000000   0.000000  -1.050791   0.000000   0.000000
+   59  KR 1 YZ    0.000000  -1.050791   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     36         37         38         39         40
+                    0.8447     1.1487     1.1487     1.1487     1.1487
+                     AG         B3U        B1U        B2U        AU  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.159219   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY   -0.176494   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.017276   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX   -0.055302   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.061302   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ   -0.006000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX   -1.141765   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    1.265651   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ   -0.123886   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000004   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000008   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.177176   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.177182   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.177179   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000  -0.177182   0.000000   0.000000
+   47  KR 1 ZZX   0.000000  -0.177185   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000  -0.177187   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000  -0.204592
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.859774   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY   -0.953063   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.093289   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000  -0.000025   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000  -0.000046   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000  -0.000001   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000  -0.993326   0.000000
+   64  KR 1 XXZ   0.000000   0.000000  -0.993356   0.000000   0.000000
+   65  KR 1 YYX   0.000000  -0.993340   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.993357   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.993373   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.993387   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   1.147029
+
+                     41         42         43         44         45
+                    1.1487     1.1487     1.1487     2.3631     2.3631
+                     B2U        B1U        B3U        B2U        B1U 
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.269068   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.269068
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   2.309329   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   2.309329
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   2.711651   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   2.711651
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000  -2.272881   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -2.272881
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000  -1.337881   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000  -1.337881
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000  -0.204592   0.000000   0.000000
+   41  KR 1 YYY  -0.204592   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000  -0.204592   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.137252   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.137245   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.137248   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.137244   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.137241   0.000000   0.000000
+   48  KR 1 ZZY   0.137237   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.399928   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.399928
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   1.147029   0.000000   0.000000
+   61  KR 1 YYY   1.147029   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   1.147029   0.000000   0.000000   0.000000
+   63  KR 1 XXY  -0.769490   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000  -0.769451   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000  -0.769472   0.000000   0.000000
+   66  KR 1 YYZ   0.000000  -0.769450   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000  -0.769429   0.000000   0.000000
+   68  KR 1 ZZY  -0.769411   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     46         47         48         49         50
+                    2.3631     2.5173     2.5173     2.5173     2.5173
+                     B3U        B2G        B1G        B3G        AG  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.269068   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    2.309329   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    2.711651   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X   -2.272881   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X   -1.337881   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.239173
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.228031
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000  -0.467204
+   25  KR 1 XY    0.000000   0.000000  -0.467248   0.000000   0.000000
+   26  KR 1 XZ    0.000000  -0.467248   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000  -0.467248   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000  -0.816349
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -0.778319
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   1.594668
+   31  KR 1 XY    0.000000   0.000000   1.594819   0.000000   0.000000
+   32  KR 1 XZ    0.000000   1.594819   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   1.594819   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000   0.803851
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000   0.766403
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000  -1.570254
+   37  KR 1 XY    0.000000   0.000000  -1.570403   0.000000   0.000000
+   38  KR 1 XZ    0.000000  -1.570403   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000  -1.570403   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   44  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   46  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.399928   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000  -0.328626
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000  -0.313317
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.641942
+   57  KR 1 XY    0.000000   0.000000   0.642003   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.642003   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.642003   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000000   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.000000   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.000000   0.000000
+   66  KR 1 YYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.000000   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   0.000000
+
+                     51         52         53         54         55
+                    2.5173     2.6956     2.6956     2.6956     2.6956
+                     AG         B1U        B2U        B3U        AU  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    2  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    3  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    4  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.401394   0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY   -0.407827   0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.006433   0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX   -1.370044   0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    1.392001   0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ   -0.021957   0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    1.349070   0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY   -1.370690   0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.021620   0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   0.000000   0.000000  -0.000109   0.000000
+   41  KR 1 YYY   0.000000   0.000000  -0.000258   0.000000   0.000000
+   42  KR 1 ZZZ   0.000000  -0.000010   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000  -1.324805   0.000000   0.000000
+   44  KR 1 XXZ   0.000000  -1.324972   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000   0.000000   0.000000  -1.324905   0.000000
+   46  KR 1 YYZ   0.000000   1.324985   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000   0.000000   0.000000   1.325051   0.000000
+   48  KR 1 ZZY   0.000000   0.000000   1.325151   0.000000   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000   1.529953
+   50  KR 1  S    0.000000   0.000000   0.000000   0.000000   0.000000
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX   -0.551519   0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.560358   0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ   -0.008839   0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000   0.000000   0.000000   0.000074   0.000000
+   61  KR 1 YYY   0.000000   0.000000   0.000174   0.000000   0.000000
+   62  KR 1 ZZZ   0.000000   0.000006   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.894424   0.000000   0.000000
+   64  KR 1 XXZ   0.000000   0.894537   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.000000   0.000000   0.894492   0.000000
+   66  KR 1 YYZ   0.000000  -0.894545   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.000000   0.000000  -0.894591   0.000000
+   68  KR 1 ZZY   0.000000   0.000000  -0.894658   0.000000   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000  -1.032927
+
+                     56         57         58         59
+                    2.6956     2.6956     2.6956     3.9180
+                     B1U        B3U        B2U        AG  
+    1  KR 1  S    0.000000   0.000000   0.000000   0.333004
+    2  KR 1  S    0.000000   0.000000   0.000000   2.160682
+    3  KR 1  S    0.000000   0.000000   0.000000   6.640205
+    4  KR 1  S    0.000000   0.000000   0.000000   5.923217
+    5  KR 1  S    0.000000   0.000000   0.000000  -4.586100
+    6  KR 1  S    0.000000   0.000000   0.000000  -3.471084
+    7  KR 1  X    0.000000   0.000000   0.000000   0.000000
+    8  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+    9  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   10  KR 1  X    0.000000   0.000000   0.000000   0.000000
+   11  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+   12  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   13  KR 1  X    0.000000   0.000000   0.000000   0.000000
+   14  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+   15  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   16  KR 1  X    0.000000   0.000000   0.000000   0.000000
+   17  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+   18  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   19  KR 1  X    0.000000   0.000000   0.000000   0.000000
+   20  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+   21  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   22  KR 1 XX    0.000000   0.000000   0.000000   0.000000
+   23  KR 1 YY    0.000000   0.000000   0.000000   0.000000
+   24  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000
+   25  KR 1 XY    0.000000   0.000000   0.000000   0.000000
+   26  KR 1 XZ    0.000000   0.000000   0.000000   0.000000
+   27  KR 1 YZ    0.000000   0.000000   0.000000   0.000000
+   28  KR 1 XX    0.000000   0.000000   0.000000   0.000000
+   29  KR 1 YY    0.000000   0.000000   0.000000   0.000000
+   30  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000
+   31  KR 1 XY    0.000000   0.000000   0.000000   0.000000
+   32  KR 1 XZ    0.000000   0.000000   0.000000   0.000000
+   33  KR 1 YZ    0.000000   0.000000   0.000000   0.000000
+   34  KR 1 XX    0.000000   0.000000   0.000000   0.000000
+   35  KR 1 YY    0.000000   0.000000   0.000000   0.000000
+   36  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000
+   37  KR 1 XY    0.000000   0.000000   0.000000   0.000000
+   38  KR 1 XZ    0.000000   0.000000   0.000000   0.000000
+   39  KR 1 YZ    0.000000   0.000000   0.000000   0.000000
+   40  KR 1 XXX   0.000000   1.529953   0.000000   0.000000
+   41  KR 1 YYY   0.000000   0.000000   1.529953   0.000000
+   42  KR 1 ZZZ   1.529953   0.000000   0.000000   0.000000
+   43  KR 1 XXY   0.000000   0.000000  -1.026547   0.000000
+   44  KR 1 XXZ  -1.026332   0.000000   0.000000   0.000000
+   45  KR 1 YYX   0.000000  -1.026418   0.000000   0.000000
+   46  KR 1 YYZ  -1.026315   0.000000   0.000000   0.000000
+   47  KR 1 ZZX   0.000000  -1.026229   0.000000   0.000000
+   48  KR 1 ZZY   0.000000   0.000000  -1.026100   0.000000
+   49  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000
+   50  KR 1  S    0.000000   0.000000   0.000000   0.942602
+   51  KR 1  X    0.000000   0.000000   0.000000   0.000000
+   52  KR 1  Y    0.000000   0.000000   0.000000   0.000000
+   53  KR 1  Z    0.000000   0.000000   0.000000   0.000000
+   54  KR 1 XX    0.000000   0.000000   0.000000   0.000000
+   55  KR 1 YY    0.000000   0.000000   0.000000   0.000000
+   56  KR 1 ZZ    0.000000   0.000000   0.000000   0.000000
+   57  KR 1 XY    0.000000   0.000000   0.000000   0.000000
+   58  KR 1 XZ    0.000000   0.000000   0.000000   0.000000
+   59  KR 1 YZ    0.000000   0.000000   0.000000   0.000000
+   60  KR 1 XXX   0.000000  -1.032927   0.000000   0.000000
+   61  KR 1 YYY   0.000000   0.000000  -1.032927   0.000000
+   62  KR 1 ZZZ  -1.032927   0.000000   0.000000   0.000000
+   63  KR 1 XXY   0.000000   0.000000   0.693059   0.000000
+   64  KR 1 XXZ   0.692914   0.000000   0.000000   0.000000
+   65  KR 1 YYX   0.000000   0.692972   0.000000   0.000000
+   66  KR 1 YYZ   0.692903   0.000000   0.000000   0.000000
+   67  KR 1 ZZX   0.000000   0.692845   0.000000   0.000000
+   68  KR 1 ZZY   0.000000   0.000000   0.692758   0.000000
+   69  KR 1 XYZ   0.000000   0.000000   0.000000   0.000000
+ ...... END OF RHF CALCULATION ......
+ STEP CPU TIME =     8.51 TOTAL CPU TIME =          8.5 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          8.6 SECONDS, CPU UTILIZATION IS    99.07%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =   -3830.5171987592
+                TWO ELECTRON ENERGY =    1078.4649755170
+           NUCLEAR REPULSION ENERGY =       0.0000000000
+                                      ------------------
+                       TOTAL ENERGY =   -2752.0522232421
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =    1078.4649755170
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =   -6582.5649940929
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       0.0000000000
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =   -5504.1000185759
+               TOTAL KINETIC ENERGY =    2752.0477953337
+                 VIRIAL RATIO (V/T) =       2.0000016090
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+     ATOMIC MULLIKEN POPULATION IN EACH MOLECULAR ORBITAL
+
+                      1          2          3          4          5
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                      6          7          8          9         10
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                     11         12         13         14         15
+
+                  2.000000   2.000000   2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000   2.000000   2.000000
+
+                     16         17         18
+
+                  2.000000   2.000000   2.000000
+
+    1             2.000000   2.000000   2.000000
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  KR 1  S      2.00001     1.99717
+              2  KR 1  S      1.99994     1.68845
+              3  KR 1  S      1.92188     0.91778
+              4  KR 1  S      1.19460     0.68567
+              5  KR 1  S      0.36514     0.37891
+              6  KR 1  S      0.51583     0.27475
+              7  KR 1  X      2.00007     1.99375
+              8  KR 1  Y      2.00007     1.99375
+              9  KR 1  Z      2.00007     1.99375
+             10  KR 1  X      1.94692     1.50186
+             11  KR 1  Y      1.94692     1.50186
+             12  KR 1  Z      1.94692     1.50186
+             13  KR 1  X      1.11572     0.66166
+             14  KR 1  Y      1.11572     0.66166
+             15  KR 1  Z      1.11572     0.66166
+             16  KR 1  X      0.46879     0.55612
+             17  KR 1  Y      0.46879     0.55612
+             18  KR 1  Z      0.46879     0.55612
+             19  KR 1  X      0.46257     0.26714
+             20  KR 1  Y      0.46257     0.26714
+             21  KR 1  Z      0.46257     0.26714
+             22  KR 1 XX      1.93951     1.55616
+             23  KR 1 YY      1.93951     1.55616
+             24  KR 1 ZZ      1.93951     1.55616
+             25  KR 1 XY      1.93951     1.87255
+             26  KR 1 XZ      1.93951     1.87255
+             27  KR 1 YZ      0.00000     1.87255
+             28  KR 1 XX      0.06027     0.30009
+             29  KR 1 YY      0.06027     0.30009
+             30  KR 1 ZZ      0.06027     0.30009
+             31  KR 1 XY      0.06027     0.12261
+             32  KR 1 XZ      0.06027     0.12261
+             33  KR 1 YZ      0.00000     0.12261
+             34  KR 1 XX      0.00009     0.11970
+             35  KR 1 YY      0.00009     0.11970
+             36  KR 1 ZZ      0.00009     0.11970
+             37  KR 1 XY      0.00009     0.00462
+             38  KR 1 XZ      0.00009     0.00462
+             39  KR 1 YZ      0.00000     0.00462
+             40  KR 1 XXX     0.00000     0.30507
+             41  KR 1 YYY     0.00000     0.30507
+             42  KR 1 ZZZ     0.00000     0.30507
+             43  KR 1 XXY     0.00000     0.13152
+             44  KR 1 XXZ     0.00000     0.13152
+             45  KR 1 YYX     0.00000     0.13152
+             46  KR 1 YYZ     0.00000     0.13152
+             47  KR 1 ZZX     0.00000     0.13152
+             48  KR 1 ZZY     0.00000     0.13152
+             49  KR 1 XYZ     0.00000     0.00000
+             50  KR 1  S      0.00261     0.07936
+             51  KR 1  X      0.00592     0.04868
+             52  KR 1  Y      0.00592     0.04868
+             53  KR 1  Z      0.00592     0.04868
+             54  KR 1 XX      0.00013     0.01669
+             55  KR 1 YY      0.00013     0.01669
+             56  KR 1 ZZ      0.00013     0.01669
+             57  KR 1 XY      0.00013     0.00022
+             58  KR 1 XZ      0.00013     0.00022
+             59  KR 1 YZ      0.00000     0.00022
+             60  KR 1 XXX     0.00000     0.21832
+             61  KR 1 YYY     0.00000     0.21832
+             62  KR 1 ZZZ     0.00000     0.21832
+             63  KR 1 XXY     0.00000     0.09218
+             64  KR 1 XXZ     0.00000     0.09218
+             65  KR 1 YYX     0.00000     0.09218
+             66  KR 1 YYZ     0.00000     0.09218
+             67  KR 1 ZZX     0.00000     0.09218
+             68  KR 1 ZZY     0.00000     0.09218
+             69  KR 1 XYZ     0.00000     0.00000
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1
+
+    1   36.0000000
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 KR           36.000000    0.000000        36.000000   -0.000000
+
+          MULLIKEN SPHERICAL HARMONIC POPULATIONS
+       ATOM           S       P       D      F      G      H      I    TOTAL
+    1 KR            8.00   18.00   10.00   0.00   0.00   0.00   0.00   36.00
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 KR                0.000       0.000       0.000
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    0.000000       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000    0.000000    0.000000
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =          8.5 (      0.1 MIN)
+ TOTAL WALL CLOCK TIME=          8.6 SECONDS, CPU UTILIZATION IS    98.96%
+                580000  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY Thu Oct  1 16:57:16 2026
+ DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 8.517 + 0.35 = 8.552
+ ----------------------------------------
+ ddikick.x: exited gracefully.
+----- accounting info -----
+Files used on the master node chemcompute-node-0.novalocal were:
+-rw-r--r--. 1 chemcomp nginx      561 Oct  1 16:57 /scratch/2006756/1625965.F05
+-rw-r--r--. 1 chemcomp nginx 50790400 Oct  1 16:57 /scratch/2006756/1625965.F10
+Thu Oct  1 16:57:19 UTC 2026
+0.107u 0.089s 0:12.01 1.4%	0+0k 0+80io 0pf+0w

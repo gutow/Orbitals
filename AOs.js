@@ -43,12 +43,33 @@ function jmolFromOrbitalNum(whichOrb){
     return whichJmol;
 }
 
+function toggle_spin() {
+    let spin_checkbox = document.getElementById('spin');
+    if (spin_checkbox != null) {
+        if (spin_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "spin on");
+        } else {
+            Jmol.script(Orbital_Jmol, "spin off");
+        }
+    }
+}
+
+function toggle_axes() {
+    let axes_checkbox = document.getElementById('axes');
+    if (axes_checkbox != null) {
+        if (axes_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "axes on");
+        } else {
+            Jmol.script(Orbital_Jmol, "axes off");
+        }
+    }
+}
 function displayOrbital(whichJmol, selectID, orbitalScript){
     // whichJmol: applet name
     // selectID: "iso1_select", "iso2_select", etc...
     // orbitalScript: string containing proper JSmol script to display the desired orbital
     // window.alert('whichJmol:'+whichJmol+'selectID:'+selectID+'orbitalScript:'+orbitalScript);
-    Jmol.script(whichJmol,orbitalScript);
+    let result = Jmol.script(whichJmol,orbitalScript);
     let prefixStr = selectID.replace('_select','');
     // Set colors to match user selections
     let colorStr = '#'+prefixStr + '_color'
@@ -152,19 +173,23 @@ function doSelectOne(triggerElem){
   }
   closeMenu(triggerElem);
   /* Call a function that does what is necessary when the selection is changed */
-  handleSelectEvents(triggerElem)
+  handleSelectEvents(triggerElem);
 }
 
-function handleClickEvent(event){
-  /*window.alert(event.target.nodeName)*/
-  if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('menuList')){
-    doMenuItem(event.target);
+function handleClickEvent(event) {
+    /*window.alert(event.target.nodeName)*/
+    if (event.target.nodeName == "LI" && event.target.parentNode.classList.contains('menuList')) {
+        doMenuItem(event.target);
     } else {
-    if (event.target.nodeName=="LI" && event.target.parentNode.classList.contains('selectOneList')){
-    doSelectOne(event.target);
+        if (event.target.nodeName == "LI" && event.target.parentNode.classList.contains('selectOneList')) {
+            let warn = document.getElementById("calc_warning");
+            warn.classList.remove('hidden');
+            document.body.classList.add('waiting');
+            window.setTimeout(function(){doSelectOne(event.target);warn.classList.add('hidden');
+                document.body.classList.remove("waiting")}, 1000);
+        }
     }
-  }
-  return;
+    return;
 }
 /* Ened SelectOne dropdowns*/
 function addListeners(){

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="../AOs.css"/>
+    <title>Atomic Orbitals</title>
+    <script src="../../Applets/JSmol/JSmol.min.js"></script>
+    <script type="text/javascript" src="../JSmol_settings.js"></script>
+    <script type="text/javascript" src="../AOs.js"></script>
+</head>
+<body>
+    <!--#include virtual = "../AO_Viewer_Header.html"-->
+    <div class="content_container">
+        <div class="subtitle-text">
+            Visualization of occupied atomic orbitals on Kr atom
+        </div>
+        <div class="explanation-text">
+            <p>This page is designed to allow you to manipulate images of atomic
+            orbitals and compare multiple orbitals (up to four) by displaying them simultaneously
+            on one atom. The goal is to help you visualize atomic orbitals and their relative sizes.
+            </p>
+            <p>You will notice that these orbitals look somewhat different from the orbitals on a one electron hydrogen atom.
+                Generally, orbitals in many electron atoms appear to be somewhat more squat than the equivalent hydrogen atom
+                orbitals. As the nuclear charge increases orbitals also get more compact. This is expected because of the increased
+                electrostatic attraction between the nucleus and each electron.
+            </p>
+            <p>Below (you may need to scroll down) is a
+            box with a small sphere in it.&nbsp;The sphere represents the location of a krypton nucleus (significantly
+            enlarged so that you can see it). To the right (or below on a narrow screen)
+            are dropdown selectors from which you can choose an orbital to display and control
+            the appearance of each orbital.
+            The orbitals appear in the dropdowns in the order orbitals are filled when assigning configurations using
+            the periodic table: lowest energy (at top) to highest energy (at bottom).
+            </p>
+            <p>The electronic configuration of a ground state krypton is [Ar]4s<sup>2</sup>3d<sup>10</sup>4p<sup>6</sup>
+                , in compact notation simply [Kr] or in fully expanded notation 1s<sup>2</sup>2s<sup>2</sup>
+                2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>4s<sup>2</sup>3d<sup>10</sup>4p<sup>6</sup>. This means that
+                all the shells with electrons in them are fully occupied.
+                Thus, the actual order of orbital energies in the Kr atom (lowest to highest) is: 1s, 2s, 2p, 3s, 3p,
+                3d, 4s, 4p. Notice this is not the filling order from the periodic table, where the 4s fills before the
+                3d. Once you reach neutral atoms where the 3d sub-shell is full, the 4s subshell is higher energy than
+                the 3d sub-shell.
+            </p>&nbsp;
+        </div>
+        <div id="calc_warning" class="hidden">Calculating (may take 10 - 15 seconds)...</div>
+        <div id="Jmol_div">
+              <script type="text/javascript">
+                    Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
+                    Jmol.script(Orbital_Jmol, 'load Kr_ACCT.log; spacefill 2%; background white; rotate x -90; spin on;')
+              </script>
+        </div>
+        <div id="Jmol_checkboxes" class="controls_div">
+            <div class="Jmol-checkboxes">
+                <input id="spin" type="checkbox" checked>
+                <label for="spin">Spin</label>
+                <input id="axes" type="checkbox">
+                <label for="axes">Show axes</label>
+                <script>
+                    document.getElementById("spin").addEventListener("click",toggle_spin);
+                    document.getElementById("axes").addEventListener("click",toggle_axes);
+                </script>
+            </div>
+            <div id="orb1_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 1:
+                </div>
+                <ul id="orb1_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb1_select_check"/>
+                  <label for="orb1_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso1 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 1;">
+                      1s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 2;">
+                      2s
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 5;" >
+                      2p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 4;">
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 3;">
+                      2p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 6;">
+                      3s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 7;">
+                      3p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 8;">
+                      3p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 9;">
+                      3p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 15;">
+                      4s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 11;">
+                      3d<sub>xy</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 13;">
+                      3d<sub>z<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 14;">
+                      3d<sub>x<sup>2</sup>-y<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 10;">
+                      3d<sub>xz</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 12;">
+                      3d<sub>yz</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 18;">
+                      4p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 16;">
+                      4p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 17;">
+                      4p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb1_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb1_color_check"/>
+                  <label for="orb1_color_check">Surface Color</label>
+                  <li  class="selected defaultselection"
+                  data-jmolscript="isosurface iso1; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso1; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb1_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb1_display_mode_check"/>
+                  <label for="orb1_display_mode_check">Display Mode</label>
+                  <li class="defaultselection"
+                  data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0.5;">
+                      Translucent
+                  </li>
+                  <li data-jmolscript="isosurface iso1 nofill mesh nodots translucent 0;"
+                  class="selected">Mesh</li>
+                  <li data-jmolscript="isosurface iso1 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb2_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 2:
+                </div>
+                <ul id="orb2_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb2_select_check"/>
+                  <label for="orb2_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso2 delete;" class="selected defaultselection">None</li>
+                   <li  data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 1;">
+                      1s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 2;">
+                      2s
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 5;" >
+                      2p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 4;">
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15  mo 3;">
+                      2p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15  mo 6;">
+                      3s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15  mo 7;">
+                      3p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15  mo 8;">
+                      3p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 9;">
+                      3p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 15;">
+                      4s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 11;">
+                      3d<sub>xy</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 13;">
+                      3d<sub>z<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 14;">
+                      3d<sub>x<sup>2</sup>-y<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 10;">
+                      3d<sub>xz</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 12;">
+                      3d<sub>yz</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 18;">
+                      4p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 16;">
+                      4p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 resolution 35 cutoff 0.15 mo 17;">
+                      4p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb2_color" class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb2_color_check"/>
+                  <label for="orb2_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li class="selected defaultselection"
+                        data-jmolscript="isosurface iso2; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso2; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb2_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb2_display_mode_check"/>
+                  <label for="orb2_display_mode_check">Display Mode</label>
+                   <li
+                  data-jmolscript="isosurface iso2 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso2 fill nomesh nodots translucent 0.5;">Translucent</li>
+                  <li class="defaultselection selected"
+                       data-jmolscript="isosurface iso2 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso2 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb3_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 3:
+                </div>
+                <ul id="orb3_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb3_select_check"/>
+                  <label for="orb3_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso3 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 1;">
+                      1s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 2;">
+                      2s
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 5;" >
+                      2p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 4;">
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15  mo 3;">
+                      2p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15  mo 6;">
+                      3s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15  mo 7;">
+                      3p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15  mo 8;">
+                      3p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 9;">
+                      3p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 15;">
+                      4s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 11;">
+                      3d<sub>xy</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 13;">
+                      3d<sub>z<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 14;">
+                      3d<sub>x<sup>2</sup>-y<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 10;">
+                      3d<sub>xz</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 12;">
+                      3d<sub>yz</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 18;">
+                      4p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 16;">
+                      4p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 resolution 35 cutoff 0.15 mo 17;">
+                      4p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb3_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb3_color_check"/>
+                  <label for="orb3_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li class="selected defaultselection"
+                  data-jmolscript="isosurface iso3; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li data-jmolscript="isosurface iso3; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb3_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb3_display_mode_check"/>
+                  <label for="orb3_display_mode_check">Display Mode</label>
+                  <li data-jmolscript="isosurface iso3 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso3 fill nomesh nodots translucent 0.5;">Translucent</li>
+                  <li class="selected defaultselection" data-jmolscript="isosurface iso3 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso3 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div id="orb4_controls" class="orbit_controls">
+                <div class="orbital_title">
+                Orbital 4:
+                </div>
+                <ul id="orb4_select" class="selectOneList mainmenu">
+                  <input type="checkbox" id="orb4_select_check"/>
+                  <label for="orb4_select_check">Orbital</label>
+                  <li data-jmolscript="isosurface iso4 delete;" class="selected defaultselection">None</li>
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 1;">
+                      1s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 2;">
+                      2s
+                  </li>
+                  <hr>
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 5;" >
+                      2p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 4;">
+                      2p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15  mo 3;">
+                      2p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15  mo 6;">
+                      3s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15  mo 7;">
+                      3p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15  mo 8;">
+                      3p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 9;">
+                      3p<sub>z</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 15;">
+                      4s
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 11;">
+                      3d<sub>xy</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 13;">
+                      3d<sub>z<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 14;">
+                      3d<sub>x<sup>2</sup>-y<sup>2</sup></sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 10;">
+                      3d<sub>xz</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 12;">
+                      3d<sub>yz</sub>
+                  </li>
+                    <hr>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 18;">
+                      4p<sub>x</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 16;">
+                      4p<sub>y</sub>
+                  </li>
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 resolution 35 cutoff 0.15 mo 17;">
+                      4p<sub>z</sub>
+                  </li>
+                </ul>
+                <ul id="orb4_color"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb4_color_check"/>
+                  <label for="orb4_color_check">Surface Color</label>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase red blue;">
+                    <div class="colorbox red complexMenuItem"></div>
+                    <div class="colorbox blue complexMenuItem"></div>
+                    Red/Blue
+                  </li>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase yellow green;">
+                      <div class="colorbox green complexMenuItem"></div>
+                      <div class="colorbox yellow complexMenuItem"></div>
+                      Green/Yellow
+                  </li>
+                  <li data-jmolscript="isosurface iso4; color isosurface phase cyan magenta;">
+                    <div class="colorbox cyan complexMenuItem"></div>
+                    <div class="colorbox magenta complexMenuItem"></div>
+                    Cyan/Magenta
+                  </li>
+                  <li class="selected defaultselection"
+                    data-jmolscript="isosurface iso4; color isosurface phase pink brown;">
+                    <div class="colorbox brown complexMenuItem"></div>
+                    <div class="colorbox pink complexMenuItem"></div>
+                    Brown/Pink
+                  </li>
+                </ul>
+                <ul id="orb4_display_mode"  class="selectOneList mainmenu">
+                  <input type="checkbox" name="menus" id="orb4_display_mode_check"/>
+                  <label for="orb4_display_mode_check">Display Mode</label>
+                  <li data-jmolscript="isosurface iso4 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso4 fill nomesh nodots translucent 0.5;"
+                      >Translucent</li>
+                  <li class="selected defaultselection" 
+                      data-jmolscript="isosurface iso4 nofill mesh nodots translucent 0;">Mesh</li>
+                  <li data-jmolscript="isosurface iso4 nofill nomesh dots translucent 0;">Dots</li>
+                </ul>
+            </div>
+            <div class="accordians">
+                <ul class="accordion">
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              Viewer Instructions
+                          </h3>
+                        <div class = "accordion-contents">
+                            <!--#include virtual = "../MV_Instructions.html"-->
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              Other visualizations and explanations of atomic orbitals
+                          </h3>
+                        <div class = "accordion-contents">
+                            <ul>
+                                <li>
+                                    Dr. Spinney's <a href="https://cbc-uged.asc.ohio-state.edu/H-AOs/" target="_blank">
+                                    hydrogenic atomic orbitals</a> (part of his general chemistry resource within
+                                    <span style="font-style:italic;">Chemistry the Central Science</span> hosted by Ohio State
+                                    University).
+                                </li>
+                                <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.07%3A_The_Schrodinger_Wave_Equation_for_the_Hydrogen_Atom"
+                                       target="_blank"> Sophomore/Junior level discussion of hydrogenic atomic orbitals </a>
+                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                                <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.08%3A_Many-Electron_Atoms_and_the_Periodic_Table"
+                                       target="blank">Sophomore/Junior level discussion of many electron atomic orbitals</a>
+                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                                <li>
+                                    <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/08%3A_The_Hydrogen_Atom" target="_blank">
+                                        Advanced undergraduate discussion of hydrogen atom quantum states (orbitals)</a>
+                                        hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                                <li>
+                                    <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/09%3A_The_Electronic_States_of_the_Multielectron_Atoms" target="_blank">
+                                        Advanced undergraduate discussion of many electron atom quantum states (orbitals)
+                                        </a>
+                                        hosted by <a href="libretexts.org">LibreTexts</a>.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              How these orbital images are generated
+                          </h3>
+                        <div class = "accordion-contents">
+                            These orbital images are based
+                            on calculations done using
+                            the <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
+                            <span style="font-style: italic;">ab initio</span> quantum
+                            mechanics
+                            package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">
+                            JSmol/Jmol</a> from the GAMESS.log file of a restricted Hartree-Fock (RHF)
+                            single point energy calculation on a ground state Kr using the aug-CC-pVTZ basis set. To aid
+                            in visualization of the nodes in the orbitals the volume with 85% probability of containing
+                            the electrons is shown, rather than the more common 90% - 95%.
+                        </div>
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                          <h3>
+                              References
+                          </h3>
+                        <div class = "accordion-contents">
+                          <ol>
+                              <li>M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert,
+                                M.S.Gordon,
+                                J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su,
+                                T.L.Windus,
+                                M.Dupuis, J.A.Montgomery <span style="font-style:
+                                    italic;">J. Comput. Chem.</span>, 14,
+                                1347-1363(1993).</li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+                <!--#include virtual = "Last_mod_date.html"-->
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

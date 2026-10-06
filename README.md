@@ -9,5 +9,8 @@ the file names for the surfaces correspond to
 reasonable names for the orbitals. 
 * The relative path to Jmol on your server must be correct in the file 
   `JSmol_settings.js`. This may also have to be set in `ethylene_VB.shmtl`.
-* JMol/JSmol version should be 16.4.7 and no newer until the bugs in reading 
-  surfaces from GAMESSUS output files is corrected (target is 16.4.25).
+* JMol/JSmol version should be <=16.4.7 or >=16.5.3 because of bugs in reading 
+  surfaces from GAMESSUS output files in between those versions.
+* When making updates make sure to change the date in the `Last_mod_date.
+html`. There is one for the Cl page, one for the Kr page one for the N page 
+  and one for the ethylene page. 
