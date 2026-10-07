@@ -56,9 +56,15 @@
                 <label for="spin">Spin</label>
                 <input id="axes" type="checkbox">
                 <label for="axes">Show axes</label>
+                <input id="ticks" type="checkbox" checked>
+                <label for="ticks">Show scale in Angstroms</label>
                 <script>
                     document.getElementById("spin").addEventListener("click",toggle_spin);
                     document.getElementById("axes").addEventListener("click",toggle_axes);
+                    document.getElementById("ticks").addEventListener("click",toggle_ticks);
+                    toggle_spin();
+                    toggle_ticks(); // must be before toggle_axes() to get things sync'd.
+                    toggle_axes();
                 </script>
             </div>
             <div id="orb1_controls" class="orbit_controls">

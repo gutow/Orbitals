@@ -64,6 +64,18 @@ function toggle_axes() {
         }
     }
 }
+
+function toggle_ticks() {
+    let ticks_checkbox = document.getElementById('ticks');
+    if (ticks_checkbox != null) {
+        if (ticks_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "axes TICKS {0.2,0.1,0};");
+        } else {
+            Jmol.script(Orbital_Jmol, "axes TICKS {0,0,0};");
+        }
+    }
+}
+
 function displayOrbital(whichJmol, selectID, orbitalScript){
     // whichJmol: applet name
     // selectID: "iso1_select", "iso2_select", etc...
