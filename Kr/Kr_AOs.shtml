@@ -47,17 +47,17 @@
         <div id="Jmol_div">
               <script type="text/javascript">
                     Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
-                    Jmol.script(Orbital_Jmol, 'load Kr_ACCT.log; spacefill 2%; background white; rotate x -90; spin on;')
+                    Jmol.script(Orbital_Jmol, 'load Kr_ACCT.log; spacefill 2%; background white; rotate x -90; spin on;');
               </script>
         </div>
-        <div id="Jmol_checkboxes" class="controls_div">
-            <div class="Jmol-checkboxes">
+        <div class="controls_div">
+            <div id="Jmol_checkboxes" class="Jmol-checkboxes">
                 <input id="spin" type="checkbox" checked>
                 <label for="spin">Spin</label>
                 <input id="axes" type="checkbox">
                 <label for="axes">Show axes</label>
                 <input id="ticks" type="checkbox" checked>
-                <label for="ticks">Show scale in Angstroms</label>
+                <label for="ticks">Show axes scales in Angstroms</label>
                 <script>
                     document.getElementById("spin").addEventListener("click",toggle_spin);
                     document.getElementById("axes").addEventListener("click",toggle_axes);
@@ -555,7 +555,8 @@
                             JSmol/Jmol</a> from the GAMESS.log file of a restricted Hartree-Fock (RHF)
                             single point energy calculation on a ground state Kr using the aug-CC-pVTZ basis set. To aid
                             in visualization of the nodes in the orbitals the volume with 85% probability of containing
-                            the electrons is shown, rather than the more common 90% - 95%.
+                            the electrons is shown, rather than the more common 90% - 95%. This makes the overall
+                            extent of the orbitals somewhat smaller than the more common choice.
                         </div>
                     </li>
                     <li class="accordion">

@@ -103,7 +103,14 @@ function handleSelectEvents(triggerElem){
     //window.alert('whichOrb:'+whichOrb+', eventtype:'+eventtype+', whichJmol:'+whichJmol+', script:'+jmolscript);
     switch (eventtype) {
         case "select" :
-            displayOrbital(whichJmol, triggerElem.parentElement.id, jmolscript);
+            let warn = document.getElementById("calc_warning");
+            warn.classList.remove('hidden');
+            document.body.classList.add('waiting');
+            window.setTimeout(function(){
+                displayOrbital(whichJmol, triggerElem.parentElement.id, jmolscript);
+                warn.classList.add('hidden');
+                document.body.classList.remove("waiting")},
+                1000);
             break;
         case "color" :
             Jmol.script(whichJmol, jmolscript);
@@ -194,11 +201,7 @@ function handleClickEvent(event) {
         doMenuItem(event.target);
     } else {
         if (event.target.nodeName == "LI" && event.target.parentNode.classList.contains('selectOneList')) {
-            let warn = document.getElementById("calc_warning");
-            warn.classList.remove('hidden');
-            document.body.classList.add('waiting');
-            window.setTimeout(function(){doSelectOne(event.target);warn.classList.add('hidden');
-                document.body.classList.remove("waiting")}, 1000);
+            doSelectOne(event.target);
         }
     }
     return;

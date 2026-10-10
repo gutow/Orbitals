@@ -17,17 +17,23 @@
         </div>
         <div class="explanation-text">
             <p>This page is designed to allow you to manipulate images of atomic
-            orbitals and compare multiple orbitals by displaying them simultaneously
-            on one atom. The goal is to help you visualize atomic orbitals and their
-                relative sizes.</p>
+            orbitals and compare multiple orbitals (up to four) by displaying them simultaneously
+            on one atom. The goal is to help you visualize atomic orbitals and their relative sizes.
+            </p>
+            <p>You will notice that these orbitals look somewhat different from the orbitals on a one electron hydrogen atom.
+                Generally, orbitals in many electron atoms appear to be somewhat more squat than the equivalent hydrogen atom
+                orbitals. As the nuclear charge increases orbitals also get more compact. This is expected because of the increased
+                electrostatic attraction between the nucleus and each electron.
+            </p>
             <p>Below (you may need to scroll down) is a
             box with a green dot in it.&nbsp;The green
             dot represents the location of a chlorine nucleus (significantly
             enlarged so that you can see it). To the right (or below on a narrow screen)
             are dropdown selectors from which you can choose an orbital to display and control
             the appearance of each orbital.
-            The orbitals appear in the dropdowns from lowest (at top) to highest (at bottom)
-            energy.</p>
+            The orbitals appear in the dropdowns in the order orbitals are filled when assigning configurations using
+            the periodic table: lowest energy (at top) to highest energy (at bottom).
+            </p>
             <p>The electronic configuration of a ground state chlorine is [Ne]3s<sup>2</sup>3p<sup>5</sup>
                 (1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>5</sup>).&nbsp;
             This means that the 4s, 3d and 4p orbitals shown are unoccupied;&nbsp;
@@ -38,10 +44,26 @@
         <div id="Jmol_div">
               <script type="text/javascript">
                     Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
-                    Jmol.script(Orbital_Jmol, 'load Cl_ACCD.log; spacefill 2%; background white;)
+                    Jmol.script(Orbital_Jmol, 'load Cl_ACCD.log; spacefill 2%; background white; rotate x -90; spin on;');
               </script>
         </div>
         <div class="controls_div">
+            <div id="Jmol_checkboxes" class="Jmol-checkboxes">
+                <input id="spin" type="checkbox" checked>
+                <label for="spin">Spin</label>
+                <input id="axes" type="checkbox">
+                <label for="axes">Show axes</label>
+                <input id="ticks" type="checkbox" checked>
+                <label for="ticks">Show axes scales in Angstroms</label>
+                <script>
+                    document.getElementById("spin").addEventListener("click",toggle_spin);
+                    document.getElementById("axes").addEventListener("click",toggle_axes);
+                    document.getElementById("ticks").addEventListener("click",toggle_ticks);
+                    toggle_spin();
+                    toggle_ticks(); // must be before toggle_axes() to get things sync'd.
+                    toggle_axes();
+                </script>
+            </div>
             <div id="orb1_controls" class="orbit_controls">
                 <div class="orbital_title">
                 Orbital 1:
@@ -50,65 +72,65 @@
                   <input type="checkbox" id="orb1_select_check"/>
                   <label for="orb1_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso1 delete;" class="selected defaultselection">None</li>
-                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 1;">
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 25 cutoff 0.04 mo 1;">
                       1s
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 2;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 2;">
                       2s
                   </li>
                   <hr>
-                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 5;" >
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 3;" >
                       2p<sub>x</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 3;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 4;">
                       2p<sub>y</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 4;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04  mo 5;">
                       2p<sub>z</sub>
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 6;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04  mo 6;">
                       3s
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 8;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04  mo 8;">
                       3p<sub>x</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15  mo 7;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04  mo 7;">
                       3p<sub>y</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 9;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 9;">
                       3p<sub>z</sub>
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 15;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 11;">
                       4s
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 10;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 17;">
                       3d<sub>xy</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 11;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 14;">
                       3d<sub>z<sup>2</sup></sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 12;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 18;">
                       3d<sub>x<sup>2</sup>-y<sup>2</sup></sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 13;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 15;">
                       3d<sub>xz</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 14;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 16;">
                       3d<sub>yz</sub>
                   </li>
                     <hr>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 17;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 21;">
                       4p<sub>x</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 'Kr_ACCT_4py.jvxl';">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 20;">
                       4p<sub>y</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 35 cutoff 0.15 mo 18;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 resolution 20 cutoff 0.04 mo 19;">
                       4p<sub>z</sub>
                   </li>
                 </ul>
@@ -530,7 +552,10 @@
                             mechanics
                             package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">
                             JSmol/Jmol</a> from the GAMESS.log file of a restricted open shell Hartree-Fock (ROHF)
-                            single point energy calculation on a ground state Cl using the aug-CC-pVDZ basis set.
+                            single point energy calculation on a ground state Cl using the aug-CC-pVDZ basis set. In
+                            to visualize the full shapes of the unoccupied orbitals the orbital volumes encompass 96%
+                            probability of finding the electron, rather than the more common 90% - 95%. This makes the
+                            extent of the orbitals somewhat larger than the more common choice.
                         </div>
                     </li>
                     <li class="accordion">

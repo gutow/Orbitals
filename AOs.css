@@ -9,18 +9,18 @@
     font-weight: bold;
     font-size: 2em;
 }
-#hybrid-site-parts{
+#orbital-site-parts{
     text-align: center;
 }
-#hybrid-site-parts a{
+#orbital-site-parts a{
     border-right:1px solid black;
     padding-left:5px;
     padding-right:5px;
 }
-#hybrid-site-parts a:last-child{
+#orbital-site-parts a:last-child{
     border-right:none;
 }
-#hybrid-site-parts span{
+#orbital-site-parts span{
     font-weight: bold;
 }
 #hosted-by{

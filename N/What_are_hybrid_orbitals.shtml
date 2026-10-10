@@ -15,7 +15,7 @@ What are Hybrid Orbitals?
 </div>
 <div id="hybrid explanation" class="explanation-text">
 Hybrid orbitals are the result of a model which combines <a
- href="../Cl/Cl_AOs.shtml.bak">atomic orbitals</a> on a single atom in ways
+ href="../Kr/Kr_AOs.shtml">atomic orbitals</a> on a single atom in ways
 that lead to a new set of orbitals that have geometries
 appropriate to form bonds in the directions predicted by the VSEPR
 model. The <a target="_blank"
@@ -58,7 +58,7 @@ You may click on each of these four images to enlarge them. Use
 your back button to return here.<br>
       <br>
 To view live images of the unhybridized atomic orbitals you can go to <a
- target="_blank" href="../Cl/Cl_AOs.shtml.bak">Dr. Gutow's atomic orbital
+ target="_blank" href="../Kr/Kr_AOs.shtml">Dr. Gutow's atomic orbital
 page</a>. To compare with hybrid orbitals use these links for <a
  href="sp%20hybrid.shtml">sp</a>, <a href="sp2%20hybrid.shtml">sp<sup>2</sup></a>
 and <a href="sp3%20hybrid.shtml">sp<sup>3</sup></a> hybrids. <br>
@@ -77,12 +77,12 @@ geometry</a>.<br>
 <br>
 How the atomic orbitals are combined to give sp<sup>3</sup>
 orbitals is a bit complicated, so we will consider the simpler case of
-the sp hybrid formed from combining a single s and p orbital.&nbsp;
+the sp hybrid formed from combining a single s and p orbital.
 This hybridization is what is seen for carbon in <a target="_blank"
  href="../../VSEPR_TUTORIAL/shtml%20version/AX2_Examples.shtml">linear
-molecules</a> like CO<sub>2</sub> and acetylene (C<sub>2</sub>H<sub>2</sub>).&nbsp;
+molecules</a> like CO<sub>2</sub> and acetylene (C<sub>2</sub>H<sub>2</sub>).
 To form separate bonds pointing 180 degrees away from each other two
-separate orbitals pointing in opposite directions are needed.&nbsp;
+separate orbitals pointing in opposite directions are needed.
 These are formed by combining the spherically symmetric s orbital with
 one of the p orbitals. The p orbital by itself doesn't work
 because both lobes are part of the same orbital, so can only

@@ -6,86 +6,7 @@
   <title>Valence Bond Model of Double Bond</title>
   <link rel="stylesheet" href="hybrid.css"/>
   <script src="../../Applets/JSmol/JSmol.min.js"></script>
-  <script type="text/javascript">
-  var jmolApplet; //our viewer
-  var jmolInfo; //setup parameters
-  ;(function() {
-
-// Developers: The debugCode flag is checked in j2s/java/core.z.js, 
-// and, if TRUE, skips loading the core methods, forcing those
-// to be read from their individual directories. Set this
-// true if you want to do some code debugging by inserting
-// System.out.println, document.title, or alert commands
-// anywhere in the Java or Jmol code.
-
-var s = document.location.search;
-Jmol.debugCode = (s.indexOf("debugcode") >= 0);
-
-
-jmol_isReady = function(applet) {
-//	document.title = (applet._id + " is ready")
-//	Jmol._getElement(applet, "appletdiv").style.border="1px solid blue"
-    elem = document.getElementById("JSmol_loading_msg");
-    elem.style.visibility="hidden";
-    elem.style.height="0";
-    elem.style.border="none";
- }		
-
-jmolInfo = {
-	width: "100%",
-	height: "100%",
-	debug: false,
-	color: "white",
-	addSelectionOptions: false,
-	serverURL: "../../Applets/JSmol/php/jsmol.php",
-	use: "HTML5",
-    coverImage: "ethylene/3-D_Lewis_structure.png",        // initial image instead of applet
-    coverScript: "",	// special script for click of cover image (otherwise equal to script)
-    deferApplet: false,                  // wait to load applet until click
-    deferUncover: true,                 // wait to uncover applet until script completed
-	j2sPath: "../../Applets/JSmol/j2s",
-	//disableJ2SLoadMonitor: true,
-	disableInitialConsole: true,
-	readyFunction: jmol_isReady,
-	//defaultModel: "ethylene/ethylene.xyz",
-	script: "load ethylene/3-D_Lewis_structure.spt"
-}
-
-// ?_USE=JAVA   ?_USE=SIGNED   ?_USE=HTML5
-   if (s.indexOf("USE=") >= 0)
-     jmolInfo.use = s.split("USE=")[1].split("&")[0]
-   else if (s.indexOf("JAVA") >= 0)
-     jmolInfo.use = "JAVA"
-   else if (s.indexOf("IMAGE") >= 0)
-     jmolInfo.use = "IMAGE"
-   else if (s.indexOf("NOWEBGL") >= 0)
-     jmolInfo.use = "JAVA IMAGE"
-   else if (s.indexOf("WEBGL") >= 0)
-     jmolInfo.use = "WEBGL HTML5"
-   if (s.indexOf("NOWEBGL") >= 0)
-     jmolInfo.use = use.replace(/WEBGL/,"")
-   var useSignedApplet = (s.indexOf("SIGNED") >= 0);
-   if(useSignedApplet && jmolInfo.use == "HTML5") jmolInfo.use = "JAVA";
-
-   var protocol = window.location.protocol.toLowerCase();
-   if (protocol == "file:") { 
-    jmolInfo.jarPath = "java";
-    jmolInfo.j2sPath = "j2s";
-    jmolInfo.jarFile = "JmolAppletSigned.jar";
-    jmolInfo.isSigned= "true";
-  }
-})();
-
-Jmol.setDocument(document);
-
-// notice that we are using no document.write() function here. All DOM-based.
-// Jmol.getAppletHtml is working.
-
-$(document).ready(function(){
-    $("#Jmol1").html(Jmol.getAppletHtml("jmolApplet", jmolInfo));
-});
-  </script>
-  
+  <script type="text/javascript" src="../JSmol_settings.js"></script>
 </head>
 <body>
 <!--#include virtual = "../N/Hybrid Orbitals Header.html"-->
@@ -95,14 +16,14 @@ $(document).ready(function(){
       (ethylene as the example)
     </div>
     <div id="Viewer_and_Widgets" class="JmolPane">
-      <div id="Jmol1" class="JmolViewerPane">This will be the viewer</div>
+      <div id="Jmol1" class="JmolViewerPane">
+        <script type="text/javascript">
+          jmolApplet = Jmol.getApplet("jmolApplet", Jmol.Info);
+          Jmol.script(jmolApplet,"load ethylene/3-D_Lewis_structure.spt");
+        </script>
+      </div>
     </div>
     <div id="Text_Buttons" class="JmolTextPane">
-      <div id="JSmol_loading_msg">
-        Once the molecule file is fully loaded the image at right
-        will become live.  At that time the "activate 3-D" icon
-        <img src="../../Applets/JSmol/j2s/img/play_make_live.jpg" height="15px"> will disappear.<hr/>
-      </div>
     At left (or above on narrow screen) is a 3-D version of the Lewis structure of the ethylene
     molecule. You may rotate the molecule yourself by holding the
     mouse button down while dragging it around within the image
@@ -116,10 +37,10 @@ $(document).ready(function(){
       </div>
       Each carbon atom is surrounded by three "groups" as specified in the <a
       target="_top"
-      href="https://cms.gutow.uwosh.edu/gutow/VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
+      href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
       model</a> for molecular shapes. An atom surrounded by three
       groups will be <a target="_top"
-      href="https://cms.gutow.uwosh.edu/gutow/Orbitals/N/sp2%20hybrid.shtml">sp<sup>2</sup>
+      href="../../Orbitals/N/sp2%20hybrid.shtml">sp<sup>2</sup>
       hybridized</a> to get orbitals pointing in the correct directions to
       make bonds at 120&deg; from each other. Click the button below to
       show these hybrid orbitals on one C.
