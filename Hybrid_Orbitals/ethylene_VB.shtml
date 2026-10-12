@@ -9,7 +9,7 @@
   <script type="text/javascript" src="../JSmol_settings.js"></script>
 </head>
 <body>
-<!--#include virtual = "../N/Hybrid Orbitals Header.html"-->
+<!--#include virtual = "../Hybrid_Orbitals/Hybrid Orbitals Header.html"-->
   <div id="visible_page_wrapper">
     <div id="HeaderInfo" class="subtitle-text">
       Valence Bond Model of the Double Bond
@@ -40,7 +40,7 @@
       href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
       model</a> for molecular shapes. An atom surrounded by three
       groups will be <a target="_top"
-      href="../../Orbitals/N/sp2%20hybrid.shtml">sp<sup>2</sup>
+      href="/sp2%20hybrid.shtml">sp<sup>2</sup>
       hybridized</a> to get orbitals pointing in the correct directions to
       make bonds at 120&deg; from each other. Click the button below to
       show these hybrid orbitals on one C.

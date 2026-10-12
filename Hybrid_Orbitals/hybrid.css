@@ -169,21 +169,25 @@
       width: 100%;
       border-top:1px dotted grey;
   }
+  #Jmol_checkboxes{
+      top: 0;
+      left: 0;
+  }
   #orb1_controls{
-      top:0;
+      top:2em;
       left:0;
       z-index: 10;
   }
   #orb2_controls{
-      top:4em;
+      top:6em;
       z-index: 8;
   }
   #orb3_controls {
-      top:8em;
+      top:10em;
       z-index: 6;
   }
   #orb4_controls{
-      top:12em;
+      top:14em;
       z-index: 4;
   }
 /* hide the checkbox*/
@@ -312,7 +316,7 @@ ul.selectOneList {
 .accordians{
     display: inline-block;
     position: absolute;
-    top: 16em;
+    top: 18em;
     width: 100%;
 }
 .accordians ul li i:before, ul li i:after {

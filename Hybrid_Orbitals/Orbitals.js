@@ -43,6 +43,39 @@ function jmolFromOrbitalNum(whichOrb){
     return whichJmol;
 }
 
+function toggle_spin() {
+    let spin_checkbox = document.getElementById('spin');
+    if (spin_checkbox != null) {
+        if (spin_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "spin on");
+        } else {
+            Jmol.script(Orbital_Jmol, "spin off");
+        }
+    }
+}
+
+function toggle_axes() {
+    let axes_checkbox = document.getElementById('axes');
+    if (axes_checkbox != null) {
+        if (axes_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "axes on");
+        } else {
+            Jmol.script(Orbital_Jmol, "axes off");
+        }
+    }
+}
+
+function toggle_ticks() {
+    let ticks_checkbox = document.getElementById('ticks');
+    if (ticks_checkbox != null) {
+        if (ticks_checkbox.checked) {
+            Jmol.script(Orbital_Jmol, "axes TICKS {0.2,0.1,0};");
+        } else {
+            Jmol.script(Orbital_Jmol, "axes TICKS {0,0,0};");
+        }
+    }
+}
+
 function displayOrbital(whichJmol, selectID, orbitalScript){
     // whichJmol: applet name
     // selectID: "iso1_select", "iso2_select", etc...
