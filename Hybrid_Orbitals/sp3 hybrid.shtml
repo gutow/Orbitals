@@ -25,10 +25,18 @@
         <div id="Jmol_div">
               <script type="text/javascript">
                     Orbital_Jmol = Jmol.getApplet("Orbital_Jmol", Jmol.Info);
-                    Jmol.script(Orbital_Jmol, 'load N-hybrid.log; spacefill 2%; background white')
+                    Jmol.script(Orbital_Jmol, 'load Ne_ACCD.log; spacefill 2%; background white')
               </script>
         </div>
         <div class="controls_div">
+            <div id="Jmol_checkboxes" class="Jmol-checkboxes">
+                <input id="spin" type="checkbox" checked>
+                <label for="spin">Spin</label>
+                <script>
+                    document.getElementById("spin").addEventListener("click",toggle_spin);
+                    toggle_spin();
+                </script>
+            </div>
             <div id="orb1_controls" class="orbit_controls">
                 <div class="orbital_title">
                 Orbital 1:
@@ -37,17 +45,17 @@
                   <input type="checkbox" id="orb1_select_check"/>
                   <label for="orb1_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso1 delete;" class="selected defaultselection">None</li>
-                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 11;">
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo[0.5,2,0.5,3,0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>i</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 12;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo[0.5,2,-0.5,3,-0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>j</sub>
                   </li>
                   
-                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 13;" >
+                  <li  data-jmolscript="isosurface iso1 delete; isosurface iso1 mo[0.5,2,0.5,3,-0.5,4,-0.5,5];" >
                       sp<sup>3</sup><sub>k</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo 14;">
+                  <li data-jmolscript="isosurface iso1 delete; isosurface iso1 mo[0.5,2,-0.5,3,0.5,4,-0.5,5];">
                       sp<sup>3</sup><sub>m</sub>
                   </li>
                 </ul>
@@ -95,11 +103,15 @@
                   <input type="checkbox" id="orb2_select_check"/>
                   <label for="orb2_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso2 delete;" class="selected defaultselection">None</li>
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 11;">sp<sup>3</sup><sub>i</sub></li>
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 12;">sp<sup>3</sup><sub>j</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo[0.5,2,0.5,3,0.5,4,0.5,5];">
+                      sp<sup>3</sup><sub>i</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo[0.5,2,-0.5,3,-0.5,4,0.5,5];">
+                      sp<sup>3</sup><sub>j</sub></li>
                   
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 13;">sp<sup>3</sup><sub>k</sub></li>
-                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo 14;">sp<sup>3</sup><sub>m</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo[0.5,2,0.5,3,-0.5,4,-0.5,5];">
+                      sp<sup>3</sup><sub>k</sub></li>
+                  <li data-jmolscript="isosurface iso2 delete; isosurface iso2 mo[0.5,2,-0.5,3,0.5,4,-0.5,5];">
+                      sp<sup>3</sup><sub>m</sub></li>
                 </ul>
                 <ul id="orb2_color" class="selectOneList mainmenu">
                   <input type="checkbox" name="menus" id="orb2_color_check"/>
@@ -145,17 +157,17 @@
                   <input type="checkbox" id="orb3_select_check"/>
                   <label for="orb3_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso3 delete;" class="selected defaultselection">None</li>
-                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 11;">
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo[0.5,2,0.5,3,0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>i</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 12;">
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo[0.5,2,-0.5,3,-0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>j</sub>
                   </li>
                   
-                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 13;" >
+                  <li  data-jmolscript="isosurface iso3 delete; isosurface iso3 mo[0.5,2,0.5,3,-0.5,4,-0.5,5];" >
                       sp<sup>3</sup><sub>k</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo 14;">
+                  <li data-jmolscript="isosurface iso3 delete; isosurface iso3 mo[0.5,2,-0.5,3,0.5,4,-0.5,5];">
                       sp<sup>3</sup><sub>m</sub>
                   </li>
                 </ul>
@@ -203,17 +215,17 @@
                   <input type="checkbox" id="orb4_select_check"/>
                   <label for="orb4_select_check">Orbital</label>
                   <li data-jmolscript="isosurface iso4 delete;" class="selected defaultselection">None</li>
-                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 11;">
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo[0.5,2,0.5,3,0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>i</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 12;">
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo[0.5,2,-0.5,3,-0.5,4,0.5,5];">
                       sp<sup>3</sup><sub>j</sub>
                   </li>
                   
-                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 13;" >
+                  <li  data-jmolscript="isosurface iso4 delete; isosurface iso4 mo[0.5,2,0.5,3,-0.5,4,-0.5,5];" >
                       sp<sup>3</sup><sub>k</sub>
                   </li>
-                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo 14;">
+                  <li data-jmolscript="isosurface iso4 delete; isosurface iso4 mo[0.5,2,-0.5,3,0.5,4,-0.5,5];">
                       sp<sup>3</sup><sub>m</sub>
                   </li>
                 </ul>
@@ -265,12 +277,28 @@
                             <!--#include virtual = "MV_Instructions.html"-->
                         </div>
                     </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h3>How these orbital images are generated</h3>
+                        <div class = "accordion-contents">
+                            <!--#include virtual = "atomic_hybrid_gen_desc.html"-->
+                        </div>
+
+                    </li>
+                    <li class="accordion">
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h3>References</h3>
+                        <div class = "accordion-contents">
+                            <!--#include virtual = "atomic_hybrid_refs.html"-->
+                        </div>
+
+                    </li>
                 </ul>
                 <!--#include virtual = "Last_mod_date.html"-->
             </div>
-
         </div>
     </div>
-
 </body>
 </html>
