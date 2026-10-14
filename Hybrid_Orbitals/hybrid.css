@@ -81,10 +81,8 @@
       display:inline-flex;
       flex-wrap: wrap;
   }
-  #JSmol_loading_msg{
-      color:orange;
-  }
-  .JmolTextPane {
+
+.JmolTextPane {
       width:49%;
       min-width:300px;
       height:95%;
@@ -107,13 +105,8 @@
       overflow:hidden;
       /*border:1px solid grey;*/
   }
-  .JmolWidgetPane {
-      width:98%;
-      height:3.5%;
-      overflow:scroll;
-      /*border:1px solid blue;*/
-  }
-  .JmolButtonDiv{
+
+.JmolButtonDiv{
       width:99%;
       /*border:1px solid blue;*/
       text-align:center;

@@ -519,22 +519,22 @@
                                 </li>
                                 <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.07%3A_The_Schrodinger_Wave_Equation_for_the_Hydrogen_Atom"
                                        target="_blank"> Sophomore/Junior level discussion of hydrogenic atomic orbitals </a>
-                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                    hosted by <a href="https://libretexts.org/">LibreTexts</a>.
                                 </li>
                                 <li><a href="https://chem.libretexts.org/Courses/University_of_Wisconsin_Oshkosh/Chem_370%3A_Physical_Chemistry_1_-_Thermodynamics_(Gutow)/08%3A_Quantum_Chemistry_Fundamentals/8.08%3A_Many-Electron_Atoms_and_the_Periodic_Table"
                                        target="blank">Sophomore/Junior level discussion of many electron atomic orbitals</a>
-                                    hosted by <a href="libretexts.org">LibreTexts</a>.
+                                    hosted by <a href="https://libretexts.org/">LibreTexts</a>.
                                 </li>
                                 <li>
                                     <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/08%3A_The_Hydrogen_Atom" target="_blank">
                                         Advanced undergraduate discussion of hydrogen atom quantum states (orbitals)</a>
-                                        hosted by <a href="libretexts.org">LibreTexts</a>.
+                                        hosted by <a href="https://libretexts.org/">LibreTexts</a>.
                                 </li>
                                 <li>
                                     <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/09%3A_The_Electronic_States_of_the_Multielectron_Atoms" target="_blank">
                                         Advanced undergraduate discussion of many electron atom quantum states (orbitals)
                                         </a>
-                                        hosted by <a href="libretexts.org">LibreTexts</a>.
+                                        hosted by <a href="https://libretexts.org/">LibreTexts</a>.
                                 </li>
                             </ul>
                         </div>
@@ -548,7 +548,7 @@
                         <div class = "accordion-contents">
                             These orbital images are based
                             on calculations done using
-                            the <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
+                            the <a href="https://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
                             <span style="font-style: italic;">ab initio</span> quantum
                             mechanics
                             package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">

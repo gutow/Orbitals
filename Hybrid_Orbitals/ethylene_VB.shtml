@@ -27,7 +27,7 @@
     At left (or above on narrow screen) is a 3-D version of the Lewis structure of the ethylene
     molecule. You may rotate the molecule yourself by holding the
     mouse button down while dragging it around within the image
-    frame. Dark grey spheres represent C atoms and light grey
+    frame. Dark gray spheres represent C atoms and light gray
     (white) spheres represent hydrogen atoms. Single bonds are
     represented as single sticks and double bonds as a pair of
     sticks. To return to this view at any time click on the button
@@ -114,7 +114,7 @@
               <a href="https://jmol.org" target="_blank">JSmol/Jmol</a>
               cartoon representations for these types of orbitals.
               The red &#960; orbital is generated from the results of a calculation done with
-              the <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
+              the <a href="https://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
               <span style="font-style: italic;">ab initio</span> quantum mechanics
               package to find the optimal geometry of ethylene using the 3-21G basis set. The compute resources were
               provided by UW Oshkosh.

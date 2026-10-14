@@ -8,7 +8,7 @@ Tools for activating JSmol script commands based on radiobutton settings.
 
 J. Gutow 9/2026
  */
-var tempEvnt
+let tempEvnt;
 
 function getRadioGroupValue(radioGroupName){
     //returns the value of the selected radio button in the radio group. The
@@ -89,7 +89,7 @@ function displayOrbital(whichJmol, selectID, orbitalScript){
     Jmol.script(whichJmol, colorScript);
     // Set the display mode to match user selections. This must happen second because
     // setting the color overrides transparency.
-    displayModeStr = '#'+prefixStr+'_display_mode';
+    let displayModeStr = '#'+prefixStr+'_display_mode';
     let displayModeScript = document.querySelector(displayModeStr+' li.selected').dataset.jmolscript;
     Jmol.script(whichJmol,displayModeScript);
 }
@@ -197,10 +197,10 @@ function doSelectOne(triggerElem){
 
 function handleClickEvent(event) {
     /*window.alert(event.target.nodeName)*/
-    if (event.target.nodeName == "LI" && event.target.parentNode.classList.contains('menuList')) {
+    if (event.target.nodeName === "LI" && event.target.parentNode.classList.contains('menuList')) {
         doMenuItem(event.target);
     } else {
-        if (event.target.nodeName == "LI" && event.target.parentNode.classList.contains('selectOneList')) {
+        if (event.target.nodeName === "LI" && event.target.parentNode.classList.contains('selectOneList')) {
             doSelectOne(event.target);
         }
     }

@@ -55,12 +55,8 @@
     max-height: 100%;
     overflow: visible;
   }
-  .example-table{
-      border-top:1px solid lightgray;
-      border-bottom:1px solid lightgray;
-      border-collapse: collapse;
-  }
-  .example-table td{
+
+.example-table td{
       border:1px solid lightgray;
       text-align:center;
       vertical-align: middle;
@@ -73,53 +69,7 @@
     vertical-align: middle;
 }
   /* double bond/VB stuff */
-  #visible_page_wrapper{
-      position:relative;
-      top:0px;
-      width:100%;
-      height:85vh;
-      overflow:hidden;
-      display:inline-flex;
-      flex-wrap: wrap;
-  }
-  #JSmol_loading_msg{
-      color:orange;
-  }
-  .JmolTextPane {
-      width:49%;
-      min-width:300px;
-      height:95%;
-      overflow:scroll;
-      border:1px solid;
-      display:inline;
-  }
-  .JmolPane {
-      width:49%;
-      min-width:300px;
-      height:95%;
-      overflow:hidden;
-      /*border:1px solid green;*/
-  }
-  .JmolViewerPane{
-      width:98%;
-      min-width: 290px;
-      aspect-ratio: 1/1;
-      max-height: 100%;
-      overflow:hidden;
-      /*border:1px solid grey;*/
-  }
-  .JmolWidgetPane {
-      width:98%;
-      height:3.5%;
-      overflow:scroll;
-      /*border:1px solid blue;*/
-  }
-  .JmolButtonDiv{
-      width:99%;
-      /*border:1px solid blue;*/
-      text-align:center;
-      /*min-height:8px;*/
-  }
+
 /* end VB stuff */
   @media (max-width: 600px){
         #Jmol_div {
@@ -137,30 +87,6 @@
             overflow: scroll;
         }
           /* VB stuff */
-            .JmolTextPane {
-              width:100%;
-              min-width:300px;
-              max-height: 400px;
-              overflow:scroll;
-              border:1px solid;
-              display:inline;
-          }
-           .JmolPane {
-              width:100%;
-              min-width:300px;
-               min-height:300px;
-              height:95%;
-              overflow:hidden;
-              /*border:1px solid green;*/
-          }
-           #visible_page_wrapper{
-               position:relative;
-               display:inline-flex;
-               flex-wrap: wrap;
-               width: 100%;
-               height: unset;
-               overflow: scroll;
-           }
   }
   /* Selection dropdown css*/
   .orbit_controls {
@@ -389,38 +315,15 @@ ul.selectOneList {
     z-index: 2;
 }
 /* end Accordian css */
-  #fig1-images {
-      max-width:410px;
-      display:inline-block;
-      border:0;
-      padding:0;
-      margin:0;
-  }
-  #fig1 img{
+#fig1 img{
       width:200px;
       height:178px;
       border:0;
       padding:0;
       margin:0;
   }
-  .fig-caption {
-      font-size: 0.9em;
-  }
-  .fig-label {
-      font-weight: bold;
-  }
-  #fig1-caption {
-      display:inline-block;
-      max-width:50%;
-      vertical-align:top;
-      margin: 20px 5px 5px 5px;
-  }
-  #hybridization-animation {
-      text-align: left;
-      width: 100%;
-      border:0;
-  }
-  #hybridization-animation td {
+
+#hybridization-animation td {
       text-align: center;
       vertical-align: middle;
   }
@@ -429,10 +332,8 @@ ul.selectOneList {
       /*background-color: rgb(250, 248, 244);*/
       overflow: scroll;
   }
-  body.waiting{
-      cursor: wait;
-  }
-  #calc_warning {
+
+#calc_warning {
       display: block;
       text-align:center;
       color: red;
