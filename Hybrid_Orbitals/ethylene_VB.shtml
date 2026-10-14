@@ -40,7 +40,7 @@
       href="../../VSEPR_TUTORIAL/shtml%20version/VSEPR_Intro.shtml">VSEPR
       model</a> for molecular shapes. An atom surrounded by three
       groups will be <a target="_top"
-      href="/sp2%20hybrid.shtml">sp<sup>2</sup>
+      href="sp2%20hybrid.shtml">sp<sup>2</sup>
       hybridized</a> to get orbitals pointing in the correct directions to
       make bonds at 120&deg; from each other. Click the button below to
       show these hybrid orbitals on one C.
@@ -91,8 +91,55 @@
       </div>
       You may look at any of these intermediate views again by clicking on
       the appropriate button.
-<!--#include virtual = "Last_mod_date.html"-->
     </div>
   </div>
+  <div class="accordians ethylene">
+    <ul class="accordion">
+        <li class="accordion">
+            <input type="checkbox" checked>
+            <i></i>
+              <h3>
+                  Viewer Instructions
+              </h3>
+            <div class = "accordion-contents">
+                <!--#include virtual = "MV_Instructions.html"-->
+            </div>
+        </li>
+        <li class="accordion">
+            <input type="checkbox" checked>
+            <i></i>
+            <h3>How these images are generated</h3>
+            <div class = "accordion-contents">
+              The blue s and sp<sup>2</sup> orbitals plus the yellow p orbital are the standard
+              <a href="https://jmol.org" target="_blank">JSmol/Jmol</a>
+              cartoon representations for these types of orbitals.
+              The red &#960; orbital is generated from the results of a calculation done with
+              the <a href="http://www.msg.ameslab.gov/GAMESS/GAMESS.html">GAMESS</a><sup>1</sup>
+              <span style="font-style: italic;">ab initio</span> quantum mechanics
+              package to find the optimal geometry of ethylene using the 3-21G basis set. The compute resources were
+              provided by UW Oshkosh.
+            </div>
+        </li>
+        <li class="accordion">
+            <input type="checkbox" checked>
+            <i></i>
+            <h3>References</h3>
+            <div class = "accordion-contents">
+                <ol>
+                  <li>M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert,
+                      M.S.Gordon,
+                      J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su,
+                      T.L.Windus,
+                      M.Dupuis, J.A.Montgomery <span style="font-style:
+                          italic;">J. Comput. Chem.</span>, 14,
+                      1347-1363(1993).
+                  </li>
+                </ol>
+            </div>
+
+        </li>
+    </ul>
+    <!--#include virtual = "Last_mod_date.html"-->
+</div>
 </body>
 </html>

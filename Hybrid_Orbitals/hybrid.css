@@ -76,7 +76,7 @@
       position:relative;
       top:0px;
       width:100%;
-      height:85vh;
+      height:75vh;
       overflow:hidden;
       display:inline-flex;
       flex-wrap: wrap;
@@ -313,11 +313,18 @@ ul.selectOneList {
   /* End selection dropdown css*/
 
 /* Accordian css */
+
 .accordians{
     display: inline-block;
     position: absolute;
     top: 18em;
     width: 100%;
+}
+.ethylene{
+    display:inline-block;
+    position:relative;
+    width: 100%;
+    top: unset;
 }
 .accordians ul li i:before, ul li i:after {
   transition: all 0.25s ease-in-out;
