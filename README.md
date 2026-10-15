@@ -1,4 +1,4 @@
-# Compativle JSmol/Jmol versions
+# Compatible JSmol/Jmol versions
 * JMol/JSmol version should be <=16.4.7 or >=16.5.3 because of bugs in reading 
   surfaces from GAMESSUS output files in between those versions.
 
@@ -57,3 +57,7 @@ molecules</a>
 * When making updates make sure to change the date in the `Last_mod_date.html`
   files. There is one for the Cl page, one for the Kr page one for the 
   hybrid pages.
+* The version number when making a release is taken from the most 
+  recent of 
+  these three last modification dates in European form (e.g. 2026.10.14). 
+  This should be used for the release number in the Github repository.
