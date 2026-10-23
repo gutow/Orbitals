@@ -165,13 +165,12 @@
                 <ul id="orb1_display_mode"  class="selectOneList mainmenu">
                   <input type="checkbox" name="menus" id="orb1_display_mode_check"/>
                   <label for="orb1_display_mode_check">Display Mode</label>
-                  <li class="defaultselection"
-                  data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0;">Solid</li>
+                  <li data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0;">Solid</li>
                   <li data-jmolscript="isosurface iso1 fill nomesh nodots translucent 0.5;">
                       Translucent
                   </li>
                   <li data-jmolscript="isosurface iso1 nofill mesh nodots translucent 0;"
-                  class="selected">Mesh</li>
+                  class="selected defaultselection">Mesh</li>
                   <li data-jmolscript="isosurface iso1 nofill nomesh dots translucent 0;">Dots</li>
                 </ul>
             </div>
