@@ -553,7 +553,9 @@
                             mechanics
                             package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">
                             JSmol/Jmol</a> from the GAMESS.log file of a restricted Hartree-Fock (RHF)
-                            single point energy calculation on a ground state Kr using the aug-CC-pVTZ basis set. To aid
+                            single point energy calculation on a ground state Kr using the aug-CC-pVTZ basis set.
+                            The computations were done on computer resources and using software maintained by
+                            <a href="https://chemcompute.org">chemcompute.org</a>.<sup>2</sup> To aid
                             in visualization of the nodes in the orbitals the volume with 85% probability of containing
                             the electrons is shown, rather than the more common 90% - 95%. This makes the overall
                             extent of the orbitals somewhat smaller than the more common choice.
@@ -574,6 +576,13 @@
                                 M.Dupuis, J.A.Montgomery <span style="font-style:
                                     italic;">J. Comput. Chem.</span>, 14,
                                 1347-1363(1993).</li>
+                                  <li>Perri, M. J. and S. H. Weber (2014).
+                                      "Web-Based Job Submission Interface for the GAMESS Computational Chemistry
+                                      Program." Journal of Chemical Education 91(12): 2206-2208.
+                                      (doi:<a href="https://doi.org/10.1021/ed5004228">10.1021/ed5004228</a>).
+                                      These resources have been supported by the NSF through grants 2417553
+                                        (chemcompute.org) and ACI-1548562 (XSEDE).
+                                  </li>
                             </ol>
                         </div>
                     </li>

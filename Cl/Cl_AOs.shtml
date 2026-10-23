@@ -552,8 +552,10 @@
                             mechanics
                             package. These images are generated on the fly by <a href="https://jmol.org" target="_blank">
                             JSmol/Jmol</a> from the GAMESS.log file of a restricted open shell Hartree-Fock (ROHF)
-                            single point energy calculation on a ground state Cl using the aug-CC-pVDZ basis set. In
-                            to visualize the full shapes of the unoccupied orbitals the orbital volumes encompass 96%
+                            single point energy calculation on a ground state Cl using the aug-CC-pVDZ basis set. The
+                            computations were done on computer resources and using software maintained by
+                            <a href="https://chemcompute.org">chemcompute.org</a>.<sup>2</sup> To aid in
+                            visualizing the full shapes of the unoccupied orbitals the orbital volumes encompass 96%
                             probability of finding the electron, rather than the more common 90% - 95%. This makes the
                             extent of the orbitals somewhat larger than the more common choice.
                         </div>
@@ -566,13 +568,22 @@
                           </h3>
                         <div class = "accordion-contents">
                           <ol>
-                              <li>M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert,
+                              <li>
+                                M.W.Schmidt, K.K.Baldridge, J.A.Boatz, S.T.Elbert,
                                 M.S.Gordon,
                                 J.H.Jensen, S.Koseki, N.Matsunaga, K.A.Nguyen, S.Su,
                                 T.L.Windus,
                                 M.Dupuis, J.A.Montgomery <span style="font-style:
                                     italic;">J. Comput. Chem.</span>, 14,
-                                1347-1363(1993).</li>
+                                1347-1363(1993).
+                              </li>
+                                <li>Perri, M. J. and S. H. Weber (2014).
+                                      "Web-Based Job Submission Interface for the GAMESS Computational Chemistry
+                                      Program." Journal of Chemical Education 91(12): 2206-2208.
+                                      (doi:<a href="https://doi.org/10.1021/ed5004228">10.1021/ed5004228</a>).
+                                      These resources have been supported by the NSF through grants 2417553
+                                      (chemcompute.org) and ACI-1548562 (XSEDE).
+                                  </li>
                             </ol>
                         </div>
                     </li>
